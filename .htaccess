@@ -1,0 +1,22 @@
+Options -Indexes
+Options -MultiViews
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?act=$1 [QSA,L]
+
+
+
+#Vary Accept-Encoding header satırını ekler
+<IfModule mod_headers.c>
+<FilesMatch ".(js|css|xml|gz)$">
+	Header append Vary Accept-Encoding
+</FilesMatch>
+</IfModule>
+
+Options -Indexes
+
+<Files .htaccess>
+	Order Allow,Deny
+	Deny from all
+</Files>
