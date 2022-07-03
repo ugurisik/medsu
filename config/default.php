@@ -12,8 +12,8 @@
 	define("DB_NAME", "medsu");
 	define("DB_USERNAME", "root");
 	define("DB_PASSWORD", "");
-	define("SITE_URL", "http://localhost/medsu/medsu/");
-	define("ADMIN_URL", "http://localhost/medsu/medsu/yonetim/");
+	define("SITE_URL", "http://localhost/medsu/");
+	define("ADMIN_URL", "http://localhost/medsu/yonetim/");
 	
 	
 	define("ADMIN_CSS_PATH", SITE_URL . "/public/yonetim/assets/css");
