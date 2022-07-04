@@ -55,7 +55,7 @@ License: For each use you must have a valid license purchased only from above li
                 <div class="aside-logo flex-column-auto" id="kt_aside_logo">
                     <!--begin::Logo-->
                     <a href="<?= ADMIN_URL ?>">
-                        <img alt="Logo" src="<?= ADMIN_ASSETS ?>/media/logos/medsulogo.png" class="h-40px logo" />
+                        <img alt="Logo" src="<?= SITE_URL ?>/public/img/medsulogo.png" class="h-40px logo" />
                     </a>
                     <!--end::Logo-->
                     <!--begin::Aside toggler-->

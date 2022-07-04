@@ -319,20 +319,20 @@ class helper
 						"children" => [
 							[
 								"text" => "Kategoriler",
-								"href" => "post/categories",
+								"href" => ADMIN_URL ."post/categories",
 								"active" => "categories",
 								"icon" => "",
 								"target" => "",
 							],
 							[
 								"text" => "Yazılar",
-								"href" => "post/posts",
+								"href" => ADMIN_URL ."post/posts",
 								"active" => "posts",
 								"icon" => "",
 								"target" => "",
 							],[
 								"text" => "Yeni Yazı",
-								"href" => "post/addpost",
+								"href" => ADMIN_URL ."post/addpost",
 								"active" => "addpost",
 								"icon" => "",
 								"target" => "",
@@ -348,19 +348,19 @@ class helper
 						"children" => [
 							[
 								"text" => "Sayfalar",
-								"href" => "pages",
+								"href" => ADMIN_URL ."pages",
 								"active" => "categories",
 								"icon" => "",
 								"target" => "",
 							],[
 								"text" => "Yeni Sayfa",
-								"href" => "pages/addpage",
+								"href" => ADMIN_URL ."pages/addpage",
 								"active" => "addpage",
 								"icon" => "",
 								"target" => "",
 							],[
 								"text" => "Sayfa Parçaları",
-								"href" => "pages/parts",
+								"href" => ADMIN_URL ."pages/parts",
 								"active" => "addpage",
 								"icon" => "",
 								"target" => "",
@@ -376,19 +376,19 @@ class helper
 						"children" => [
 							[
 								"text" => "Görseller",
-								"href" => "files/images",
+								"href" => ADMIN_URL ."files/images",
 								"active" => "images",
 								"icon" => "fa fa-image",
 								"target" => "",
 							],[
 								"text" => "Videolar",
-								"href" => "files/videos",
+								"href" => ADMIN_URL ."files/videos",
 								"active" => "videos",
 								"icon" => "fa fa-video-camera",
 								"target" => "",
 							],[
 								"text" => "Dosyalar",
-								"href" => "files/files",
+								"href" => ADMIN_URL ."files/files",
 								"active" => "files",
 								"icon" => "fa fa-file",
 								"target" => "",
@@ -397,14 +397,14 @@ class helper
 					],
 					[
 						"text" => "Reklam Alanları",
-						"href" => "ads",
+						"href" => ADMIN_URL ."ads",
 						"active" => "ads",
 						"icon" => "",
 						"target" => "",
 					],
 					[
 						"text" => "Yorumlar",
-						"href" => "comments",
+						"href" => ADMIN_URL ."comments",
 						"active" => "comments",
 						"icon" => "",
 						"target" => "",
