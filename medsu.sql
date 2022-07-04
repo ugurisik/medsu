@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Anamakine: 127.0.0.1:3306
--- Üretim Zamanı: 29 Mar 2022, 12:32:28
--- Sunucu sürümü: 5.7.36
--- PHP Sürümü: 7.4.26
+-- Anamakine: localhost
+-- Üretim Zamanı: 04 Tem 2022, 03:11:10
+-- Sunucu sürümü: 10.4.21-MariaDB
+-- PHP Sürümü: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,30 +18,8 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Veritabanı: `nictr_jff`
+-- Veritabanı: `medsu`
 --
-
--- --------------------------------------------------------
-
---
--- Tablo için tablo yapısı `nictr_homedesign`
---
-
-DROP TABLE IF EXISTS `nictr_homedesign`;
-CREATE TABLE IF NOT EXISTS `nictr_homedesign` (
-  `id` int(11) NOT NULL,
-  `langID` int(11) NOT NULL,
-  `pageName` text NOT NULL,
-  `design_json` longtext NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Tablo döküm verisi `nictr_homedesign`
---
-
-INSERT INTO `nictr_homedesign` (`id`, `langID`, `pageName`, `design_json`) VALUES
-(1, 2, 'englishHome', '[{\"text\":\"homeCat\",\"href\":\"\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"sablonFile\":\"style-1.php\",\"baslikdurum\":\"off\",\"type\":\"sablon\",\"children\":[{\"text\":\"Destinations\",\"href\":\"destinations\",\"icon\":\"\",\"target\":2,\"title\":\"Destinations\",\"type\":\"tourCat\"},{\"text\":\"City Departure Tours\",\"href\":\"city-departure-tours\",\"icon\":\"\",\"target\":4,\"title\":\"City Departure Tours\",\"type\":\"tourCat\"},{\"text\":\"Ephesus Tours\",\"href\":\"ephesus-tours\",\"icon\":\"\",\"target\":12,\"title\":\"Ephesus Tours\",\"type\":\"tourCat\"},{\"text\":\"Religious belief Tours in Turkey \",\"href\":\"religious-belief-tours-in-turkey\",\"icon\":\"\",\"target\":6,\"title\":\"Religious belief Tours in Turkey \",\"type\":\"tourCat\"},{\"text\":\"Tours By Days\",\"href\":\"tours-by-days\",\"icon\":\"\",\"target\":5,\"title\":\"Tours By Days\",\"type\":\"tourCat\"},{\"text\":\" Special Tours Turkey\",\"href\":\"special-tours-turkey\",\"icon\":\"\",\"target\":3,\"title\":\" Special Tours Turkey\",\"type\":\"tourCat\"},{\"text\":\"Multi-Country Tours\",\"href\":\"multi-country-tours\",\"icon\":\"\",\"target\":7,\"title\":\"Multi-Country Tours\",\"type\":\"tourCat\"},{\"text\":\"Guaranteed Group Tours\",\"href\":\"guaranteed-group-tours\",\"icon\":\"\",\"target\":8,\"title\":\"Guaranteed Group Tours\",\"type\":\"tourCat\"},{\"text\":\"Turkey Shore Excursions\",\"href\":\"turkey-shore-excursions\",\"icon\":\"\",\"target\":18,\"title\":\"Turkey Shore Excursions\",\"type\":\"tourCat\"}]},{\"text\":\"Turkey Special Tours\",\"href\":\"\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"sablonFile\":\"style-3.php\",\"baslikdurum\":\"on\",\"type\":\"sablon\",\"children\":[{\"text\":\"HOT DEAL Turkey Tours\",\"href\":\"hot-deal-turkey-tours\",\"icon\":\"\",\"target\":19,\"title\":\"HOT DEAL Turkey Tours\",\"type\":\"tourCat\"},{\"text\":\"Trekking & Hiking in Turkey\",\"href\":\"trekking-hiking-in-turkey\",\"icon\":\"\",\"target\":20,\"title\":\"Trekking & Hiking in Turkey\",\"type\":\"tourCat\"},{\"text\":\"Yacht Charter Turkey\",\"href\":\"yacht-charter-turkey\",\"icon\":\"\",\"target\":27,\"title\":\"Yacht Charter Turkey\",\"type\":\"tourCat\"},{\"text\":\"Turkey Honeymoon Tour Packages\",\"href\":\"turkey-honeymoon-tour-packages\",\"icon\":\"\",\"target\":22,\"title\":\"Turkey Honeymoon Tour Packages\",\"type\":\"tourCat\"},{\"text\":\"Yoga Tours in Turkey\",\"href\":\"yoga-tours-in-turkey\",\"icon\":\"\",\"target\":23,\"title\":\"Yoga Tours in Turkey\",\"type\":\"tourCat\"},{\"text\":\"Medical Tours in Turkey\",\"href\":\"medical-tours-in-turkey\",\"icon\":\"\",\"target\":21,\"title\":\"Medical Tours in Turkey\",\"type\":\"tourCat\"},{\"text\":\"Women\'s Tours in Turkey\",\"href\":\"women-s-tours-in-turkey\",\"icon\":\"\",\"target\":24,\"title\":\"Women\'s Tours in Turkey\",\"type\":\"tourCat\"},{\"text\":\"Student Tours in Turkey\",\"href\":\"student-tours-in-turkey\",\"icon\":\"\",\"target\":25,\"title\":\"Student Tours in Turkey\",\"type\":\"tourCat\"},{\"text\":\"Shopping Tours in Turkey\",\"href\":\"shopping-tours-in-turkey\",\"icon\":\"\",\"target\":26,\"title\":\"Shopping Tours in Turkey\",\"type\":\"tourCat\"},{\"text\":\"Wedding Organizations in Turkey\",\"href\":\"wedding-organizations-in-turkey\",\"icon\":\"\",\"target\":28,\"title\":\"Wedding Organizations in Turkey\",\"type\":\"tourCat\"},{\"text\":\"Luxury Turkey Tours\",\"href\":\"luxury-turkey-tours\",\"icon\":\"\",\"target\":29,\"title\":\"Luxury Turkey Tours\",\"type\":\"tourCat\"},{\"text\":\"Göbeklitepe Tours in Turkey\",\"href\":\"gobeklitepe-tours-in-turkey\",\"icon\":\"\",\"target\":87,\"title\":\"Göbeklitepe Tours in Turkey\",\"type\":\"tourCat\"}]},{\"text\":\"Popular Tours\",\"href\":\"\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"sablonFile\":\"style-4.php\",\"baslikdurum\":\"on\",\"type\":\"sablon\",\"children\":[{\"text\":\"can deme tur // Antalya - Cappadocia Tour -4 Days\",\"href\":\"can-deme-tur-antalya---cappadocia-tour--4-days\",\"icon\":\"\",\"target\":1,\"title\":\"can deme tur // Antalya - Cappadocia Tour -4 Days\",\"type\":\"tour\"},{\"text\":\"Antalya Cappadocia, Konya Tour - 8 Days\",\"href\":\"antalya-cappadocia-konya-tour---8-days\",\"icon\":\"\",\"target\":2,\"title\":\"Antalya Cappadocia, Konya Tour - 8 Days\",\"type\":\"tour\"},{\"text\":\"Antalya Ancient Pamphylia & Ionia Tour - 8 Days \",\"href\":\"antalya-ancient-pamphylia-ionia-tour---8-days\",\"icon\":\"\",\"target\":3,\"title\":\"Antalya Ancient Pamphylia & Ionia Tour - 8 Days \",\"type\":\"tour\"},{\"text\":\"Antalya - Central Anatolian civilizations tour - 8 Days\",\"href\":\"antalya---central-anatolian-civilizations-tour---8-days\",\"icon\":\"\",\"target\":4,\"title\":\"Antalya - Central Anatolian civilizations tour - 8 Days\",\"type\":\"tour\"},{\"text\":\"St. Paul\'s Missionary Journey in Turkey Tour - 17 Days \",\"href\":\"st-paul-s-missionary-journey-in-turkey-tour---17-days\",\"icon\":\"\",\"target\":5,\"title\":\"St. Paul\'s Missionary Journey in Turkey Tour - 17 Days \",\"type\":\"tour\"},{\"text\":\"Anatolian Tour South to North - 14 Days \",\"href\":\"anatolian-tour-south-to-north---14-days\",\"icon\":\"\",\"target\":208,\"title\":\"Anatolian Tour South to North - 14 Days \",\"type\":\"tour\"}]},{\"text\":\"Hot deal Tours\",\"href\":\"\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"sablonFile\":\"style-4.php\",\"baslikdurum\":\"on\",\"type\":\"sablon\",\"children\":[{\"text\":\"Istanbul Tour Package  / 4 Days - 3 Nights\",\"href\":\"istanbul-tour-package-4-days---3-nights\",\"icon\":\"\",\"target\":64,\"title\":\"Istanbul Tour Package  / 4 Days - 3 Nights\",\"type\":\"tour\"},{\"text\":\"Cappadocia Tour   4 Days – 3 Nights\",\"href\":\"cappadocia-tour-4-days-3-nights\",\"icon\":\"\",\"target\":72,\"title\":\"Cappadocia Tour   4 Days – 3 Nights\",\"type\":\"tour\"},{\"text\":\"Göbeklitepe Temple - Urfa - Gaziantep Tour - 3 Days\",\"href\":\"gobeklitepe-temple---urfa---gaziantep-tour---3-days\",\"icon\":\"\",\"target\":81,\"title\":\"Göbeklitepe Temple - Urfa - Gaziantep Tour - 3 Days\",\"type\":\"tour\"},{\"text\":\"Göbeklitepe Tour Gaziantep to Urfa - 2 Days \",\"href\":\"gobeklitepe-tour-gaziantep-to-urfa---2-days\",\"icon\":\"\",\"target\":85,\"title\":\"Göbeklitepe Tour Gaziantep to Urfa - 2 Days \",\"type\":\"tour\"}]}]'),
-(2, 3, 'espanolHome', '[{\"text\":\"homeCat\",\"href\":\"\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"sablonFile\":\"style-1.php\",\"baslikdurum\":\"off\",\"type\":\"sablon\",\"children\":[{\"text\":\"Destinos\",\"href\":\"destinos\",\"icon\":\"\",\"target\":45,\"title\":\"Destinos\",\"type\":\"tourCat\",\"children\":[{\"text\":\"Excursiones Estambul\",\"href\":\"excursiones-estambul\",\"icon\":\"\",\"target\":53,\"title\":\"Excursiones Estambul\",\"type\":\"tourCat\"},{\"text\":\"Excursiones Capadocia\",\"href\":\"excursiones-capadocia\",\"icon\":\"\",\"target\":54,\"title\":\"Excursiones Capadocia\",\"type\":\"tourCat\"},{\"text\":\"Excursiones Éfeso\",\"href\":\"excursiones-feso\",\"icon\":\"\",\"target\":55,\"title\":\"Excursiones Éfeso\",\"type\":\"tourCat\"},{\"text\":\"Turquía occidental tours.\",\"href\":\"turqu-a-occidental-tours\",\"icon\":\"\",\"target\":56,\"title\":\"Turquía occidental tours.\",\"type\":\"tourCat\"},{\"text\":\"Turquía oriental y sudoriental Tours\",\"href\":\"turqu-a-oriental-y-sudoriental-tours\",\"icon\":\"\",\"target\":57,\"title\":\"Turquía oriental y sudoriental Tours\",\"type\":\"tourCat\"},{\"text\":\"Anatolia central Turquía Tours.\",\"href\":\"anatolia-central-turqu-a-tours\",\"icon\":\"\",\"target\":58,\"title\":\"Anatolia central Turquía Tours.\",\"type\":\"tourCat\"},{\"text\":\"Turquía mediterránea Tours\",\"href\":\"turqu-a-mediterr-nea-tours\",\"icon\":\"\",\"target\":59,\"title\":\"Turquía mediterránea Tours\",\"type\":\"tourCat\"},{\"text\":\"Turquía del Mar Negro Tours\",\"href\":\"turqu-a-del-mar-negro-tours\",\"icon\":\"\",\"target\":60,\"title\":\"Turquía del Mar Negro Tours\",\"type\":\"tourCat\"},{\"text\":\"Excursiones por la Costa de  Turquía\",\"href\":\"excursiones-por-la-costa-de-turqu-a\",\"icon\":\"\",\"target\":61,\"title\":\"Excursiones por la Costa de  Turquía\",\"type\":\"tourCat\"},{\"text\":\"Viajes especiales Turquía\",\"href\":\"viajes-especiales-turqu-a\",\"icon\":\"\",\"target\":46,\"title\":\"Viajes especiales Turquía\",\"type\":\"tourCat\"}]},{\"text\":\"GRANDE OFERTA Turquía Tours !!!\",\"href\":\"grande-oferta-turqu-a-tours\",\"icon\":\"\",\"target\":62,\"title\":\"GRANDE OFERTA Turquía Tours !!!\",\"type\":\"tourCat\",\"children\":[{\"text\":\"Tours de trekking & senderismo  Turquia\",\"href\":\"tours-de-trekking-senderismo-turquia\",\"icon\":\"\",\"target\":63,\"title\":\"Tours de trekking & senderismo  Turquia\",\"type\":\"tourCat\"},{\"text\":\"Turismo médico en Turquía\",\"href\":\"turismo-m-dico-en-turqu-a\",\"icon\":\"\",\"target\":64,\"title\":\"Turismo médico en Turquía\",\"type\":\"tourCat\"},{\"text\":\"Tours de Luna de Miel Turquia\",\"href\":\"tours-de-luna-de-miel-turquia\",\"icon\":\"\",\"target\":65,\"title\":\"Tours de Luna de Miel Turquia\",\"type\":\"tourCat\"},{\"text\":\"Tours de yoga en Turquía\",\"href\":\"tours-de-yoga-en-turqu-a\",\"icon\":\"\",\"target\":66,\"title\":\"Tours de yoga en Turquía\",\"type\":\"tourCat\"},{\"text\":\"Tours para Señoras en Turquía\",\"href\":\"tours-para-se-oras-en-turqu-a\",\"icon\":\"\",\"target\":67,\"title\":\"Tours para Señoras en Turquía\",\"type\":\"tourCat\"},{\"text\":\"Viajes para estudiantes en Turquía\",\"href\":\"viajes-para-estudiantes-en-turqu-a\",\"icon\":\"\",\"target\":68,\"title\":\"Viajes para estudiantes en Turquía\",\"type\":\"tourCat\"},{\"text\":\"Tours de compras en Turquía\",\"href\":\"tours-de-compras-en-turqu-a\",\"icon\":\"\",\"target\":69,\"title\":\"Tours de compras en Turquía\",\"type\":\"tourCat\"},{\"text\":\"Alquiler de barcos Turquía\",\"href\":\"alquiler-de-barcos-turqu-a\",\"icon\":\"\",\"target\":70,\"title\":\"Alquiler de barcos Turquía\",\"type\":\"tourCat\"},{\"text\":\"Organizaciones de Bodas en Turquia\",\"href\":\"organizaciones-de-bodas-en-turquia\",\"icon\":\"\",\"target\":71,\"title\":\"Organizaciones de Bodas en Turquia\",\"type\":\"tourCat\"},{\"text\":\"Tours de lujo en Turquía\",\"href\":\"tours-de-lujo-en-turqu-a\",\"icon\":\"\",\"target\":72,\"title\":\"Tours de lujo en Turquía\",\"type\":\"tourCat\"}]},{\"text\":\"Tours con la salida desde ciudades\",\"href\":\"tours-con-la-salida-desde-ciudades\",\"icon\":\"\",\"target\":47,\"title\":\"Tours con la salida desde ciudades\",\"type\":\"tourCat\",\"children\":[{\"text\":\"Tours desde Estambul\",\"href\":\"tours-desde-estambul\",\"icon\":\"\",\"target\":73,\"title\":\"Tours desde Estambul\",\"type\":\"tourCat\"},{\"text\":\"Tours desde Izmir\",\"href\":\"tours-desde-izmir\",\"icon\":\"\",\"target\":74,\"title\":\"Tours desde Izmir\",\"type\":\"tourCat\"},{\"text\":\"Tours desde Antalya\",\"href\":\"tours-desde-antalya\",\"icon\":\"\",\"target\":75,\"title\":\"Tours desde Antalya\",\"type\":\"tourCat\"},{\"text\":\"Tours desde Ankara\",\"href\":\"tours-desde-ankara\",\"icon\":\"\",\"target\":76,\"title\":\"Tours desde Ankara\",\"type\":\"tourCat\"},{\"text\":\"Tours desde Trabzon y Samsun\",\"href\":\"tours-desde-trabzon-y-samsun\",\"icon\":\"\",\"target\":77,\"title\":\"Tours desde Trabzon y Samsun\",\"type\":\"tourCat\"},{\"text\":\"Tours desde Kars - Erzurum\",\"href\":\"tours-desde-kars---erzurum\",\"icon\":\"\",\"target\":78,\"title\":\"Tours desde Kars - Erzurum\",\"type\":\"tourCat\"},{\"text\":\"Tours desde Urfa - Mardin - Gaziantep\",\"href\":\"tours-desde-urfa---mardin---gaziantep\",\"icon\":\"\",\"target\":79,\"title\":\"Tours desde Urfa - Mardin - Gaziantep\",\"type\":\"tourCat\"}]},{\"text\":\"Tours por días\",\"href\":\"tours-por-d-as\",\"icon\":\"\",\"target\":48,\"title\":\"Tours por días\",\"type\":\"tourCat\",\"children\":[{\"text\":\"Tours de 2 a 4 días\",\"href\":\"tours-de-2-a-4-d-as\",\"icon\":\"\",\"target\":80,\"title\":\"Tours de 2 a 4 días\",\"type\":\"tourCat\"},{\"text\":\"Tours de 5 a 7 días\",\"href\":\"tours-de-5-a-7-d-as\",\"icon\":\"\",\"target\":81,\"title\":\"Tours de 5 a 7 días\",\"type\":\"tourCat\"},{\"text\":\"Tours de 8 a 10 días\",\"href\":\"tours-de-8-a-10-d-as\",\"icon\":\"\",\"target\":82,\"title\":\"Tours de 8 a 10 días\",\"type\":\"tourCat\"},{\"text\":\"Tours de 11 a 14 días\",\"href\":\"tours-de-11-a-14-d-as\",\"icon\":\"\",\"target\":83,\"title\":\"Tours de 11 a 14 días\",\"type\":\"tourCat\"},{\"text\":\"Tours de 15 a 25 días\",\"href\":\"tours-de-15-a-25-d-as\",\"icon\":\"\",\"target\":84,\"title\":\"Tours de 15 a 25 días\",\"type\":\"tourCat\"}]},{\"text\":\"Tours de fe Religiosa en Turquía\",\"href\":\"tours-de-fe-religiosa-en-turqu-a\",\"icon\":\"\",\"target\":49,\"title\":\"Tours de fe Religiosa en Turquía\",\"type\":\"tourCat\",\"children\":[{\"text\":\"las Siete Iglesias del Apocalipsis Tour\",\"href\":\"las-siete-iglesias-del-apocalipsis-tour\",\"icon\":\"\",\"target\":85,\"title\":\"las Siete Iglesias del Apocalipsis Tour\",\"type\":\"tourCat\"},{\"text\":\"Tours de monumentos islámicos en Turquía\",\"href\":\"tours-de-monumentos-isl-micos-en-turqu-a\",\"icon\":\"\",\"target\":86,\"title\":\"Tours de monumentos islámicos en Turquía\",\"type\":\"tourCat\"}]},{\"text\":\"Tours por Varios Paises\",\"href\":\"tours-por-varios-paises\",\"icon\":\"\",\"target\":50,\"title\":\"Tours por Varios Paises\",\"type\":\"tourCat\"},{\"text\":\"Excursiones de Grupos Garantizadas\",\"href\":\"excursiones-de-grupos-garantizadas\",\"icon\":\"\",\"target\":51,\"title\":\"Excursiones de Grupos Garantizadas\",\"type\":\"tourCat\"},{\"text\":\"GRANDE OFERTA ! Tours de última hora\",\"href\":\"grande-oferta-tours-de-ltima-hora\",\"icon\":\"\",\"target\":52,\"title\":\"GRANDE OFERTA ! Tours de última hora\",\"type\":\"tourCat\"},{\"text\":\"Excursiones por la Costa de  Turquía\",\"href\":\"excursiones-por-la-costa-de-turqu-a\",\"icon\":\"\",\"target\":61,\"title\":\"Excursiones por la Costa de  Turquía\",\"type\":\"tourCat\"}]},{\"text\":\"Viajes especiales Turquía\",\"href\":\"\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"sablonFile\":\"style-3.php\",\"baslikdurum\":\"on\",\"type\":\"sablon\",\"children\":[{\"text\":\"GRANDE OFERTA Turquía Tours !!!\",\"href\":\"grande-oferta-turqu-a-tours\",\"icon\":\"\",\"target\":62,\"title\":\"GRANDE OFERTA Turquía Tours !!!\",\"type\":\"tourCat\"},{\"text\":\"Tours de trekking & senderismo  Turquia\",\"href\":\"tours-de-trekking-senderismo-turquia\",\"icon\":\"\",\"target\":63,\"title\":\"Tours de trekking & senderismo  Turquia\",\"type\":\"tourCat\"},{\"text\":\"Turismo médico en Turquía\",\"href\":\"turismo-m-dico-en-turqu-a\",\"icon\":\"\",\"target\":64,\"title\":\"Turismo médico en Turquía\",\"type\":\"tourCat\"},{\"text\":\"Tours de Luna de Miel Turquia\",\"href\":\"tours-de-luna-de-miel-turquia\",\"icon\":\"\",\"target\":65,\"title\":\"Tours de Luna de Miel Turquia\",\"type\":\"tourCat\"},{\"text\":\"Tours de yoga en Turquía\",\"href\":\"tours-de-yoga-en-turqu-a\",\"icon\":\"\",\"target\":66,\"title\":\"Tours de yoga en Turquía\",\"type\":\"tourCat\"},{\"text\":\"Tours para Señoras en Turquía\",\"href\":\"tours-para-se-oras-en-turqu-a\",\"icon\":\"\",\"target\":67,\"title\":\"Tours para Señoras en Turquía\",\"type\":\"tourCat\"},{\"text\":\"Viajes para estudiantes en Turquía\",\"href\":\"viajes-para-estudiantes-en-turqu-a\",\"icon\":\"\",\"target\":68,\"title\":\"Viajes para estudiantes en Turquía\",\"type\":\"tourCat\"},{\"text\":\"Tours de compras en Turquía\",\"href\":\"tours-de-compras-en-turqu-a\",\"icon\":\"\",\"target\":69,\"title\":\"Tours de compras en Turquía\",\"type\":\"tourCat\"},{\"text\":\"Alquiler de barcos Turquía\",\"href\":\"alquiler-de-barcos-turqu-a\",\"icon\":\"\",\"target\":70,\"title\":\"Alquiler de barcos Turquía\",\"type\":\"tourCat\"},{\"text\":\"Organizaciones de Bodas en Turquia\",\"href\":\"organizaciones-de-bodas-en-turquia\",\"icon\":\"\",\"target\":71,\"title\":\"Organizaciones de Bodas en Turquia\",\"type\":\"tourCat\"},{\"text\":\"Tours de lujo en Turquía\",\"href\":\"tours-de-lujo-en-turqu-a\",\"icon\":\"\",\"target\":72,\"title\":\"Tours de lujo en Turquía\",\"type\":\"tourCat\"},{\"text\":\"Tours de Göbeklitepe en Turquía\",\"href\":\"tours-de-gobeklitepe-en-turqu-a\",\"icon\":\"\",\"target\":88,\"title\":\"Tours de Göbeklitepe en Turquía\",\"type\":\"tourCat\"}]},{\"text\":\"Viajes especiales Turquía\",\"href\":\"\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"sablonFile\":\"style-4.php\",\"baslikdurum\":\"on\",\"type\":\"sablon\",\"children\":[{\"text\":\"Cuna de civilizaciones Sureste de Anatolia, Tour Turquía - 9 Días\",\"href\":\"cuna-de-civilizaciones-sureste-de-anatolia-tour-turqu-a---9-d-as\",\"icon\":\"\",\"target\":202,\"title\":\"Cuna de civilizaciones Sureste de Anatolia, Tour Turquía - 9 Días\",\"type\":\"tour\"},{\"text\":\" Cuna de civilizaciones Este y sureste de Anatolia Tour Turquía - 13 Días\",\"href\":\"cuna-de-civilizaciones-este-y-sureste-de-anatolia-tour-turqu-a---13-d-as\",\"icon\":\"\",\"target\":201,\"title\":\" Cuna de civilizaciones Este y sureste de Anatolia Tour Turquía - 13 Días\",\"type\":\"tour\"},{\"text\":\"Tour por Turquía y Crucero por las islas de Grecia  - 10 Días\",\"href\":\"tour-por-turqu-a-y-crucero-por-las-islas-de-grecia---10-d-as\",\"icon\":\"\",\"target\":200,\"title\":\"Tour por Turquía y Crucero por las islas de Grecia  - 10 Días\",\"type\":\"tour\"},{\"text\":\"Gran Tour de Turquía por el Mar Negro -14 Días\",\"href\":\"gran-tour-de-turqu-a-por-el-mar-negro--14-d-as\",\"icon\":\"\",\"target\":199,\"title\":\"Gran Tour de Turquía por el Mar Negro -14 Días\",\"type\":\"tour\"},{\"text\":\"Tour de Turquía por el Mar Negro - 7 días Ankara - Ankara\",\"href\":\"tour-de-turqu-a-por-el-mar-negro---7-d-as-ankara---ankara\",\"icon\":\"\",\"target\":198,\"title\":\"Tour de Turquía por el Mar Negro - 7 días Ankara - Ankara\",\"type\":\"tour\"},{\"text\":\"Tour de Turquía & Georgia por el Mar Negro - 5 días\",\"href\":\"tour-de-turqu-a-georgia-por-el-mar-negro---5-d-as\",\"icon\":\"\",\"target\":197,\"title\":\"Tour de Turquía & Georgia por el Mar Negro - 5 días\",\"type\":\"tour\"},{\"text\":\"Tour de Turquía por el Mar Negro - 8 Días\",\"href\":\"tour-de-turqu-a-por-el-mar-negro---8-d-as\",\"icon\":\"\",\"target\":196,\"title\":\"Tour de Turquía por el Mar Negro - 8 Días\",\"type\":\"tour\"}]},{\"text\":\"GRANDE OFERTA Turquía Tours\",\"href\":\"\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"sablonFile\":\"style-4.php\",\"baslikdurum\":\"on\",\"type\":\"sablon\",\"children\":[{\"text\":\"Trekking por las tierras altas de Fethiye y Cameli - 7 días\",\"href\":\"trekking-por-las-tierras-altas-de-fethiye-y-cameli---7-d-as\",\"icon\":\"\",\"target\":129,\"title\":\"Trekking por las tierras altas de Fethiye y Cameli - 7 días\",\"type\":\"tour\"},{\"text\":\"Trekking por las mesetas del Mar Negro en Turquía - 7 días\",\"href\":\"trekking-por-las-mesetas-del-mar-negro-en-turqu-a---7-d-as\",\"icon\":\"\",\"target\":128,\"title\":\"Trekking por las mesetas del Mar Negro en Turquía - 7 días\",\"type\":\"tour\"},{\"text\":\"Tour de escalada al Monte Ararat en Turquía - 6 Días\",\"href\":\"tour-de-escalada-al-monte-ararat-en-turqu-a---6-d-as\",\"icon\":\"\",\"target\":127,\"title\":\"Tour de escalada al Monte Ararat en Turquía - 6 Días\",\"type\":\"tour\"},{\"text\":\"Tour de Senderismo Capadocia Turquía - 8 Días\",\"href\":\"tour-de-senderismo-capadocia-turqu-a---8-d-as\",\"icon\":\"\",\"target\":126,\"title\":\"Tour de Senderismo Capadocia Turquía - 8 Días\",\"type\":\"tour\"},{\"text\":\" Tour de senderismo Lycian Way Turquía - 6 Días\",\"href\":\"tour-de-senderismo-lycian-way-turqu-a---6-d-as\",\"icon\":\"\",\"target\":124,\"title\":\" Tour de senderismo Lycian Way Turquía - 6 Días\",\"type\":\"tour\"},{\"text\":\"Tour clásico de Turquía - 9 días   \",\"href\":\"tour-cl-sico-de-turqu-a---9-d-as\",\"icon\":\"\",\"target\":123,\"title\":\"Tour clásico de Turquía - 9 días   \",\"type\":\"tour\"},{\"text\":\"Misteriosa gira de Turquía por Jonia y Panfilia - 8 Días\",\"href\":\"misteriosa-gira-de-turqu-a-por-jonia-y-panfilia---8-d-as\",\"icon\":\"\",\"target\":122,\"title\":\"Misteriosa gira de Turquía por Jonia y Panfilia - 8 Días\",\"type\":\"tour\"}]}]');
 
 -- --------------------------------------------------------
 
@@ -49,26 +27,21 @@ INSERT INTO `nictr_homedesign` (`id`, `langID`, `pageName`, `design_json`) VALUE
 -- Tablo için tablo yapısı `nictr_langs`
 --
 
-DROP TABLE IF EXISTS `nictr_langs`;
-CREATE TABLE IF NOT EXISTS `nictr_langs` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nictr_langs` (
+  `id` int(11) NOT NULL,
   `title` text COLLATE utf8_turkish_ci NOT NULL,
   `subtitle` text COLLATE utf8_turkish_ci NOT NULL,
   `img` text COLLATE utf8_turkish_ci NOT NULL,
-  `url` text COLLATE utf8_turkish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+  `url` text COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `nictr_langs`
 --
 
 INSERT INTO `nictr_langs` (`id`, `title`, `subtitle`, `img`, `url`) VALUES
-(1, 'TÜRKÇE', 'TR', '027-turkey.png', 'tr'),
-(2, 'ENGLISH', 'EN', '002-united-kingdom.png', 'en'),
-(3, 'DEUTSCH', 'DE', '006-germany.png', 'de'),
-(4, 'FRENCH', 'FR', '003-france.png', 'fr'),
-(5, 'ARABIC', 'AR', '003-france.png', 'ar');
+(1, 'TÜRKÇE', 'TR', 'turkey.svg', 'tr'),
+(2, 'ENGLISH', 'EN', 'united-states.svg', 'en');
 
 -- --------------------------------------------------------
 
@@ -76,248 +49,23 @@ INSERT INTO `nictr_langs` (`id`, `title`, `subtitle`, `img`, `url`) VALUES
 -- Tablo için tablo yapısı `nictr_langs_meta`
 --
 
-DROP TABLE IF EXISTS `nictr_langs_meta`;
-CREATE TABLE IF NOT EXISTS `nictr_langs_meta` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `langID` int(11) NOT NULL,
+CREATE TABLE `nictr_langs_meta` (
+  `id` int(11) NOT NULL,
   `type` text COLLATE utf8_turkish_ci NOT NULL,
-  `type_meta` text COLLATE utf8_turkish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=231 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+  `type_meta` text COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `nictr_langs_meta`
 --
 
-INSERT INTO `nictr_langs_meta` (`id`, `langID`, `type`, `type_meta`) VALUES
-(1, 1, 'kategori', 'kategori'),
-(2, 1, 'sayfa', 'sayfa'),
-(3, 1, 'yazi', 'yazi'),
-(4, 1, 'bizişimdiara', 'Bizi Şimdi Ara'),
-(5, 2, 'bizişimdiara', 'Call Us Now'),
-(6, 1, 'kalkisnoktasi', 'Kalkış Noktası'),
-(7, 1, 'tarihsecin', 'Kalkış Tarihi'),
-(8, 1, 'varisNoktasi', 'Varış Noktası'),
-(9, 1, 'kisisayisi', 'Kişi Sayısı'),
-(10, 1, 'ara', 'Ara'),
-(11, 2, 'kalkisnoktasi', 'Point of departure'),
-(12, 2, 'tarihsecin', 'Departure date'),
-(13, 2, 'varisNoktasi', 'Point of destination'),
-(14, 2, 'kisisayisi', 'Number of Persons'),
-(15, 2, 'ara', 'Search'),
-(16, 1, 'resimyok', 'Resim Yok'),
-(17, 2, 'resimyok', 'No image'),
-(18, 1, 'bizitakipedin', 'Bizi Takip Edin'),
-(19, 2, 'bizitakipedin', 'Follow Us'),
-(20, 1, 'maksimum', 'Maksimum'),
-(21, 2, 'maksimum', 'maximum'),
-(22, 1, 'bagaj', 'Bagaj'),
-(23, 2, 'bagaj', 'Luggage'),
-(24, 1, 'kişi', 'Kişi'),
-(25, 2, 'kişi', 'People'),
-(26, 1, 'rezervasyonyap', 'Rezervasyon Yap'),
-(27, 2, 'rezervasyonyap', 'Make a reservation'),
-(28, 1, 'yolculukbilgileri', 'Yolculuk Bilgileri'),
-(29, 2, 'yolculukbilgileri', 'Trip Information'),
-(30, 1, 'mesafe', 'Toplam mesafe'),
-(31, 1, 'tvs', 'Tahmini varış süresi'),
-(32, 2, 'mesafe', 'Total distance'),
-(33, 2, 'tvs', 'Estimated time of arrival'),
-(34, 1, 'ekozellikler', 'Ek Özellikler'),
-(35, 2, 'ekozellikler', 'Additional features'),
-(36, 1, 'odemebilgileri', 'Rezervasyon Bilgileri'),
-(37, 2, 'odemebilgileri', 'Reservation Information'),
-(38, 1, 'aracucreti', 'Araç Ücreti'),
-(39, 2, 'aracucreti', 'Vehicle Fee'),
-(40, 1, 'odenecektutar', 'Ödenecek Tutar'),
-(41, 2, 'odenecektutar', 'Amount to be paid'),
-(42, 1, 'sepettutari', 'Sepet Tutarı'),
-(43, 2, 'sepettutari', 'Basket Amount'),
-(44, 1, 'kdv', 'KDV'),
-(45, 2, 'kdv', 'VAT'),
-(46, 1, 'toplamtutar', 'Toplam Tutar'),
-(47, 2, 'toplamtutar', 'Total Amount'),
-(48, 1, 'odemeyap', 'Ödeme Yap'),
-(49, 2, 'odemeyap', 'Pay'),
-(50, 1, 'yolcubilgileri', 'Yolcu bilgileri'),
-(51, 2, 'yolcubilgileri', 'Passenger information'),
-(52, 1, 'isimsoyisim', 'İsim Soyisim'),
-(53, 1, 'tcno', 'T.C. Kimlik NO'),
-(54, 1, 'pasaportno', 'Pasaport No'),
-(55, 1, 'heskodu', 'HES Kodu'),
-(56, 1, 'telefon', 'Telefon'),
-(57, 1, 'eposta', 'E-posta'),
-(58, 1, 'dogumtarihi', 'Doğum Tarihi'),
-(59, 2, 'isimsoyisim', 'Name Surname'),
-(60, 2, 'tcno', 'Identification number'),
-(61, 2, 'pasaportno', 'Passport number'),
-(62, 2, 'heskodu', 'HES Code'),
-(63, 2, 'telefon', 'Phone'),
-(64, 2, 'eposta', 'E-mail'),
-(65, 2, 'dogumtarihi', 'Date of birth'),
-(66, 1, 'vatandasdegilim', 'Ben türkiye cumhuriyeti vatandaşı değilim!'),
-(67, 2, 'vatandasdegilim', 'I am not a citizen of the Republic of Turkey!'),
-(68, 1, 'ilgilikisi', 'İlgili Kişi'),
-(69, 2, 'ilgilikisi', 'Related person'),
-(70, 1, 'odemebasarili', 'Ödeme Başarılı bir şekilde alınmıştır.'),
-(71, 2, 'odemebasarili', 'Payment Received Successfully.'),
-(72, 1, 'islembasarili', 'İşlem Başarılı'),
-(73, 2, 'islembasarili', 'Operation Success'),
-(74, 1, 'islembasarisiz', 'İşlem Başarısız'),
-(75, 2, 'islembasarisiz', 'Operation Failed'),
-(78, 3, 'kategori', 'kategorie'),
-(79, 3, 'sayfa', 'seite'),
-(80, 3, 'yazi', 'schreiben'),
-(81, 3, 'bizişimdiara', 'Ruf uns jetzt an'),
-(82, 3, 'kalkisnoktasi', 'Ausstiegspunkt'),
-(83, 3, 'tarihsecin', 'Veröffentlichungsdatum'),
-(84, 3, 'varisNoktasi', 'Ziel'),
-(85, 3, 'kisisayisi', 'Anzahl der Personen'),
-(86, 3, 'ara', 'Suche'),
-(87, 3, 'resimyok', 'kein Bild hinzugefügt'),
-(88, 3, 'bizitakipedin', 'Folge uns'),
-(89, 3, 'maksimum', 'maximal'),
-(90, 3, 'bagaj', 'Gepäck'),
-(91, 3, 'kişi', 'Person'),
-(92, 3, 'rezervasyonyap', 'eine Reservierung machen'),
-(93, 3, 'yolculukbilgileri', 'Reiseinformation'),
-(94, 3, 'mesafe', 'Distanz'),
-(95, 3, 'tvs', 'Geschätzte Ankunftszeit'),
-(96, 3, 'ekozellikler', 'Zusatzfunktionen'),
-(97, 3, 'odemebilgileri', 'Zahlungsinformationen'),
-(98, 3, 'aracucreti', 'Fahrzeuggebühr'),
-(99, 3, 'odenecektutar', 'Geld zahlbar'),
-(100, 3, 'sepettutari', 'Warenkorbbetrag'),
-(101, 3, 'kdv', 'MwSt.'),
-(102, 3, 'toplamtutar', 'Gesamtsumme'),
-(103, 3, 'odemeyap', 'Gesamtsaldo'),
-(104, 3, 'yolcubilgileri', 'Fahrgastinformationen'),
-(105, 3, 'isimsoyisim', 'Vorname Nachname'),
-(106, 3, 'tcno', 'Identifikationsnummer'),
-(107, 3, 'pasaportno', 'Ausweisnummer'),
-(108, 3, 'heskodu', 'Hes-Code'),
-(109, 3, 'telefon', 'Telefon'),
-(110, 3, 'eposta', 'Email'),
-(111, 3, 'dogumtarihi', 'Geburtsdatum'),
-(112, 3, 'vatandasdegilim', 'Ich bin kein Staatsbürger der Republik Türkei'),
-(113, 3, 'ilgilikisi', 'berechtigte Person'),
-(114, 3, 'odemebasarili', 'Bezahlung erfolgreich'),
-(115, 3, 'islembasarili', 'Transaktion Erfolgreich'),
-(116, 3, 'islembasarisiz', 'Operation fehlgeschlagen'),
-(117, 1, 'kategoriler', 'Kategoriler'),
-(118, 2, 'kategoriler', 'Categories'),
-(119, 3, 'kategoriler', 'Kategorien'),
-(120, 1, 'sonhaberler', 'Son Haberler'),
-(121, 2, 'sonhaberler', 'Latest News'),
-(122, 3, 'sonhaberler', 'Neuesten Nachrichten'),
-(123, 2, 'sayfa', 'page'),
-(124, 2, 'yazi', 'post'),
-(125, 2, 'kategori', 'category'),
-(126, 1, 'ofis', 'Ofis'),
-(127, 2, 'ofis', 'Office'),
-(128, 3, 'ofis', 'Office'),
-(129, 1, 'mesajgonder', 'Mesajı gönder'),
-(130, 2, 'mesajgonder', 'Send to message'),
-(131, 3, 'mesajgonder', 'Nachricht senden'),
-(132, 1, 'merhaba', 'Merhaba'),
-(133, 2, 'merhaba', 'Hi'),
-(134, 3, 'merhaba', 'Hallo'),
-(135, 1, 'iletisimbilgileriniz', 'İletişim Bilgileriniz'),
-(136, 2, 'iletisimbilgileriniz', 'Your Contact Information'),
-(137, 3, 'iletisimbilgileriniz', 'Ihre Kontaktinformationen'),
-(138, 1, 'ourmail', 'E-posta adresiniz'),
-(139, 2, 'ourmail', 'E-Mail Address'),
-(140, 3, 'ourmail', 'E-Mail-Addresse'),
-(141, 1, 'konu', 'E-posta adresiniz'),
-(142, 2, 'konu', 'E-Mail Address'),
-(143, 3, 'konu', 'E-Mail-Addresse'),
-(144, 1, 'message', 'Mesajınız'),
-(145, 2, 'message', 'your message'),
-(146, 3, 'message', 'deine Nachricht'),
-(147, 1, 'noreply', 'Lütfen bu maili yanıtlamayınız'),
-(148, 2, 'noreply', 'Please do not reply to this email'),
-(149, 3, 'noreply', 'Bitte antworten Sie nicht auf diese Email'),
-(150, 1, 'aracmodeli', 'Araç modeli'),
-(151, 2, 'aracmodeli', 'Vehicle Model'),
-(152, 3, 'aracmodeli', 'Fahrzeugmodell'),
-(153, 1, 'hizmetdisi', 'Hizmet alanı dışında'),
-(154, 2, 'hizmetdisi', 'Out of service area'),
-(155, 3, 'hizmetdisi', 'außerhalb des Servicebereichs'),
-(156, 1, 'aramahata', 'Arama yapılamadı'),
-(157, 2, 'aramahata', 'Search failed'),
-(158, 3, 'aramahata', 'Suche fehlgeschlagen'),
-(159, 4, 'kategori', 'category'),
-(160, 4, 'sayfa', ''),
-(161, 4, 'yazi', ''),
-(162, 4, 'bizişimdiara', ''),
-(163, 4, 'kalkisnoktasi', ''),
-(164, 4, 'tarihsecin', ''),
-(165, 4, 'varisNoktasi', ''),
-(166, 4, 'kisisayisi', ''),
-(167, 4, 'ara', ''),
-(168, 4, 'resimyok', ''),
-(169, 4, 'bizitakipedin', ''),
-(170, 4, 'maksimum', ''),
-(171, 4, 'bagaj', ''),
-(172, 4, 'kişi', ''),
-(173, 4, 'rezervasyonyap', ''),
-(174, 4, 'yolculukbilgileri', ''),
-(175, 4, 'mesafe', ''),
-(176, 4, 'tvs', ''),
-(177, 4, 'ekozellikler', 'asd'),
-(178, 4, 'odemebilgileri', 'asd'),
-(179, 4, 'aracucreti', ''),
-(180, 4, 'odenecektutar', 'asda'),
-(181, 4, 'sepettutari', ''),
-(182, 4, 'kdv', ''),
-(183, 4, 'toplamtutar', ''),
-(184, 4, 'odemeyap', ''),
-(185, 4, 'yolcubilgileri', ''),
-(186, 4, 'isimsoyisim', ''),
-(187, 4, 'tcno', ''),
-(188, 4, 'pasaportno', ''),
-(189, 4, 'heskodu', ''),
-(190, 4, 'telefon', ''),
-(191, 4, 'eposta', ''),
-(192, 4, 'dogumtarihi', ''),
-(193, 4, 'vatandasdegilim', ''),
-(194, 4, 'ilgilikisi', ''),
-(195, 4, 'odemebasarili', ''),
-(196, 4, 'islembasarili', ''),
-(197, 4, 'islembasarisiz', ''),
-(198, 4, 'kategoriler', ''),
-(199, 4, 'sonhaberler', 'sd'),
-(200, 4, 'ofis', ''),
-(201, 4, 'mesajgonder', ''),
-(202, 4, 'merhaba', 'Salutddd'),
-(203, 4, 'iletisimbilgileriniz', 'tesdaasdd'),
-(204, 4, 'ourmail', 'E-Mail-Addresseasd'),
-(205, 4, 'konu', 'teasdasd'),
-(206, 4, 'message', 'asdasd'),
-(207, 4, 'noreply', 'asd'),
-(208, 4, 'aracmodeli', 'asd'),
-(209, 4, 'hizmetdisi', 'asd'),
-(210, 4, 'aramahata', 'asd'),
-(211, 1, 'yolcubilgileri', 'Yolcu bilgileri'),
-(212, 2, 'yolcubilgileri', 'Passenger information'),
-(213, 3, 'yolcubilgileri', 'Fahrgastinformationen'),
-(214, 4, 'yolcubilgileri', 'Informations passagers'),
-(215, 1, 'siparisview', 'Siparişi görüntülemek için tıklayınız.'),
-(216, 2, 'siparisview', 'Click to view the order.'),
-(217, 3, 'siparisview', 'Klicken Sie hier, um die Bestellung anzuzeigen.'),
-(218, 4, 'siparisview', 'Cliquez pour voir la commande.'),
-(219, 1, 'googlecaptchaerror', 'Robot doğrulaması yapılamadı lütfen sayfayı yenileyiniz!'),
-(220, 2, 'googlecaptchaerror', 'Robot verification failed, please refresh the page!'),
-(221, 3, 'googlecaptchaerror', 'Roboterüberprüfung fehlgeschlagen, bitte aktualisieren Sie die Seite!'),
-(222, 4, 'googlecaptchaerror', 'La vérification du robot a échoué, veuillez actualiser la page !'),
-(223, 1, 'formgonderildi', 'Form Gönderildi'),
-(224, 2, 'formgonderildi', 'Form submitted'),
-(225, 3, 'formgonderildi', 'Formular gesendet'),
-(226, 4, 'formgonderildi', 'Formulaire soumis'),
-(227, 1, 'tekrardene', 'Tekrar deneyiniz'),
-(228, 2, 'tekrardene', 'Try again'),
-(229, 3, 'tekrardene', 'Versuch es noch einmal'),
-(230, 4, 'tekrardene', 'Essayer à nouveau');
+INSERT INTO `nictr_langs_meta` (`id`, `type`, `type_meta`) VALUES
+(2, 'merhaba', '{\"1\":\"Merhaba\",\"2\":\"Hi\"}'),
+(3, 'isimsoyisim', '{\"1\":\"Ad Soyad\",\"2\":\"Name Lastname\"}'),
+(4, 'eposta', '{\"1\":\"E-Posta\",\"2\":\"Email\"}'),
+(5, 'telefon', '{\"1\":\"Telefon\",\"2\":\"Phone\"}'),
+(6, 'mesaj', '{\"1\":\"Mesaj\",\"2\":\"Message\"}'),
+(7, 'noreply', '{\"1\":\"Bu e-posta tarafınıza otomatik olarak gönderilmiştir ve cevaplanamamaktadır.\",\"2\":\"This e-mail has been sent to you automatically and cannot be answered.\"}');
 
 -- --------------------------------------------------------
 
@@ -325,17 +73,15 @@ INSERT INTO `nictr_langs_meta` (`id`, `langID`, `type`, `type_meta`) VALUES
 -- Tablo için tablo yapısı `nictr_log`
 --
 
-DROP TABLE IF EXISTS `nictr_log`;
-CREATE TABLE IF NOT EXISTS `nictr_log` (
-  `ID` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nictr_log` (
+  `ID` int(11) NOT NULL,
   `Transaction` text NOT NULL,
-  `TransactionDate` timestamp NOT NULL,
+  `TransactionDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `userIP` text NOT NULL,
   `userOS` text NOT NULL,
   `userLang` text NOT NULL,
-  `userAgent` text NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=MyISAM AUTO_INCREMENT=92 DEFAULT CHARSET=utf8;
+  `userAgent` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Tablo döküm verisi `nictr_log`
@@ -432,7 +178,10 @@ INSERT INTO `nictr_log` (`ID`, `Transaction`, `TransactionDate`, `userIP`, `user
 (88, 'Giriş yapıldı! E-posta: ugur.isik@internettescil.com.tr', '2022-03-25 09:16:19', '::1', 'Windows 10', 'TR', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36'),
 (89, 'Hatalı şifreyle giriş tespiti. E-posta: ugur.isik@internettescil.com.tr', '2022-03-25 12:19:46', '::1', 'Windows 10', 'TR', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36'),
 (90, 'Giriş yapıldı! E-posta: ugur.isik@internettescil.com.tr', '2022-03-25 12:19:51', '::1', 'Windows 10', 'TR', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36'),
-(91, 'Giriş yapıldı! E-posta: ugur.isik@internettescil.com.tr', '2022-03-26 13:02:17', '::1', 'Windows 10', 'TR', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36');
+(91, 'Giriş yapıldı! E-posta: ugur.isik@internettescil.com.tr', '2022-03-26 13:02:17', '::1', 'Windows 10', 'TR', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36'),
+(92, 'Giriş yapıldı! E-posta: ugur.isik@internettescil.com.tr', '2022-05-31 07:15:10', '::1', 'Mac OS X', 'TR', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 OPR/86.0.4363.64'),
+(93, 'Giriş yapıldı! E-posta: ugur.isik@internettescil.com.tr', '2022-06-01 13:14:51', '::1', 'Mac OS X', 'TR', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 OPR/86.0.4363.64'),
+(94, 'Giriş yapıldı! E-posta: ugur.isik@internettescil.com.tr', '2022-06-14 07:04:17', '::1', 'Mac OS X', 'TR', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 OPR/86.0.4363.70');
 
 -- --------------------------------------------------------
 
@@ -440,14 +189,12 @@ INSERT INTO `nictr_log` (`ID`, `Transaction`, `TransactionDate`, `userIP`, `user
 -- Tablo için tablo yapısı `nictr_login_ban`
 --
 
-DROP TABLE IF EXISTS `nictr_login_ban`;
-CREATE TABLE IF NOT EXISTS `nictr_login_ban` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nictr_login_ban` (
+  `id` int(11) NOT NULL,
   `startDate` text COLLATE utf8_turkish_ci NOT NULL,
   `endDate` text COLLATE utf8_turkish_ci NOT NULL,
-  `ip` text COLLATE utf8_turkish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+  `ip` text COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `nictr_login_ban`
@@ -462,9 +209,8 @@ INSERT INTO `nictr_login_ban` (`id`, `startDate`, `endDate`, `ip`) VALUES
 -- Tablo için tablo yapısı `nictr_login_error`
 --
 
-DROP TABLE IF EXISTS `nictr_login_error`;
-CREATE TABLE IF NOT EXISTS `nictr_login_error` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nictr_login_error` (
+  `id` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
   `date` text COLLATE utf8_turkish_ci NOT NULL,
   `browser` text COLLATE utf8_turkish_ci NOT NULL,
@@ -472,9 +218,8 @@ CREATE TABLE IF NOT EXISTS `nictr_login_error` (
   `ip` text COLLATE utf8_turkish_ci NOT NULL,
   `userAgent` text COLLATE utf8_turkish_ci NOT NULL,
   `username` text COLLATE utf8_turkish_ci NOT NULL,
-  `password` text COLLATE utf8_turkish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+  `password` text COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `nictr_login_error`
@@ -510,17 +255,15 @@ INSERT INTO `nictr_login_error` (`id`, `userID`, `date`, `browser`, `os`, `ip`, 
 -- Tablo için tablo yapısı `nictr_login_info`
 --
 
-DROP TABLE IF EXISTS `nictr_login_info`;
-CREATE TABLE IF NOT EXISTS `nictr_login_info` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nictr_login_info` (
+  `id` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
   `date` text COLLATE utf8_turkish_ci NOT NULL,
   `browser` text COLLATE utf8_turkish_ci NOT NULL,
   `os` text COLLATE utf8_turkish_ci NOT NULL,
   `ip` text COLLATE utf8_turkish_ci NOT NULL,
-  `userAgent` text COLLATE utf8_turkish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=968 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+  `userAgent` text COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `nictr_login_info`
@@ -1243,7 +986,10 @@ INSERT INTO `nictr_login_info` (`id`, `userID`, `date`, `browser`, `os`, `ip`, `
 (964, 1, '25.03.2022', 'Chrome', 'Windows 10', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36'),
 (965, 1, '25.03.2022', 'Chrome', 'Windows 10', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36'),
 (966, 1, '25.03.2022', 'Chrome', 'Windows 10', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36'),
-(967, 1, '26.03.2022', 'Chrome', 'Windows 10', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36');
+(967, 1, '26.03.2022', 'Chrome', 'Windows 10', '::1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36'),
+(968, 1, '31.05.2022', 'Opera', 'Mac OS X', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 OPR/86.0.4363.64'),
+(969, 1, '01.06.2022', 'Opera', 'Mac OS X', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 OPR/86.0.4363.64'),
+(970, 1, '14.06.2022', 'Opera', 'Mac OS X', '::1', 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 OPR/86.0.4363.70');
 
 -- --------------------------------------------------------
 
@@ -1251,23 +997,21 @@ INSERT INTO `nictr_login_info` (`id`, `userID`, `date`, `browser`, `os`, `ip`, `
 -- Tablo için tablo yapısı `nictr_mailsetting`
 --
 
-DROP TABLE IF EXISTS `nictr_mailsetting`;
-CREATE TABLE IF NOT EXISTS `nictr_mailsetting` (
-  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nictr_mailsetting` (
+  `id` int(11) UNSIGNED NOT NULL,
   `host` text NOT NULL,
   `port` text NOT NULL,
   `encryption` text NOT NULL,
   `mail` text NOT NULL,
-  `pass` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `pass` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Tablo döküm verisi `nictr_mailsetting`
 --
 
 INSERT INTO `nictr_mailsetting` (`id`, `host`, `port`, `encryption`, `mail`, `pass`) VALUES
-(1, 'mail.internettescil.com.tr', '587', 'tls', 'ugur.isik@internettescil.com.tr', 'fx20qz60');
+(1, 'mail.internettescil.com.tr', '587', 'tls', 'ugur.isik@internettescil.com.tr', '#Ugur2021.');
 
 -- --------------------------------------------------------
 
@@ -1275,9 +1019,8 @@ INSERT INTO `nictr_mailsetting` (`id`, `host`, `port`, `encryption`, `mail`, `pa
 -- Tablo için tablo yapısı `nictr_mailtemplate`
 --
 
-DROP TABLE IF EXISTS `nictr_mailtemplate`;
-CREATE TABLE IF NOT EXISTS `nictr_mailtemplate` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nictr_mailtemplate` (
+  `id` int(11) NOT NULL,
   `type` text NOT NULL,
   `senderMail` text NOT NULL,
   `senderTitle` text NOT NULL,
@@ -1286,9 +1029,8 @@ CREATE TABLE IF NOT EXISTS `nictr_mailtemplate` (
   `sablonmesaji` text NOT NULL,
   `sablonbasligi` text NOT NULL,
   `adminMail` text NOT NULL,
-  `adminTitle` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `adminTitle` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Tablo döküm verisi `nictr_mailtemplate`
@@ -1301,29 +1043,49 @@ INSERT INTO `nictr_mailtemplate` (`id`, `type`, `senderMail`, `senderTitle`, `re
 -- --------------------------------------------------------
 
 --
+-- Tablo için tablo yapısı `nictr_mail_schema`
+--
+
+CREATE TABLE `nictr_mail_schema` (
+  `ID` int(11) NOT NULL,
+  `schema_` text DEFAULT NULL,
+  `receiverMail` text NOT NULL,
+  `adminMail` text NOT NULL,
+  `adminTitle` text NOT NULL,
+  `adminSchema` longtext NOT NULL,
+  `schemaTitle` text NOT NULL,
+  `schemaMessage` longtext NOT NULL,
+  `receiverSchema` longtext NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Tablo döküm verisi `nictr_mail_schema`
+--
+
+INSERT INTO `nictr_mail_schema` (`ID`, `schema_`, `receiverMail`, `adminMail`, `adminTitle`, `adminSchema`, `schemaTitle`, `schemaMessage`, `receiverSchema`) VALUES
+(2, 'contact', 'noreply@noreply.com', 'Admin E-Posta', 'Admin Başlık', '<table class=\"body\" style=\"width: 42.7502%; margin-left: auto; margin-right: auto;\" role=\"presentation\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr>\r\n<td style=\"text-align: center; width: 0.15949%;\">&nbsp;</td>\r\n<td class=\"container\" style=\"width: 98.2482%;\">\r\n<div class=\"content\">\r\n<table class=\"main\" style=\"width: 99.8349%;\" role=\"presentation\">\r\n<tbody>\r\n<tr>\r\n<td class=\"logo\" style=\"text-align: center; width: 100%;\"><a href=\"{{url}}\"><img src=\"https://freepikpsd.com/file/2019/10/example-logo-png-2-Transparent-Images-300x121.png\" width=\"211\" height=\"85\"></a></td>\r\n</tr>\r\n<tr>\r\n<td class=\"wrapper\" style=\"width: 100%;\">\r\n<table style=\"width: 100.158%;\" role=\"presentation\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 100%;\">\r\n<p>{{hi}},<strong> {{name}}</strong></p>\r\n<p style=\"text-align: center;\">{{sablonmesaji}}</p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td class=\"wrapper\" style=\"width: 100%;\">\r\n<table style=\"height: 257px; width: 101.137%;\" role=\"presentation\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr style=\"height: 34px;\">\r\n<td style=\"height: 34px; width: 100%;\">\r\n<p style=\"text-align: center;\">{{iletisimbilgileriniz}}</p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 34px;\">\r\n<td style=\"height: 34px; width: 100%;\">\r\n<p>{{isimsoyisim}}: <strong>{{name}}</strong></p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 34px;\">\r\n<td style=\"height: 34px; width: 100%;\">\r\n<p>{{ouremail}}: <strong>{{postemail}}</strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 100%;\">\r\n<p>{{ourphone}}: <strong>{{postphone}}</strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td style=\"width: 100%;\">\r\n<p>{{firmaniz}}: <strong>{{postfirmaadi}}</strong></p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 34px;\">\r\n<td style=\"height: 34px; width: 100%;\">\r\n<p>{{konu}}: <strong>{{postsubject}}</strong></p>\r\n</td>\r\n</tr>\r\n<tr style=\"height: 34px;\">\r\n<td style=\"height: 34px; width: 100%;\">\r\n<p>{{mesajınız}}: <strong>{{postmessage}}</strong></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<div class=\"footer\">\r\n<table style=\"width: 98.4991%;\" role=\"presentation\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n<tbody>\r\n<tr>\r\n<td style=\"width: 100%; text-align: center;\"><a href=\"#\"><img src=\"https://bikare.work/works/2020/01-alsero/php/tur/bwp-content/uploads/mail/facebook.png\" alt=\"\"></a> <a href=\"#\"><img src=\"https://bikare.work/works/2020/01-alsero/php/tur/bwp-content/uploads/mail/instagram.png\" alt=\"\"></a> <a href=\"#\"><img src=\"https://bikare.work/works/2020/01-alsero/php/tur/bwp-content/uploads/mail/youtube.png\" alt=\"\"></a> <a href=\"#\"><img src=\"https://bikare.work/works/2020/01-alsero/php/tur/bwp-content/uploads/mail/twitter.png\" alt=\"\"></a></td>\r\n</tr>\r\n<tr>\r\n<td class=\"content-block powered-by\" style=\"width: 100%; text-align: center;\">{{noreply}}</td>\r\n</tr>\r\n<tr>\r\n<td class=\"content-block powered-by\" style=\"width: 100%; text-align: center;\"><a href=\"{{url}}\">{{compName}}</a></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n</td>\r\n<td style=\"width: 1.59236%;\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>', '{\"1\":\"TR ALICI\",\"2\":\"EN ALICI\"}', '{\"1\":\"TR ALICI MESAJ\",\"2\":\"EN ALICI MESAJ\"}', '{\"1\":\"<table class=\\\"body\\\" style=\\\"width: 42.7432%; margin-left: auto; margin-right: auto;\\\" role=\\\"presentation\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\">\\r\\n<tbody>\\r\\n<tr>\\r\\n<td style=\\\"text-align: center; width: 0.186916%;\\\">&nbsp;<\\/td>\\r\\n<td class=\\\"container\\\" style=\\\"width: 99.6262%;\\\">\\r\\n<div class=\\\"content\\\">\\r\\n<table class=\\\"main\\\" role=\\\"presentation\\\">\\r\\n<tbody>\\r\\n<tr>\\r\\n<td class=\\\"logo\\\" style=\\\"text-align: center;\\\"><a href=\\\"{{url}}\\\"><img src=\\\"https:\\/\\/freepikpsd.com\\/file\\/2019\\/10\\/example-logo-png-2-Transparent-Images-300x121.png\\\" width=\\\"211\\\" height=\\\"85\\\"><\\/a><\\/td>\\r\\n<\\/tr>\\r\\n<tr>\\r\\n<td class=\\\"wrapper\\\">\\r\\n<table style=\\\"width: 100.158%;\\\" role=\\\"presentation\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\">\\r\\n<tbody>\\r\\n<tr>\\r\\n<td style=\\\"width: 100%;\\\">\\r\\n<p>{{hi}},<strong> {{name}}<\\/strong><\\/p>\\r\\n<p style=\\\"text-align: center;\\\">{{sablonmesaji}}<\\/p>\\r\\n<\\/td>\\r\\n<\\/tr>\\r\\n<\\/tbody>\\r\\n<\\/table>\\r\\n<\\/td>\\r\\n<\\/tr>\\r\\n<tr>\\r\\n<td class=\\\"wrapper\\\">\\r\\n<table style=\\\"height: 257px;\\\" role=\\\"presentation\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\">\\r\\n<tbody>\\r\\n<tr style=\\\"height: 34px;\\\">\\r\\n<td style=\\\"height: 34px; width: 503.219px;\\\">\\r\\n<p style=\\\"text-align: center;\\\">{{iletisimbilgileriniz}}<\\/p>\\r\\n<\\/td>\\r\\n<\\/tr>\\r\\n<tr style=\\\"height: 34px;\\\">\\r\\n<td style=\\\"height: 34px; width: 503.219px;\\\">\\r\\n<p>{{isimsoyisim}}: <strong>{{name}}<\\/strong><\\/p>\\r\\n<\\/td>\\r\\n<\\/tr>\\r\\n<tr style=\\\"height: 34px;\\\">\\r\\n<td style=\\\"height: 34px; width: 503.219px;\\\">\\r\\n<p>{{ouremail}}: <strong>{{postemail}}<\\/strong><\\/p>\\r\\n<\\/td>\\r\\n<\\/tr>\\r\\n<tr>\\r\\n<td style=\\\"width: 503.219px;\\\">\\r\\n<p>{{ourphone}}: <strong>{{postphone}}<\\/strong><\\/p>\\r\\n<\\/td>\\r\\n<\\/tr>\\r\\n<tr>\\r\\n<td style=\\\"width: 503.219px;\\\">\\r\\n<p>{{firmaniz}}: <strong>{{postfirmaadi}}<\\/strong><\\/p>\\r\\n<\\/td>\\r\\n<\\/tr>\\r\\n<tr style=\\\"height: 34px;\\\">\\r\\n<td style=\\\"height: 34px; width: 503.219px;\\\">\\r\\n<p>{{konu}}: <strong>{{postsubject}}<\\/strong><\\/p>\\r\\n<\\/td>\\r\\n<\\/tr>\\r\\n<tr style=\\\"height: 34px;\\\">\\r\\n<td style=\\\"height: 34px; width: 503.219px;\\\">\\r\\n<p>{{mesajınız}}: <strong>{{postmessage}}<\\/strong><\\/p>\\r\\n<\\/td>\\r\\n<\\/tr>\\r\\n<\\/tbody>\\r\\n<\\/table>\\r\\n<\\/td>\\r\\n<\\/tr>\\r\\n<\\/tbody>\\r\\n<\\/table>\\r\\n<div class=\\\"footer\\\">\\r\\n<table style=\\\"width: 98.4991%;\\\" role=\\\"presentation\\\" border=\\\"0\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\">\\r\\n<tbody>\\r\\n<tr>\\r\\n<td style=\\\"width: 100%; text-align: center;\\\"><a href=\\\"#\\\"><img src=\\\"https:\\/\\/bikare.work\\/works\\/2020\\/01-alsero\\/php\\/tur\\/bwp-content\\/uploads\\/mail\\/facebook.png\\\" alt=\\\"\\\"><\\/a> <a href=\\\"#\\\"><img src=\\\"https:\\/\\/bikare.work\\/works\\/2020\\/01-alsero\\/php\\/tur\\/bwp-content\\/uploads\\/mail\\/instagram.png\\\" alt=\\\"\\\"><\\/a> <a href=\\\"#\\\"><img src=\\\"https:\\/\\/bikare.work\\/works\\/2020\\/01-alsero\\/php\\/tur\\/bwp-content\\/uploads\\/mail\\/youtube.png\\\" alt=\\\"\\\"><\\/a> <a href=\\\"#\\\"><img src=\\\"https:\\/\\/bikare.work\\/works\\/2020\\/01-alsero\\/php\\/tur\\/bwp-content\\/uploads\\/mail\\/twitter.png\\\" alt=\\\"\\\"><\\/a><\\/td>\\r\\n<\\/tr>\\r\\n<tr>\\r\\n<td class=\\\"content-block powered-by\\\" style=\\\"width: 100%; text-align: center;\\\">{{noreply}}<\\/td>\\r\\n<\\/tr>\\r\\n<tr>\\r\\n<td class=\\\"content-block powered-by\\\" style=\\\"width: 100%; text-align: center;\\\"><a href=\\\"{{url}}\\\">{{compName}}<\\/a><\\/td>\\r\\n<\\/tr>\\r\\n<\\/tbody>\\r\\n<\\/table>\\r\\n<\\/div>\\r\\n<\\/div>\\r\\n<\\/td>\\r\\n<td style=\\\"width: 0.186916%;\\\">&nbsp;<\\/td>\\r\\n<\\/tr>\\r\\n<\\/tbody>\\r\\n<\\/table>\",\"2\":\"\"}');
+
+-- --------------------------------------------------------
+
+--
 -- Tablo için tablo yapısı `nictr_menu`
 --
 
-DROP TABLE IF EXISTS `nictr_menu`;
-CREATE TABLE IF NOT EXISTS `nictr_menu` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nictr_menu` (
+  `id` int(11) NOT NULL,
   `menu_langID` int(11) NOT NULL,
   `menu_title` text COLLATE utf8_turkish_ci NOT NULL,
   `menu_position` int(11) NOT NULL,
   `menu_author` int(11) NOT NULL,
-  `menu_json` longtext COLLATE utf8_turkish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+  `menu_json` longtext COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `nictr_menu`
 --
 
 INSERT INTO `nictr_menu` (`id`, `menu_langID`, `menu_title`, `menu_position`, `menu_author`, `menu_json`) VALUES
-(1, 1, 'Türkçe menü', 1, 1, '[{\"text\":\"Anasayfa\",\"href\":\"anasayfa\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Anasayfa\",\"type\":\"sayfa\"},{\"text\":\"Kurumsal\",\"href\":\"kurumsal\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Kurumsal\",\"type\":\"kategori\",\"children\":[{\"text\":\"Hakkımızda\",\"href\":\"hakkimizda\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Hakkımızda\",\"type\":\"yazi\"},{\"text\":\"Misyonumuz\",\"href\":\"misyonumuz\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Misyonumuz\",\"type\":\"yazi\"},{\"text\":\"Viyonumuz\",\"href\":\"viyonumuz\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Viyonumuz\",\"type\":\"yazi\"}]},{\"text\":\"Hizmetlerimiz\",\"href\":\"hizmetlerimiz\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Hizmetlerimiz\",\"type\":\"kategori\"},{\"text\":\"İletişim\",\"href\":\"iletisim\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"İletişim\",\"type\":\"sayfa\"}]'),
-(2, 2, 'English Menü', 1, 1, '[{\"text\":\"Home\",\"href\":\"home\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Home\",\"type\":\"sayfa\"},{\"text\":\"Corporate\",\"href\":\"corporate\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Corporate\",\"type\":\"kategori\",\"children\":[{\"text\":\"About US\",\"href\":\"about-us\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"About US\",\"type\":\"yazi\"},{\"text\":\"Our Mission\",\"href\":\"our-mission\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Our Mission\",\"type\":\"yazi\"},{\"text\":\"Our vision\",\"href\":\"our-vision\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"our vision\",\"type\":\"yazi\"}]},{\"text\":\"Our Services\",\"href\":\"our-services\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Our Services\",\"type\":\"kategori\"},{\"text\":\"Contact\",\"href\":\"contact\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Contact\",\"type\":\"sayfa\"}]'),
-(3, 1, 'türkçe-AltMenu', 2, 1, '[{\"text\":\"Hakkımızda\",\"href\":\"#\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Hakkımızda\",\"type\":\"url\",\"children\":[{\"text\":\"Anasayfa\",\"href\":\"anasayfa\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Anasayfa\",\"type\":\"sayfa\"},{\"text\":\"Kurumsal\",\"href\":\"kurumsal\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Kurumsal\",\"type\":\"kategori\"},{\"text\":\"İletişim\",\"href\":\"iletisim\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"İletişim\",\"type\":\"sayfa\"}]}]'),
-(4, 3, 'de-topmenu', 1, 1, '[{\"text\":\"Startseite\",\"href\":\"startseite\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Startseite\",\"type\":\"sayfa\"},{\"text\":\"Unsere Dienstleistungen\",\"href\":\"unsere-dienstleistungen\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Unsere Dienstleistungen\",\"type\":\"kategori\"},{\"text\":\"Kontakt\",\"href\":\"kontakt\",\"icon\":\"\",\"target\":\"_self\",\"title\":\"Kontakt\",\"type\":\"sayfa\"}]');
+(11, 1, 'TR_HEADER_CUPSOFT', 1, 1, '[{\"text\":\"Üretim\",\"href\":\"javascript:;\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\",\"children\":[{\"text\":\"Üretim Verisi\",\"href\":\"uretimverisi\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\"},{\"text\":\"Reçeteler\",\"href\":\"receteler\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\"},{\"text\":\"Yedek\",\"href\":\"yedek\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\"}]},{\"text\":\"Stok Yönetimi\",\"href\":\"javascript:;\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\",\"children\":[{\"text\":\"Satın Almalar\",\"href\":\"satinalmalar\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\"},{\"text\":\"Fire Girişi\",\"href\":\"firegirisi\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\"}]},{\"text\":\"Raporlar\",\"href\":\"javascript:;\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\",\"children\":[{\"text\":\"Stok İşletme Değeri\",\"href\":\"stokisletmedegeri\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\"},{\"text\":\"Koli Maliyet Hesabı\",\"href\":\"kolimaliyethesabi\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\"},{\"text\":\"Sabit Giderler\",\"href\":\"sabitgiderler\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\"}]},{\"text\":\"Ayarlar\",\"href\":\"javascript:;\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\",\"children\":[{\"text\":\"Üretim Girdisi Tanımlama\",\"href\":\"uretimgirdisitanimlama\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\"},{\"text\":\"Parametreler\",\"href\":\"parametreler\",\"icon\":\"empty\",\"target\":\"_self\",\"title\":\"\",\"type\":\"url\"}]}]');
 
 -- --------------------------------------------------------
 
@@ -1331,34 +1093,19 @@ INSERT INTO `nictr_menu` (`id`, `menu_langID`, `menu_title`, `menu_position`, `m
 -- Tablo için tablo yapısı `nictr_postcat`
 --
 
-DROP TABLE IF EXISTS `nictr_postcat`;
-CREATE TABLE IF NOT EXISTS `nictr_postcat` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `catID` int(11) NOT NULL,
-  `langID` int(11) NOT NULL,
-  `title` text COLLATE utf8_turkish_ci NOT NULL,
-  `url` text COLLATE utf8_turkish_ci NOT NULL,
-  `img` text COLLATE utf8_turkish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+CREATE TABLE `nictr_postcat` (
+  `id` int(11) NOT NULL,
+  `title` text COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `nictr_postcat`
 --
 
-INSERT INTO `nictr_postcat` (`id`, `catID`, `langID`, `title`, `url`, `img`) VALUES
-(1, 0, 1, 'Kurumsal', 'kurumsal', ''),
-(2, 0, 2, 'Corporate', 'corporate', ''),
-(5, 0, 1, 'Blog', 'blog', ''),
-(6, 0, 2, 'Blog', 'blog', ''),
-(7, 5, 1, 'Popüler Transfer Noktaları', 'populer-transfer-noktalari', ''),
-(8, 6, 2, 'Popular Transfer Destinations', 'popular-transfer-destinations', ''),
-(9, 5, 1, 'Turizm', 'turizm', ''),
-(10, 0, 3, 'Blog', 'blog', ''),
-(11, 10, 3, 'Beliebte Transferziele', 'beliebte-transferziele', ''),
-(12, 0, 1, 'Hizmetlerimiz', 'hizmetlerimiz', ''),
-(13, 0, 2, 'Our Services', 'our-services', ''),
-(14, 0, 3, 'Unsere Dienstleistungen', 'unsere-dienstleistungen', '');
+INSERT INTO `nictr_postcat` (`id`, `title`) VALUES
+(11, '{\"blogcat_baslik_\":{\"1\":\" General\",\"7\":\" Genel\"}}'),
+(12, '{\"blogcat_baslik_\":{\"1\":\"News\",\"7\":\"Haberler\"}}'),
+(17, '{\"blogcat_baslik_\":{\"1\":\"Food\",\"7\":\"Yemek\"}}');
 
 -- --------------------------------------------------------
 
@@ -1366,81 +1113,28 @@ INSERT INTO `nictr_postcat` (`id`, `catID`, `langID`, `title`, `url`, `img`) VAL
 -- Tablo için tablo yapısı `nictr_posts`
 --
 
-DROP TABLE IF EXISTS `nictr_posts`;
-CREATE TABLE IF NOT EXISTS `nictr_posts` (
-  `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `post_author` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+CREATE TABLE `nictr_posts` (
+  `ID` bigint(20) UNSIGNED NOT NULL,
+  `post_cover` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `post_author` bigint(20) UNSIGNED NOT NULL DEFAULT 0,
   `post_date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_content` longtext COLLATE utf8_turkish_ci NOT NULL,
   `post_title` text COLLATE utf8_turkish_ci NOT NULL,
-  `post_status` int(11) NOT NULL DEFAULT '1',
-  `post_langID` int(11) NOT NULL,
-  `post_password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
+  `post_status` int(11) NOT NULL DEFAULT 1,
   `post_modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `post_modified_gmt` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
   `post_slug` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+  `post_summary` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `post_keywords` text COLLATE utf8_turkish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `nictr_posts`
 --
 
-INSERT INTO `nictr_posts` (`ID`, `post_author`, `post_date`, `post_content`, `post_title`, `post_status`, `post_langID`, `post_password`, `post_modified`, `post_modified_gmt`, `post_slug`) VALUES
-(1, 1, '2021-11-22 14:09:02', '', 'Misyonumuz', 0, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'misyonumuz'),
-(2, 1, '2021-11-22 14:09:11', '', 'Viyonumuz', 2, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'viyonumuz'),
-(3, 6, '2021-12-23 13:17:21', '<p>Hakkımızda test i&ccedil;erik</p>', 'Hakkımızda', 2, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'hakkimizda'),
-(4, 1, '2021-11-22 14:22:12', '', 'About US', 2, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'about-us'),
-(5, 1, '2021-11-22 14:23:10', '', 'our vision', 2, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'our-vision'),
-(6, 1, '2021-11-22 14:23:20', '', 'Our Mission', 2, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'our-mission'),
-(7, 6, '2021-12-06 10:07:11', '', 'İstanbul Havalimanı', 2, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'istanbul-havalimani'),
-(8, 6, '2021-12-06 10:03:53', '<p>Adnan Menderes Havalimanı, T&uuml;rkiye\'nin İzmir iline hizmet veren uluslararası havalimanıdır. Şehir merkezinin 14 km g&uuml;neyinde, Gaziemir ve Menderes il&ccedil;eleri sınırları i&ccedil;indedir. Adını 1950-1960 yılları arasında başbakanlık yapan Adnan Menderes\'ten almaktadır.</p>', 'Adnan Menderes Havalimanı', 2, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'adnan-menderes-havalimani'),
-(9, 1, '2021-12-03 10:42:50', '', 'Amsterdam', 2, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'amsterdam'),
-(10, 1, '2021-12-03 10:42:51', '', 'Prag', 2, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'prag'),
-(11, 1, '2021-12-03 10:42:52', '<p><span style=\"font-size: 16px;\">Azerbaycan, 11 farklı iklim b&ouml;lgesinden 9\'una ev sahipliği yapması sayesinde, plaj ve yemyeşil ormanlardan karlı dağlara kadar &ccedil;eşitli manzaraları kendinde barındırıyor.</span><br /><br /><span style=\"font-size: 16px;\">Azerbaycan, 11 farklı iklim b&ouml;lgesinden 9\'una ev sahipliği yapması sayesinde,<a class=\"text-18\" title=\"plaj\" href=\"https://www.turizmnews.com/haber/plaj/\">&nbsp;plaj&nbsp;</a>ve yemyeşil ormanlardan karlı dağlara kadar &ccedil;eşitli manzaraları kendinde barındırıyor. Kafkas dağlarının ortasında,<a class=\"text-18\" title=\"kayak\" href=\"https://www.turizmnews.com/haber/kayak/\">&nbsp;kayak&nbsp;</a>tutkunları i&ccedil;in en tatmin edici pistlerden donmuş şelalelere ve yılbaşı fuarına kadar &ccedil;eşitli deneyimler sunan Azerbaycan, her mevsim olduğu gibi,kış tatilinde de unutulmaz anılar vad ediyor.</span><br /><br /><span style=\"font-size: 16px;\">Kayak imkanları ile başlayacak olursak, Azerbaycan&rsquo;da 3 b&uuml;y&uuml;k, tam teşekk&uuml;ll&uuml; dağ<a class=\"text-18\" title=\"tatil\" href=\"https://www.turizmnews.com/haber/tatil/\">&nbsp;tatil&nbsp;</a>k&ouml;y&uuml; bulunuyor. Bunlardan birincisi &uuml;lkenin kuzeyinde yer alan Gusar kentinde faaliyet g&ouml;steren Şahdağ tatil merkezi. Dağların arasında huzurlu bir konuma sahip olan merkez&rsquo;de kayak ve diğer kış aktivitelerinin yanı sıra spa ve sağlıklı yaşam merkezi, havuz ve hamam hizmetleri sunan birinci sınıf hotel ve restoranlar &ccedil;alışmakta. Geleneksel kayak hizmetlerine ilaveten, bu yılın en heyecan verici haberi ise &ccedil;ox yakında a&ccedil;ılışı yapılacak Şahdağ hız treninin kullanıma sunulması olacak.<a class=\"text-18\" title=\"Azerbaycan\" href=\"https://www.turizmnews.com/haber/Azerbaycan/\">&nbsp;Azerbaycan&nbsp;</a>ve t&uuml;m Kafkasya b&ouml;lgesinde bir ilk olacak 2590 metre uzunlukta hız treni, 920 metre kalkış şeridine, 1670 metre iniş şeridine ve 9 keskin d&ouml;ng&uuml;ye sahip. 2 kişilik kızaklarının 10 saniye aralıklarla işlev</span><br /><span style=\"font-size: 16px;\">g&ouml;receği hız treni, kesinlikle ekstrem aktivite meraklılarının uğrak yeri olacaktır.</span><br /><br /><span style=\"font-size: 16px;\"><img class=\" lazyloaded\" src=\"https://www.turizmnews.com/images/files/2021/12/61a71bce0c6ec.jpg\" alt=\"\" data-src=\"https://www.turizmnews.com/images/files/2021/12/61a71bce0c6ec.jpg\" /></span><br /><span style=\"font-size: 16px;\">Şahdağ tatil merkezi</span><br /><br /><span style=\"font-size: 16px;\">Kafkas Dağlarının b&uuml;y&uuml;leyici manzarası ile &ccedil;evrelenmiş bir diğer meşhur dağ tatil merkezi Gebele kentinde yer alan Tufandağ. Aynı anda 3.000 kişiyi ağırlayabilen kompleks, restoranlar, kafeler, barlar ve dinlenme alanlarının yanı sıra &ccedil;ocuklar ve yetişkinler i&ccedil;in kayak okulu ile iyi bir donanıma sahiptir. 15 kilometrelik m&uuml;kemmel bakımlı yama&ccedil;lar, m&uuml;kemmel bir snowboard ve kayak deneyimi sunmakta. Sadece teleferikle ulaşılabilen ve Azerbaycan\'ın en y&uuml;ksek noktasında yer alan &ldquo;Chalet Steak and Wine House&rdquo; restoranı ise karlı manzara ve yerel şarap eşliğinde lezzetli yemeklerin tadını &ccedil;ıkararak g&uuml;n&uuml; sonlandırmak i&ccedil;in m&uuml;kemmel bir se&ccedil;im olacaktır.</span><br /><span style=\"font-size: 16px;\"><img class=\" lazyloaded\" src=\"https://www.turizmnews.com/images/files/2021/12/61a71c108b185.jpg\" alt=\"\" data-src=\"https://www.turizmnews.com/images/files/2021/12/61a71c108b185.jpg\" /></span><br /><span style=\"font-size: 16px;\">Tufandağ tatil merkezi</span><br /><br /><span style=\"font-size: 16px;\">Azerbaycan&rsquo;ın &uuml;&ccedil;&uuml;nc&uuml; ve kış tatili i&ccedil;in en yeni merkezi Nah&ccedil;ıvan&rsquo;dan bir saatlik s&uuml;r&uuml;ş mesafesinde yer alan Akbulak k&ouml;y&uuml;nde hizmet veriyor. Bu b&ouml;lge uzun zamandır tarım turizmi ve doğada dinlenmek i&ccedil;in pop&uuml;ler olmuş, temiz havası ve berrak havasıyla turistleri cezbetmiştir. Ancak kayak merkezi, artık yıl boyunca harika seyahat fırsatları teklif edilmesini sağlıyor. Merkezde sadece kayak, snowboard veya kızakla gezmekle kalmayıp, K&uuml;&ccedil;&uuml;k Kafkas Dağları manzarasının keyfini &ccedil;ıkarabilir ve lezzetli y&ouml;resel yemeklerin tadına bakabilirsiniz. Merkez, 38 odalı bir otel de dahil olmak &uuml;zere turistlere hitap etmek i&ccedil;in gerekli her şeye sahiptir.</span><br /><span style=\"font-size: 16px;\"><img class=\" lazyloaded\" src=\"https://www.turizmnews.com/images/files/2021/12/61a71c6c744e0.jpg\" alt=\"\" data-src=\"https://www.turizmnews.com/images/files/2021/12/61a71c6c744e0.jpg\" /></span><br /><span style=\"font-size: 16px;\">Akbulak</span><br /><br /><span style=\"font-size: 16px;\">Dağ tatil merkezlerinde kayak, snowboard, zip line ve diğer kış aktivitelerinin tadını &ccedil;ıkarmakla beraber Azerbaycanın y&uuml;zde 60&rsquo;ından fazlasını oluşturan dağlarda kendine &ouml;zg&uuml; atmosferi ile se&ccedil;ilen k&ouml;yler ve buz tutmuş şelaler kış aylarında y&uuml;r&uuml;y&uuml;ş i&ccedil;in benzersiz deneyimler sunmakta. Bu k&ouml;ylerden biri Şahdağ merkezinin yakınlarındaki, kış aylarında buzullara d&ouml;n&uuml;şen ve buz tırmanışı i&ccedil;in pop&uuml;ler bir yer haline gelen katlı şelaleleriyle &uuml;nl&uuml; Laza k&ouml;y&uuml;.</span><br /><span style=\"font-size: 16px;\"><img class=\" lazyloaded\" src=\"https://www.turizmnews.com/images/files/2021/12/61a71d120a6ce.jpg\" alt=\"\" data-src=\"https://www.turizmnews.com/images/files/2021/12/61a71d120a6ce.jpg\" /></span><br /><span style=\"font-size: 16px;\">Laza k&ouml;y&uuml;</span><br /><br /><br /><span style=\"font-size: 16px;\">Bir diğer benzer deneyim sunan k&ouml;y, Guba kentinde, deniz seviyesinden 2200 metre y&uuml;kseklikte bulunan Grız k&ouml;y&uuml;. Aynı şekilde kış aylarında donan şelalesi ile &uuml;nl&uuml; olan k&ouml;y doğa hayranları i&ccedil;in m&uuml;kemmel bir manzara yaratıyor.</span><br /><span style=\"font-size: 16px;\"><img class=\" lazyloaded\" src=\"https://www.turizmnews.com/images/files/2021/12/61a71d3b0de93.jpg\" alt=\"\" data-src=\"https://www.turizmnews.com/images/files/2021/12/61a71d3b0de93.jpg\" /></span><br /><span style=\"font-size: 16px;\">Grız şelalesi</span><br /><br /><span style=\"font-size: 16px;\">Azerbaycan&rsquo;ın kış masalını hatırlatan tatil deneyimi yalnız dağ tatil merkezleri ve ya uzak k&ouml;ylere y&uuml;r&uuml;y&uuml;ş ile kısıtlanmıyor. Başkent Bak&uuml;&rsquo;de her yıl Fevvareler Meydanı&rsquo;nda d&uuml;zenlenen ve Aralık ayından itibaren Ocak ayının ortalarına kadar devam eden &ldquo;Soğuk Eller, Sıcak Kalp&rdquo; adlı fuar da şehiri canlandıran etkinliklerden biri. Şenlikli bir şekilde dekore edilmiş meydanda, &ccedil;eşitli hediyelik eşyaların satışa sunulduğu masalsı d&uuml;kanlar bulabilir, konserlere ve eğlenceli yarışmalara denk gelebilir, &ccedil;ay veya kahve, geleneksel tatlı ve yemeklerin tadına bakabilirsiniz.</span><br /><span style=\"font-size: 16px;\"><img class=\" lazyloaded\" src=\"https://www.turizmnews.com/images/files/2021/12/61a71d60d045a.jpg\" alt=\"\" data-src=\"https://www.turizmnews.com/images/files/2021/12/61a71d60d045a.jpg\" /></span><br /><span style=\"font-size: 16px;\">Bak&uuml;</span><br /><br /><span style=\"font-size: 16px;\">Uzun yıllardır d&uuml;zenlenen bu fuar sadece &ccedil;ocuklar ve yetişkinler i&ccedil;in eğlence ama&ccedil;lı değil, aynı zamanda b&ouml;lgenin en b&uuml;y&uuml;k sosyal projelerinden biri. Ş&ouml;yle ki, fuarda kazanılan t&uuml;m gelirler sağlık yardımına ihtiyacı olan &ccedil;ocukların tedavisine ayrılıyor.</span><br /><span style=\"font-size: 16px;\">Sonu&ccedil; olarak, adrenalin dolu aktivitilerin olduğu birinci sınıf tatil merkezleri, yerel insanların sıcak misafirperverliğini hiss edeceğiniz ve doğal mucizelere tanık olacağınız kış k&ouml;ylernin yanı sıra eğlence dolu etkinliklerin olduğu Bak&uuml;&rsquo;de harika bir kış deneyimi yaşayabilir ve kendinizi peri masalında hissedebilirsiniz.</span></p>', 'Azerbaycan\'da Peri Masalını Hatırlatan Kış Mevsimi', 2, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'azerbaycan-da-peri-masalini-hatirlatan-kis-mevsimi'),
-(12, 1, '2021-12-03 10:42:52', '<p>Rusya&rsquo;da yıl sonuna kadar y&uuml;r&uuml;rl&uuml;ğe girecek &nbsp;yeni<a class=\"text-18\" title=\"yasa\" href=\"https://www.turizmnews.com/haber/yasa/\">&nbsp;yasa&nbsp;</a>ve uygulamalardan birisi, yabancılar i&ccedil;in b&uuml;y&uuml;k &ouml;nem taşıyor: Rusya&rsquo;da &uuml;&ccedil; aydan fazla kalacak yabancı &uuml;lke &nbsp;vatandaşları i&ccedil;in parmak izi,<a class=\"text-18\" title=\"biyometrik\" href=\"https://www.turizmnews.com/haber/biyometrik/\">&nbsp;biyometrik&nbsp;</a>fotoğraf ve sağlık raporu zorunluluğu getirildi.<br />&nbsp;<br />Bu uygulama 29 Aralık tarihinden itibaren y&uuml;r&uuml;rl&uuml;ğe girecek.<br />&nbsp;<br />Yani uzun s&uuml;reli ikamet edecekler artık başvuru yapmadan &ouml;nce devlet hastanelerinden uyuşturucu bağımlısı ve HİV taşıyıcısı olmadığına, toplum i&ccedil;in tehdit yaratan<a class=\"text-18\" title=\"bulaşıcı\" href=\"https://www.turizmnews.com/haber/bula%C5%9F%C4%B1c%C4%B1/\">&nbsp;bulaşıcı&nbsp;</a>hastalıkları bulunmadığına dair rapor almaları gerekecek.<br />&nbsp;<br />Rusya&rsquo;ya &ccedil;alışmak i&ccedil;in gelen yabancıların<a class=\"text-18\" title=\"giriş\" href=\"https://www.turizmnews.com/haber/giri%C5%9F/\">&nbsp;giriş&nbsp;</a>tarihinden itibaren 30 g&uuml;n, diğer yabancıların ise 90 g&uuml;n i&ccedil;inde bu belgeleri tamamlamaları istenecek. (T&uuml;rkRus)</p>', 'Yabancılara 29 Aralık uyarısı', 2, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'yabancilara-29-aralik-uyarisi'),
-(13, 1, '2021-12-03 10:42:53', '<p>İSTANBUL (AA) - T&uuml;rk Hava Yolları (THY), 22-28 Kasım arasında g&uuml;nl&uuml;k 1.019 sefer yaparak Avrupa\'da en &ccedil;ok<a class=\"text-18\" title=\"u&ccedil;uş\" href=\"https://www.turizmnews.com/haber/u%C3%A7u%C5%9F/\">&nbsp;u&ccedil;uş&nbsp;</a>yapan 2.<a class=\"text-18\" title=\"hava yolu\" href=\"https://www.turizmnews.com/haber/hava%20yolu/\">&nbsp;hava yolu&nbsp;</a>şirketi oldu.<br /><br />Avrupa Hava Seyr&uuml;sefer Emniyeti Teşkilatının (EUROCONTROL), 22-28 Kasım tarihleri arasındaki hava trafiği verilerine g&ouml;re, haftada 140 bin 372 u&ccedil;uş, g&uuml;nde 20 bin 053 sefer ger&ccedil;ekleştirildi.<br /><br />Yeni tip<a class=\"text-18\" title=\"koronavir&uuml;s\" href=\"https://www.turizmnews.com/haber/koronavir%C3%BCs/\">&nbsp;koronavir&uuml;s&nbsp;</a>&ouml;nlemleri kapsamındaki kısıtlamaların b&uuml;y&uuml;k oranda kalkmasıyla İrlandalı Ryanair Group, g&uuml;nl&uuml;k 2 bin 103 u&ccedil;uşla Avrupa\'nın en &ccedil;ok u&ccedil;an hava yolu olarak kayıtlara ge&ccedil;ti.<br /><br />THY, g&uuml;nl&uuml;k bin 19 u&ccedil;uşla 2. sırada yer alırken, Lufthansa Havayolları 934 seferle 3. sırayı aldı.<br /><br /><strong>Pegasus Hava Yolları da 401 u&ccedil;uşla listede 10. sırada yer aldı</strong><br /><br />Raporda, u&ccedil;uş seferlerinin salgın &ouml;ncesi, 2019 seviyesinin yaklaşık y&uuml;zde 76,3 oranına yaklaştığı ve son 1 haftalık periyotta<a class=\"text-18\" title=\"tatil\" href=\"https://www.turizmnews.com/haber/tatil/\">&nbsp;tatil&nbsp;</a>u&ccedil;uşlarının azalması nedeniyle u&ccedil;uşların &ouml;nceki haftaya g&ouml;re y&uuml;zde 2,8 oranında gerilediği kaydedildi.</p>', 'THY, Avrupa\'da ikinci 2. sırada yer aldı', 2, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'thy-avrupa-da-ikinci-2-sirada-yer-aldi'),
-(14, 1, '2021-12-03 10:42:53', '<p>&nbsp;95&rsquo;e yakın &uuml;lkede bulunan yaklaşık 9 bin oteliyle d&uuml;nyanın franchise veren en b&uuml;y&uuml;k şirketi<a class=\"text-18\" title=\"Wyndham\" href=\"https://www.turizmnews.com/haber/Wyndham/\">&nbsp;Wyndham&nbsp;</a>Hotels &amp; Resorts, k&uuml;lt&uuml;rel zenginlikleriyle ziyaret&ccedil;ileri kendine &ccedil;eken Jaipur, Varanasi,<a class=\"text-18\" title=\"Mohali\" href=\"https://www.turizmnews.com/haber/Mohali/\">&nbsp;Mohali&nbsp;</a>ve Udaipur&rsquo;da Ramada by Wyndham, Howard Johnson by Wyndham ve &uuml;st sınıf Wyndham markaları altında yakın zamanda a&ccedil;ılan ve a&ccedil;ılması beklenen d&ouml;rt yeni otel ile<a class=\"text-18\" title=\"Hindistan\" href=\"https://www.turizmnews.com/haber/Hindistan/\">&nbsp;Hindistan&nbsp;</a>pazarındaki varlığını g&uuml;&ccedil;lendiriyor.</p>\n<p>Yeni a&ccedil;ılışlarla birlikte Wyndham&rsquo;ın Hindistan&rsquo;daki otel sayısı 50&rsquo;ye ulaşacak ve bu a&ccedil;ılışlar, şirketin sekizi 2022&rsquo;de a&ccedil;ılması beklenen yaklaşık 30 otelin bulunduğu proje stokuna sahip olduğu Hindistan alt kıtasındaki b&uuml;y&uuml;me kararlılığının bir par&ccedil;asını oluşturuyor.</p>\n<p>Wyndham Hotels &amp; Resorts Ortadoğu, Avrasya ve Afrika Geliştirme Başkan Yardımcısı Panos Loupasis, &ldquo;D&uuml;nyanın en hızlı b&uuml;y&uuml;yen ekonomilerinden Hindistan, konaklama a&ccedil;ısından &ccedil;ok b&uuml;y&uuml;k bir potansiyel sunuyor. Bu d&ouml;rt yeni a&ccedil;ılış, &uuml;lke genelinde daha da fazla konaklama se&ccedil;eneği sunmaya y&ouml;nelik b&uuml;y&uuml;me hedeflerimiz a&ccedil;ısından &ouml;nemli bir kilometre taşı teşkil ediyor. Burada ve Hindistan alt kıtası genelindeki g&uuml;&ccedil;l&uuml; b&uuml;y&uuml;me &ccedil;izgimizi s&uuml;rd&uuml;rmeyi, b&ouml;ylesine g&uuml;zel ve zengin &ccedil;eşitliliğe bir b&ouml;lgede seyahati herkes i&ccedil;in m&uuml;mk&uuml;n kılmayı d&ouml;rt g&ouml;zle bekliyoruz&rdquo; dedi.</p>', 'Hindistan\'da 50 otele ulaşıyor', 2, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'hindistan-da-50-otele-ulasiyor'),
-(15, 1, '2021-12-03 10:44:32', '<div class=\"post-body my-3\">\n<div class=\"detay\">\n<p>Ulusal ve uluslararası<a class=\"text-18\" title=\"turizm\" href=\"https://www.turizmnews.com/haber/turizm/\">&nbsp;turizm&nbsp;</a>akt&ouml;rlerinin buluşup iş anlaşmalarının yapıldığı bir turizm borsasına d&ouml;n&uuml;şen Travel Turkey İzmir Turizm Fuarı, birbirinden &ccedil;eşitli etkinlikleri ile 2-4 Aralık 2021 tarihleri arasında misafirlerine zengin bir fuar deneyimi yaşatmaya hazırlanıyor. D&uuml;nya turizm trendlerini İzmir&rsquo;de buluşturacak olan 15. Travel Turkey İzmir Turizm Fuarı, aynı zamanda T&uuml;rkiye&rsquo;nin tarihi ve k&uuml;lt&uuml;rel değerlerini de &ouml;ne &ccedil;ıkarmaya devam ediyor. Yaz turizminin yanı sıra T&uuml;rkiye&rsquo;nin d&ouml;rt bir yanındaki tarihi, k&uuml;lt&uuml;rel ve doğal g&uuml;zelliklerin keşfedilmesini sağlayan fuar, &uuml;lkenin d&ouml;rt mevsim yaşayan bir turizm potansiyeline sahip olduğunun t&uuml;m d&uuml;nyaya tanıtılmasına katkı sunuyor. Bu yıl ilk kez d&uuml;zenlenecek TTI Outdoor &ndash; Kamp, Karavan, Outdoor ve Ekipmanları Fuarı ise, 2-5 Aralık tarihleri arasında doğa tutkunu misafirlerini ağırlayacak.</p>\n<p><strong>Onur konuğu il: Edirne</strong></p>\n<p>D&uuml;nya turizm trendlerinde kentlerin &ouml;n plana &ccedil;ıkması, Travel Turkey İzmir kapsamında misafir edilen onur konuğu illere de &ccedil;ıkarma yapıyor. K&uuml;lt&uuml;rel mirasları fuar &ccedil;atısı altında buluşturan Travel Turkey İzmir, onur konuğu il olarak bu yıl Edirne&rsquo;yi ağırlayacak. &nbsp;Anadolu ve Rumeli&rsquo;yi birbirine bağlayan Meri&ccedil; K&ouml;pr&uuml;s&uuml; gibi her iki yakanın tarihi ve k&uuml;lt&uuml;rel değerlerini i&ccedil;inde barındıran Edirne, t&uuml;m mirası ile 2-4 Aralık tarihleri arasında onur konuğu il olarak fuardaki yerini alacak. Edirne&rsquo;nin turizmi, tarihi, k&uuml;lt&uuml;r&uuml; ve gastronomisi; kente hizmet veren işletmelerden olan Keşan Ticaret ve Sanayi Odası,<a class=\"text-18\" title=\"Edirne\" href=\"https://www.turizmnews.com/haber/Edirne/\">&nbsp;Edirne&nbsp;</a>Ticaret Borsası, İpsala Ticaret Borsası, Keşan Ticaret Borsası, Uzunk&ouml;pr&uuml; Ticaret Borsası, Uzunk&ouml;pr&uuml; Ticaret Odası, Uzunk&ouml;pr&uuml; Bal &Uuml;reticileri Birliği, oteller, seyahat acenteleri, turizm STK&rsquo;ları, profesyonel tur rehberleri eşliğinde tanıtılacak.</p>\n<p><strong>İzmir&rsquo;in turizm faaliyetleri tanıtılacak</strong></p>\n<p>Turizm trendlerinin t&uuml;m d&uuml;nyada hızlı bir değişime girmesi, T&uuml;rkiye&rsquo;de de s&uuml;rd&uuml;r&uuml;lebilir turizmin &ouml;nemini a&ccedil;ığa &ccedil;ıkardı. İzmir B&uuml;y&uuml;kşehir Belediyesi &ouml;ng&ouml;r&uuml;s&uuml; ve kent paydaşları ile geliştirilen İzmir Turizm Stratejisi ve Eylem Planı, Şubat ayında d&uuml;zenlenen 14. Travel Turkey İzmir Dijital Fuarı&rsquo;nda tanıtılmıştı. &ldquo;Uygarlıklara y&ouml;n veren pek &ccedil;ok kavram, d&uuml;ş&uuml;nce ve yaklaşımın İzmir&rsquo;den d&uuml;nyaya taşınması&rdquo; fikrinden hareket eden turizm stratejisi, 15. Travel Turkey İzmir Turizm Fuarı&rsquo;na da yansıtılacak. Bu kapsamda ge&ccedil;tiğimiz yıl b&uuml;y&uuml;k ilgi g&ouml;ren İzmir Sokakları da, İzmir B&uuml;y&uuml;kşehir Belediyesi, il&ccedil;e belediyeleri ve kent paydaşlarının kendilerine &ouml;zg&uuml; temalarıyla fuardaki yerini alacak.</p>\n<p><strong>İzmir sahnesi durmayacak</strong></p>\n<p>Kentin turizm faaliyetlerini &ouml;ne &ccedil;ıkararak İzmir&rsquo;in tarih, k&uuml;lt&uuml;r ve gastronomi değerlerini ziyaret&ccedil;ilerle buluşturacak İzmir Sokakları b&ouml;l&uuml;m&uuml;nde ayrıca fuarizmir A hol i&ccedil;erisinde bir sahne yer alacak. İzmir Sokakları Sahnesi&rsquo;nde il&ccedil;e belediye başkanlarının katılımı ile ger&ccedil;ekleşen sunumların yanı sıra; &ldquo;Visit İzmir&rdquo;, &ldquo;Cittaslow&rdquo;, &ldquo;İzmiras&rdquo;, &ldquo;İzmir Sinema Ofisi&rdquo;, &ldquo;Turuncu &Ccedil;ember&rdquo;, &ldquo;Başka Bir Tarım M&uuml;mk&uuml;n&rdquo;, &ldquo;Terra Madre Anadolu İzmir 2022&rdquo; gibi İzmir&rsquo;in nitelikli turizm faaliyetlerini destekleyen uygulamalar tanıtılacak.</p>\n<p><strong>Turizme dair her şey fuarda</strong></p>\n<p>Farklı etkinlikleri ile &ouml;n plana &ccedil;ıkmaya hazırlanan fuar, alanında uzman isimlerin yer aldığı s&ouml;yleşiler ile T&uuml;rkiye ve d&uuml;nya turizmine ışık tutuyor. 2 Aralık Perşembe saat 11.00&rsquo;da a&ccedil;ılışı yapılacak. fuarizmir B fuar sokağı sahnesi, programına 14.00&rsquo;da Başkanlar Zirvesi ile devam edecek. 3 Aralık Cuma g&uuml;n&uuml; 10.30&rsquo;da Arkeoloji Zirvesi Lansmanı ile hareket kazanan B fuar sokağı sahnesi; aynı g&uuml;n sırasıyla &ldquo;Film Setinde Acentenin Ne İşi Var?&rdquo;, &ldquo;Sağlık Turizmi Politikaları, T&uuml;rleri ve Seyahat Acentelerinin Rol&uuml;&rdquo;, &ldquo;Yeni Nesil Dizi ve Filmlerin Turizme Etkisi&rdquo;, &ldquo;Gastronomi Turizminin Gelişimi, Nereden Nereye Gidiyor?&rdquo; s&ouml;yleşileri ile devam ediyor. 4 Aralık Cumartesi g&uuml;n&uuml; 11.45&rsquo;te başlayan s&ouml;yleşiler ise &ldquo;Antalya&rsquo;nın Y&uuml;kselen K&uuml;lt&uuml;r ve Turizm Trendi: Patara&rdquo;, &ldquo;İzmir; Erken Tarihi ve Arkeolojisi&rdquo;, &ldquo;Influencer Marketing&rsquo;in Turizm Destinasyonlarına ve &Uuml;r&uuml;nlerine Etkisi&rdquo;, &ldquo;Bisiklet Turizminin Turizm Ekonomisine Katkısı&rdquo; konu başlıkları ile son buluyor.</p>\n<p><strong>Turizmin geleceği TTI Tech Stage&rsquo;de konuşulacak</strong></p>\n<p>Fuar kapsamında turizmde dijital d&ouml;n&uuml;ş&uuml;m konuları da g&uuml;ndeme geliyor. B Hol&rsquo;de d&uuml;zenlenen s&ouml;yleşileri takip eden izleyiciler, konuya dair merak ettiklerini sorabilecek.<a class=\"text-18\" title=\"Fuar\" href=\"https://www.turizmnews.com/haber/Fuar/\">&nbsp;Fuar&nbsp;</a>s&uuml;resince aralıksız olarak devam edecek s&ouml;yleşilerin konu başlıkları; &ldquo;&rdquo;Geleceğin Acentesi Olmak&rdquo;, &ldquo;K&uuml;resel Trendler ve T&uuml;rk Turizmi i&ccedil;in Fırsatlar&rdquo;, &ldquo;Turizm Sekt&ouml;r&uuml;nde Dijital Medyanın ve KVKK&rsquo;nın &Ouml;nemi&rdquo;, &ldquo;Yeni Nesil Misafir İlişkileri ve CRM &Ccedil;&ouml;z&uuml;mleri&rdquo;, &ldquo;Dijitalleşen Konaklama Sekt&ouml;r&uuml;nde Mobil Uygulamaların &Ouml;nemi&rdquo;, &ldquo;Doğrudan Rezervasyonun &Ouml;nemi ve Stratejileri&rdquo;, &ldquo;Turizm Sekt&ouml;r&uuml;nde M&uuml;şteri Deneyimi&rdquo; olacak. Teknoloji sahnesinin bulunduğu alanda ayrıca Filipinler, Kıbrıs ve Uganda &uuml;lke sunumları ger&ccedil;ekleşecek.</p>\n<p><strong>Sergiler ve performanslar dikkat &ccedil;ekiyor</strong></p>\n<p>Travel Turkey İzmir Fuarı, birbirinden renkli sergileri ile misafirlerini ağırlayacak. A ve B holleri ile fuaye alanında kurulacak sergiler, 2-4 Aralık tarihlerinde 10.00-18.00 saatleri arasında ziyaret edilebilecek. Şanlıurfa Haleplibah&ccedil;e Mozaik Sergisi ve Kitre Bebek Sergisi yer alacak. B Holde ise yıllardır fuarın ilgi &ccedil;eken b&ouml;l&uuml;mlerinden biri olan Klasik Otomobiller Sergisi bulunurken; Artemis Tapınağı, Efes&rsquo;in g&ouml;sterildiği sanal ger&ccedil;eklik deneyim alanı ziyaret&ccedil;ilerin beğenisine sunulacak. Fuar girişinde yer alan A Fuaye alanında kurulan performans sahnesinde ise, 3-4 Aralık tarihlerinde &ccedil;eşitli dans g&ouml;sterileri, geleneksel şovlar ve halk oyunları; fuar ziyaret&ccedil;ilerine renkli bir karşılama yapacak.</p>\n<p><strong>TTI Outdoor&rsquo;la &lsquo;Doğadaki yerini keşfet!&rsquo;</strong></p>\n<p>D&uuml;nya turizminde yenilikleri İzmir&rsquo;de tanıtan Travel Turkey İzmir&rsquo;in b&ouml;l&uuml;mlerinden biri olan alternatif turizm alanı, artan yoğun ilgiyle beraber yeni bir fuarın oluşmasına zemin hazırlamıştı. 15&rsquo;inci Travel Turkey İzmir Turizm Fuarı ile eş zamanlı olarak ilk kez d&uuml;zenlenecek olan TTI Outdoor Fuarı, doğayla i&ccedil; i&ccedil;e olma isteğini yaşam tarzı haline getiren t&uuml;m alternatif turizm tutkunlarının ihtiya&ccedil;larına cevap veriyor. C Hol&rsquo;de halka a&ccedil;ık olarak d&uuml;zenlenen TTI Outdoor Kamp, Karavan, Tekne, Outdoor Ekipmanları Fuarı&rsquo;nda Ege B&ouml;lgesi&rsquo;nin doğa ile uyumlu yaşam tarzı sergilenirken, son zamanlarda yoğun ilgi g&ouml;ren doğaya d&ouml;n&uuml;ş kavramı ele alınıyor. Fuar, İzmir ve &ccedil;evresinin a&ccedil;ık alan turistik faaliyetlerine olan coğrafi uygunluğunu &ouml;n plana &ccedil;ıkartarak sekt&ouml;r profesyonelleri i&ccedil;in alternatif bir buluşma noktası olacak. Fuar, k&uuml;resel &ouml;l&ccedil;ekte oluşan a&ccedil;ık alan turistik faaliyetleri trendinin hem hizmet hem de &uuml;retim kısmında b&uuml;y&uuml;k rol oynayan T&uuml;rkiye&rsquo;nin uluslararası pazardaki farkındalığını artıracak.</p>\n<p><strong>Macera severler fuarda buluşuyor</strong></p>\n<p>5 Aralık Pazar g&uuml;n&uuml;ne kadar devam edecek olan TTI Outdoor Fuarı, birbirinden farklı aktiviteleri ile macera ve eğlenceyi birleştirecek. Ziyaret&ccedil;iler, fuar s&uuml;resince 10.00-18.00 saatleri arasında &ldquo;Homeros Macera Parkı Aktiviteleri&rdquo;, &ldquo;Accell Bisiklet Aktiviteleri&rdquo;, &ldquo;&Ouml;d&uuml;ll&uuml; Yarışmalar&rdquo; ve alanında uzman spor danışmanları ile farklı spor dalları hakkında bilgi sahibi olabilecekleri &ldquo;Decathlon&rdquo; etkinliklerine katılabilecek. Fuar i&ccedil;inde kurulan &ldquo;Hub Meetings&rdquo; alanında ise &ldquo;Kamp-Karavan&rdquo;, &ldquo;Bisiklet&rdquo;, &ldquo;Pandemi D&ouml;neminde Kamp Organizasyonları&rdquo;, &ldquo;T&uuml;rkiye Amat&ouml;r Yelken Sporu&rdquo; gibi alanlarda s&ouml;yleşiler ger&ccedil;ekleşecek. Fuar kapsamında ayrıca, Ressam Savaş Simitli Resim Sergisi sanatseverlerle buluşacak.</p>\n<p>2-4 Aralık 2021 tarihleri arasında profesyonel ziyaret&ccedil;iye a&ccedil;ık olarak fuarizmir A ve B hollerinde d&uuml;zenlenen 15. Travel Turkey İzmir Turizm Fuarı, son g&uuml;n&uuml;nde halka a&ccedil;ık olarak ger&ccedil;ekleşiyor. TTI Outdoor Kamp, Karavan, Tekne, Outdoor ve Ekipmanları Fuarı ise, 2-5 Aralık tarihlerinde halka a&ccedil;ık ve &uuml;cretsiz olarak C holde d&uuml;zenleniyor. Her iki fuar da T.C. K&uuml;lt&uuml;r ve Turizm Bakanlığı ile T.C. Ticaret Bakanlığı himayelerinde; İzmir B&uuml;y&uuml;kşehir Belediyesi ev sahipliği, İZFAŞ ve T&Uuml;RSAB Fuarcılık A.Ş. tarafından ger&ccedil;ekleştiriliyor.</p>\n</div>\n</div>\n<div class=\"py-3\"><a class=\"pr-2\" title=\"Fuar\" href=\"https://www.turizmnews.com/haber/Fuar/\"><span class=\"btn btn-outline-secondary btn-sm mb-2\"># Fuar</span></a><a class=\"pr-2\" title=\"travel turkey\" href=\"https://www.turizmnews.com/haber/travel-turkey/\"><span class=\"btn btn-outline-secondary btn-sm mb-2\"># travel turkey</span></a><a class=\"pr-2\" title=\"rota\" href=\"https://www.turizmnews.com/haber/rota/\"><span class=\"btn btn-outline-secondary btn-sm mb-2\"># rota</span></a><a class=\"pr-2\" title=\"turizm\" href=\"https://www.turizmnews.com/haber/turizm/\"><span class=\"btn btn-outline-secondary btn-sm mb-2\"># turizm</span></a><a class=\"pr-2\" title=\"konuk\" href=\"https://www.turizmnews.com/haber/konuk/\"><span class=\"btn btn-outline-secondary btn-sm mb-2\"># konuk</span></a><a class=\"pr-2\" title=\"Edirne\" href=\"https://www.turizmnews.com/haber/Edirne/\"><span class=\"btn btn-outline-secondary btn-sm mb-2\"># Edirne</span></a></div>', 'Turizmin yol haritası İzmir\'de çiziliyor', 2, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'turizmin-yol-haritasi-izmir-de-ciziliyor'),
-(16, 1, '2021-12-03 10:42:54', '<p>T&uuml;rk Hava Yolları Genel M&uuml;d&uuml;r&uuml; Bilal Ekşi, &ldquo;İstanbul\'daki şiddetli<a class=\"text-18\" title=\"fırtına\" href=\"https://www.turizmnews.com/haber/f%C4%B1rt%C4%B1na/\">&nbsp;fırtına&nbsp;</a>sebebi ile<a class=\"text-18\" title=\"u&ccedil;ak\" href=\"https://www.turizmnews.com/haber/u%C3%A7ak/\">&nbsp;u&ccedil;ak&nbsp;</a>iniş ve kalkışlarında maalesef gecikmeler olmaktadır&rdquo; dedi.</p>\n<p>Ekşi, sosyal medya hesabından yaptığı paylaşımda, &ldquo;İstanbul\'daki şiddetli fırtına sebebi ile u&ccedil;ak iniş ve kalkışlarında maalesef gecikmeler olmaktadır. Bu sebeple<a class=\"text-18\" title=\"İstanbul\" href=\"https://www.turizmnews.com/haber/%C4%B0stanbul/\">&nbsp;İstanbul&nbsp;</a>varışlı seferlerimizde de kalkış meydanlarımızda gecikmeler olabilmektedir. Anlayışınız i&ccedil;in teşekk&uuml;r ederiz&rdquo; ifadelerini kullandı.</p>', 'THY Genel Müdürü Ekşi\'den fırtına açıklaması', 2, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'thy-genel-muduru-eksi-den-firtina-aciklamasi'),
-(17, 1, '2021-12-03 10:42:55', '<div class=\"post-body my-3\">\n<div class=\"detay\">Fransa&rsquo;nın uluslararası otel zinciri Accor &ccedil;atısı altında yer alan<a class=\"text-18\" title=\"l&uuml;ks\" href=\"https://www.turizmnews.com/haber/l%C3%BCks/\">&nbsp;l&uuml;ks&nbsp;</a>otel markası M&ouml;venpick, Balmumcu&rsquo;daki yeni oteli ile misafirlerinin hizmetine a&ccedil;ıldı.&nbsp;M&ouml;venpick Hotel<a class=\"text-18\" title=\"İstanbul\" href=\"https://www.turizmnews.com/haber/%C4%B0stanbul/\">&nbsp;İstanbul&nbsp;</a>Bosphorus a&ccedil;ıldı.<a class=\"text-18\" title=\"Otel\" href=\"https://www.turizmnews.com/haber/Otel/\">&nbsp;Otel&nbsp;</a>eski The Plaza, Mercure the Plaza Bosphorus\'un yerinde a&ccedil;ıldı.<br /><br />30 ile 163 m&sup2; arasında değişen genişlikte, 11 farklı kategorideki oda ve suitleri ile misafirlerini ağırlayacak olan M&ouml;venpick Bosphorus, hi&ccedil;bir detayın es ge&ccedil;ilmediği deluxe odalarının yanı sıra, boğaz manzaralı odaları, 1+1 geniş aile suitleri ve yine Boğaz&rsquo;a nazır Panoramic Bosphorus Suit ile İstanbul&rsquo;un keyfini &ccedil;ıkarmak isteyen misafirleri i&ccedil;in her zevke ve gereksinime uygun se&ccedil;enekler sunuyor.<br /><br />M&ouml;venpick Bosphorus&rsquo;un kral dairesi kategorisinde yer alan 163 m&sup2; genişliğindeki Royal Bosphorus ve 143 m&sup2; b&uuml;y&uuml;kl&uuml;ğ&uuml;ndeki Presidential Suit&rsquo;i ise ihtişamın ve l&uuml;ks&uuml;n tanımı niteliğinde bir dizayna sahip. &nbsp;</div>\n</div>\n<div class=\"py-3\"><a class=\"pr-2\" title=\"Otel\" href=\"https://www.turizmnews.com/haber/Otel/\"><span class=\"btn btn-outline-secondary btn-sm mb-2\"># Otel</span></a><a class=\"pr-2\" title=\"l&uuml;ks\" href=\"https://www.turizmnews.com/haber/l%C3%BCks/\"><span class=\"btn btn-outline-secondary btn-sm mb-2\"># l&uuml;ks</span></a><a class=\"pr-2\" title=\"İstanbul\" href=\"https://www.turizmnews.com/haber/%C4%B0stanbul/\"><span class=\"btn btn-outline-secondary btn-sm mb-2\"># İstanbul</span></a><a class=\"pr-2\" title=\"manzara\" href=\"https://www.turizmnews.com/haber/manzara/\"><span class=\"btn btn-outline-secondary btn-sm mb-2\"># manzara</span></a><a class=\"pr-2\" title=\"s&uuml;it\" href=\"https://www.turizmnews.com/haber/s%C3%BCit/\"><span class=\"btn btn-outline-secondary btn-sm mb-2\"># s&uuml;it</span></a><a class=\"pr-2\" title=\"accor\" href=\"https://www.turizmnews.com/haber/accor/\"><span class=\"btn btn-outline-secondary btn-sm mb-2\"># accor</span></a></div>', 'İstanbul\'un yeni lüks oteli açıldı', 2, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'istanbul-un-yeni-luks-oteli-acildi'),
-(18, 1, '2021-12-03 10:42:56', '<p>Sivil Havacılık Genel M&uuml;d&uuml;rl&uuml;ğ&uuml; (SHGM), Meteorolojinin Nevşehir\'de hava koşullarının olumsuz olacağı y&ouml;n&uuml;nde uyarı yapmasının ardından,&nbsp; sıcak hava balon turlarını<a class=\"text-18\" title=\"iptal\" href=\"https://www.turizmnews.com/haber/iptal/\">&nbsp;iptal&nbsp;</a>etti.</p>', 'Kapadokya\'da balon turları iptal', 2, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kapadokya-da-balon-turlari-iptal'),
-(19, 1, '2021-12-10 11:15:03', '<p>Sabiha G&ouml;k&ccedil;en Uluslararası Havalimanı Pendik il&ccedil;esi sınırlarında inşa edilen İstanbul\'un 2. havalimanı. Havalimanı ismini, d&uuml;nyanın ilk kadın savaş pilotu ve T&uuml;rkiye\'nin ilk kadın pilotu olan Sabiha G&ouml;k&ccedil;en\'den almıştır.</p>', 'Sabiha Gökçen Havalimanı', 0, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'sabiha-gokcen-havalimani'),
-(23, 1, '2021-12-10 11:15:03', '<p>Milas-Bodrum Havalimanı, Muğla ilinin Milas il&ccedil;esinde bulunan uluslararası havalimanıdır. Bodrum il&ccedil;esine de hizmet vermektedir.</p>', 'Milas-Bodrum Havalimanı', 2, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'milas-bodrum-havalimani'),
-(25, 1, '2021-12-10 11:13:55', '<p>Trabzon Havalimanı, T&uuml;rkiye\'nin Trabzon iline hizmet veren uluslararası havalimanı. 1957 yılında hizmete girdi.</p>', 'Trabzon Uluslararası Havalimanı', 0, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'trabzon-uluslararasi-havalimani'),
-(26, 1, '2021-12-10 10:26:49', '<p>Sabiha G&ouml;k&ccedil;en International Airport is the 2nd airport in Istanbul, built on the borders of Pendik district. airport. The airport is named after Sabiha G&ouml;k&ccedil;en, the world\'s first female fighter pilot and Turkey\'s first female pilot.</p>', ' Sabiha Gokcen Airport', 2, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'sabiha-gokcen-airport'),
-(27, 1, '2021-12-10 10:26:49', '<p>Trabzon Airport is an international airport serving the Turkish province of Trabzon. it was commissioned in 1957.</p>', 'Trabzon Airport', 2, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'trabzon-airport'),
-(28, 1, '2021-12-10 10:26:48', '<p>Dalaman Airport is an international airport located within the borders of Dalaman district, Mugla Province, Turkey. 6 km of the city centre. the airport is located in the south; Along with Milas-Bodrum Airport, it is one of the two international airports serving Muğla.</p>', 'Dalaman Airport', 0, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'dalaman-airport'),
-(29, 1, '2021-12-10 10:26:47', '<p>Adnan Menderes Airport is an international airport serving the province of Izmir, Turkey. It is located 14 km south of the city center, within the boundaries of Gaziemir and Menderes districts. Dec is named after Adnan Menderes, who was prime minister between 1950 and 1960.</p>', 'Adnan Menderes Airport', 0, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'adnan-menderes-airport'),
-(30, 1, '2021-12-10 10:26:47', '<p>Istanbul Airport is an international airport serving the city of Istanbul, Turkey. Dec October 29, 2018, the airport was opened on the European Side of the city, between the villages of Tayakadin and Akpinar on the Black Sea coast. The first flight was made from Istanbul to Ankara on October 29, 2018 with the code TK2124.</p>', 'İstanbul Airport', 2, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'istanbul-airport'),
-(31, 1, '2021-12-10 10:26:46', '<p>Milas-Bodrum Airport is an international airport located in the Milas district of Muğla Province, Turkey. It also serves the district of Bodrum.</p>', 'Milas-Bodrum Airport', 0, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'milas-bodrum-airport'),
-(32, 6, '2021-12-13 09:25:32', '<p>Der Flughafen Istanbul ist der internationale Flughafen in Istanbul, T&uuml;rkei. Der Flughafen auf der Europ&auml;ischen Seite der Stadt, zwischen den D&ouml;rfern Tayakad und Akpinar an der Schwarzmeerk&uuml;ste, wurde am 29.Oktober 2018 er&ouml;ffnet. Der erste Flug mit dem Code TK2124 erfolgte am 29.Oktober 2018 von Istanbul nach Ankara.</p>', 'Flughafen İstanbul', 0, 3, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'flughafen-istanbul'),
-(33, 6, '2021-12-13 09:17:34', '<p>Der internationale Flughafen Sabiha Gokcen wurde an den Grenzen des Bezirks Pendik in Istanbul 2 gebaut. Flughafen. Der Flughafen erhielt seinen Namen von Sabiha Gokcen, der ersten Kampfpilotin der Welt und der ersten Pilotin der T&uuml;rkei.</p>', 'Flughafen Sabiha Gokcen', 0, 3, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'flughafen-sabiha-gokcen'),
-(34, 6, '2021-12-13 09:25:12', '<p>Der Flughafen Adnan Menderes ist der internationale Flughafen der t&uuml;rkischen Provinz Izmir. 14 km s&uuml;dlich des Stadtzentrums befinden sich die Bezirke Gaziemir und Menderes. Benannt wurde es nach Adnan Menderes, der von 1950 bis 1960 Premierminister war.</p>', 'Flughafen Adnan Menderes', 0, 3, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'flughafen-adnan-menderes'),
-(35, 6, '2021-12-13 09:26:58', '<p>Dalaman Flughafen ist ein Internationaler Flughafen innerhalb der Grenzen der Provinz Mugla, Dalaman Bezirk. 6 km vom Stadtzentrum entfernt. der Flughafen im S&uuml;den ist einer der beiden internationalen Flugh&auml;fen, die Mugla zusammen mit dem Flughafen Milas-Bodrum bedienen.</p>', 'Dalaman Flughafen', 0, 3, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'dalaman-flughafen'),
-(36, 6, '2021-12-13 09:29:14', '<p>Der Flughafen Trabzon ist der internationale Flughafen, der die t&uuml;rkische Provinz Trabzon bedient. 1957 wurde er in Dienst gestellt.</p>', 'Flughafen Trabzon', 0, 3, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'flughafen-trabzon'),
-(37, 6, '2021-12-13 09:32:00', '<p>Der Flughafen Milas-Bodrum ist ein Internationaler Flughafen im Bezirk Milas der Provinz Mugla. Es dient auch dem Keller.</p>', 'Flughafen Milas-Bodrum', 0, 3, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'flughafen-milas-bodrum'),
-(38, 6, '2021-12-13 10:42:05', '', 'BLABLA', 0, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'blabla'),
-(39, 6, '2021-12-14 14:53:35', '<p>&Ouml;zel Turizm, protokol taşımacılığı, kongre, seminer organizasyonlarında veya bunların dışında bireysel olarak kişi veya grupların havaalanı transferlerini ger&ccedil;ekleştirmektedir. Bu transferler esnasında ara&ccedil; se&ccedil;eneği olarak otomobil, VIP otomobil, minib&uuml;s, VIP minib&uuml;s, midib&uuml;s veya otob&uuml;s se&ccedil;enekleri sunulmaktadır. Yurti&ccedil;i ve yurtdışından havayoluyla gelen b&uuml;t&uuml;n konuklarımızın havaalanından karşılanıp istedikleri adrese ulaşımı sağlandığı gibi, havaalanına gitmek isteyen misafirlerimizin adreslerinden alınıp havaalanına transfer hizmeti de karşılıklı olarak ger&ccedil;ekleştirilmektedir.</p>', 'Havaalanı Transferi', 0, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'havaalani-transferi'),
-(40, 6, '2021-12-14 14:55:07', '<p>It carries out airport transfers of individuals or groups individually in private tourism, protocol transportation, congress, seminar organizations or outside them. During these transfers, car, VIP car, minibus, VIP van, midibus or bus options are offered as a vehicle option. All our guests arriving by air from home and abroad are welcomed at the airport and reached to the address they want, as well as the transfer service to the airport is provided mutually from the addresses of our guests who want to go to the airport.</p>', 'Airport Transfer', 0, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'airport-transfer'),
-(41, 6, '2021-12-14 14:58:06', '<p>Privattourismus, protokolltransport, Kongresse, seminarorganisationen oder au&szlig;erhalb von ihnen f&uuml;hren individuelle Flughafentransfers von Personen oder Gruppen durch. W&auml;hrend dieser Transfers werden Autos, VIP-Autos, Minibus, VIP-Minibus, Midibus oder Bus als Fahrzeugoption angeboten. Alle unsere G&auml;ste, die mit der Fluggesellschaft aus dem In-und Ausland ankommen, werden vom Flughafen abgeholt und an die gew&uuml;nschte Adresse gebracht, und der Transferservice zum Flughafen wird von den Adressen unserer G&auml;ste, die zum Flughafen gehen m&ouml;chten, gegenseitig durchgef&uuml;hrt.</p>', 'Flughafen Transfer', 0, 3, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'flughafen-transfer'),
-(42, 6, '2021-12-14 14:58:50', '<p>&Ouml;zel Turizm, &ouml;zel tur hizmetlerinde kişi veya kurum ayırt etmeden, yurti&ccedil;i veya yurtdışına y&ouml;nelik &ouml;zel turlara ara&ccedil; temini sağlamaktadır. Bu kapsamda &ouml;rneğin; kurum ve kuruluşların hazırladıkları &ouml;zel programlar &ccedil;er&ccedil;evesinde yurtdışı turlarına, vakıf ve derneklerin d&uuml;zenledikleri gezi programlarına, haftasonu ve g&uuml;n&uuml;birlik gezilere ara&ccedil; temininde bulunmaktadır.Programın nerede başlayıp nerede biteceğine kendinizin karar vereceği bu &ouml;zel turlara, &Ouml;zel Turizm g&uuml;vencesiyle, profesyonel s&uuml;r&uuml;c&uuml; ve modern filosundan se&ccedil;eceğiniz ara&ccedil;larla konforlu bir yolculuğa &ccedil;ıkabilirsiniz.</p>', 'Özel Turlar', 0, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'ozel-turlar'),
-(43, 6, '2021-12-14 15:02:57', '<p>Privattourismus bietet fahrzeugversorgung f&uuml;r private Touren im In-oder Ausland, ohne zwischen Personen oder Institutionen zu unterscheiden. In diesem Zusammenhang bietet es beispielsweise Fahrzeuge f&uuml;r Auslandsreisen im Rahmen spezieller Programme an, die von Institutionen und Organisationen vorbereitet werden, f&uuml;r von Stiftungen und Vereinen organisierte Ausflugsprogramme, f&uuml;r Wochenend-und Tagesausfl&uuml;ge.Sie k&ouml;nnen auf diese speziellen Touren gehen, wo sie selbst entscheiden, wo das Programm beginnt und endet, mit einer speziellen Tourismusgarantie, mit professionellen Fahrern und Fahrzeugen Ihrer Wahl aus der modernen Flotte.</p>', 'Private Touren', 0, 3, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'private-touren'),
-(44, 6, '2021-12-14 15:03:21', '<p>Special Tourism, private tour services in person or institution, to distinguish vehicle supply provides private tours for domestic or abroad. In this context, for example; It provides vehicles for foreign tours, excursion programs organized by foundations and associations, weekend and day trips within the framework of special programs prepared by institutions and organizations.</p>\n<p>You can go on these special tours, where you will decide for yourself where the program will start and end, with Special Tourism assurance, a professional driver and a comfortable journey with the vehicles you will choose from a modern fleet.</p>', 'Private Tours', 0, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'private-tours'),
-(45, 6, '2021-12-14 15:04:03', '<p>Kongre ve seminer organizasyonlarının en &ouml;nemli temel taşlarından birisi, gelen misafilerinizin doğru yere doğru zamanda iletilmesini sağlamaktır. Bu y&uuml;zden &Ouml;zel Turizm olarak; pazarlama, tanıtım, seminer ve her t&uuml;rl&uuml; toplantı ve organizasyonlarınızda konuklarınızın ilk geliş noktalarından (havaalanı, terminal, tren garı, otel&nbsp;vb.) alınarak organizasyonun d&uuml;zenlendiği yerlere transferleri, bu transferler esnasında talep edilirse rehberlik hizmeti sunulması ve organizasyon sonrasında t&uuml;m konukların istedikleri noktalara gerid&ouml;n&uuml;şlerinin sağlanması&nbsp;gibi se&ccedil;enekler &uuml;st&uuml;n bir kaliteyle sağlanır.&nbsp;<br />Gerek teke tek gerekse gruplar i&ccedil;in istenilen t&uuml;r ve kapasitede&nbsp;ara&ccedil;lar temin edilir.<br />&nbsp;<br />&Ouml;zel Turizm, kongre-seminer organizasyonlarında gelen misafirlerin sayısına g&ouml;re alternatif taşıma se&ccedil;enekleri sunar. Eğer heyet i&ccedil;erisinde protokol kapsamına giren kişiler mevcutsa, bu kişilere y&ouml;nelik Protokol Taşımacılığı Hizmeti de sunulabilmektedir.</p>', 'Kongre Seminer Organizasyon', 0, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kongre-seminer-organizasyon'),
-(46, 6, '2021-12-14 15:09:38', '<p>Her k&ouml;şesinden tarih ve k&uuml;lt&uuml;r fışkıran Anadolu&rsquo;nun g&uuml;zelliklerini keşfetmek i&ccedil;in d&uuml;zenleyeceğiniz kısa veya uzun s&uuml;reli turlara &Ouml;zel Turizm g&uuml;vencesiyle &ccedil;ıkabilirsiniz. Her t&uuml;rl&uuml; k&uuml;lt&uuml;r ve inan&ccedil; gezileri, yerli ve yabancı turist grupları i&ccedil;in seyahat acenteleri tarafından d&uuml;zenlenen Anadolu turlarına ara&ccedil; temin edebilirsiniz.<br />&Ouml;zel Turizm bu gezilerinizde modern ara&ccedil; filosuyla, g&uuml;zergah deneyimi olan s&uuml;r&uuml;c&uuml;leriyle, bilgilendirici rehberleriyle, g&uuml;venli ve konforlu bir yolculuk se&ccedil;eneği sunuyor. &Ouml;zel grupların yurti&ccedil;i k&uuml;lt&uuml;r turlarına ara&ccedil; temini hizmeti sağladığımız gibi, yerli ve yabancı seyahat acentelerinin tur programlarında da talep edilen tip ve &ouml;zellikte ara&ccedil; sağlanmaktadır.</p>', 'Yurtiçi Kültür Turları', 0, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'yurtici-kultur-turlari'),
-(47, 6, '2021-12-14 15:10:02', '<p>&Ouml;zel Turizm ara&ccedil; filosunda &ouml;zel donanımlı l&uuml;ks VIP ara&ccedil;lar bulunmaktadır. S&uuml;r&uuml;c&uuml;l&uuml; VIP hizmeti kapsamında kurum, kuruluşlar ya da şahıslara &ouml;zel g&uuml;nler (d&uuml;ğ&uuml;n, s&uuml;nnet t&ouml;reni vb.), havaalanı transferleri, geziler i&ccedil;in VIP segmentinden ara&ccedil; sunulmaktadır.<br /><br />Yolculuğunuz s&uuml;resince sizin emrinize sunulmuş ve sizin memnuniyetinize kendini adamış profesyonel s&uuml;r&uuml;c&uuml;lerimiz ile sizi &ouml;zel hissettirecek zamanlarda &Ouml;zel Turizm en doğru se&ccedil;imdir.<br /><br />Ara&ccedil; filomuzda 3 segmentte VIP ara&ccedil; bulunmaktadır. Bunlar VIP Otomobil, VIP Minib&uuml;s ve VIP Otob&uuml;st&uuml;r. Bu gruplarda yolcu sayısına veya protokol durumuna g&ouml;re farklı tipte ara&ccedil;lar &ouml;nerilmektedir. Mercedes Benz ve Volkswagen ara&ccedil;lardan oluşan VIP grubundaki ara&ccedil;ların genel &ouml;zellikleri arasında; deri d&ouml;şeme, plazma tv, klima, airbag, minibar gibi unsurlar yer almaktadır.</p>', 'Yurtiçi', 0, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'yurtici'),
-(48, 6, '2021-12-14 15:10:23', '<p>&Ouml;zel Turizm sadece tekil ara&ccedil; temini hizmeti sunmamaktadır. Talep &uuml;zerine uzun&nbsp;veya kısa s&uuml;reli zamanlar i&ccedil;in istenilen segmentte (otomobil, minib&uuml;s, otob&uuml;s)&nbsp;istenilen sayıda ara&ccedil; temini &Ouml;zel urizm&nbsp;tarafından sorunsuz sağlanır.&nbsp;B&uuml;y&uuml;k&nbsp;grupların&nbsp;&nbsp;okul gezileri, personel seyahatleri gibi etkinliklerine&nbsp;istenilen donanımlarda ara&ccedil; temini&nbsp;&Ouml;zel Tur&nbsp;g&uuml;vencesiyle sağlanmaktadır.</p>', 'Filo Kiralama', 0, 1, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'filo-kiralama'),
-(49, 6, '2021-12-14 15:10:40', '<p>One of the most important cornerstones of congress and seminar organizations is to ensure that your incoming guests are delivered to the right place at the right time. For this reason, as a Private Tourism; marketing, promotion, seminars and all kinds of meetings and organizations from the first points of arrival of your guests (airport, terminal, train station, hotel, etc.) in your meetings and organizations.) such options as receiving and transferring to the places where the organization is organized, providing guidance services if requested during these transfers, and ensuring that all guests return to their desired points after the organization are provided with superior quality.&nbsp;<br />Vehicles of the desired type and capacity are provided for both jul and groups.<br />&nbsp;<br />Private Tourism offers alternative transportation options according to the number of guests arriving at the congress-seminar organizations. If there are people within the scope of the protocol in the delegation, Protocol Transportation Service for these people can also be provided.</p>', 'Organization of the Congress Seminar', 0, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'organization-of-the-congress-seminar'),
-(50, 6, '2021-12-14 15:11:31', '<p>You can go on short or long-term tours to explore the beauties of Anatolia, where history and culture are gushing from every corner, with the Special Tourism guarantee. You can provide vehicles for all kinds of cultural and faith trips, tours to Anatolia organized by travel agencies for domestic and foreign tourist groups. Jul.<br />Private Tourism offers a safe and comfortable journey option with its modern vehicle fleet, drivers with route experience, informative guides on these trips. We provide vehicle supply services for domestic cultural tours of private groups, as well as provide vehicles of the type and characteristics requested in the tour programs of domestic and foreign travel agencies. Jul.</p>', 'Domestic Cultural Tours', 0, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'domestic-cultural-tours'),
-(51, 6, '2021-12-14 15:12:04', '<p>The special Tourism vehicle fleet includes specially equipped luxury VIP vehicles. Special occasions for institutions, organizations or individuals within the scope of the VIP service with a driver (wedding, circumcision ceremony, etc.), airport transfers, vehicles from the VIP segment are offered for excursions.</p>\n<p>Private Tourism is the right choice when it will make you feel special with our professional drivers who have been put at your disposal during your journey and are dedicated to your satisfaction.</p>\n<p>There are VIP vehicles in our vehicle fleet in 3 segments. These are VIP Cars, VIP Minibuses and VIP Buses. Different types of vehicles are recommended in these groups according to the number of passengers or protocol status. The general characteristics of the VIP group of Mercedes Benz and Volkswagen vehicles include elements such as leather decking, plasma TV, air conditioning, airbag, minibar.</p>', 'Domestic', 0, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'domestic'),
-(52, 6, '2021-12-14 15:12:39', '<p>Private Tourism does not only provide individual car rental services. Jul. On request, the supply of the required number of vehicles in the desired segment (car, minibus, bus) for long or short-term times is provided by JUL-tial uriz without any problems. The provision of vehicles with the necessary equipment for the activities of large groups such as school trips and staff trips is provided with the guarantee of a private Tour. jul.</p>', 'Fleet Leasing', 0, 2, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'fleet-leasing');
-INSERT INTO `nictr_posts` (`ID`, `post_author`, `post_date`, `post_content`, `post_title`, `post_status`, `post_langID`, `post_password`, `post_modified`, `post_modified_gmt`, `post_slug`) VALUES
-(53, 6, '2021-12-14 15:13:05', '<p>Einer der wichtigsten Eckpfeiler von Kongressen und Seminaren ist es, sicherzustellen, dass Ihre G&auml;ste zur richtigen Zeit am richtigen Ort ankommen. Daher als privater Tourismus; Marketing, Promotion, Seminare und alle Arten von Meetings und Veranstaltungen von den ersten ankunftspunkten Ihrer G&auml;ste (Flughafen, terminal, Bahnhof, Hotel usw.).) Transfers zu den Orten, an denen die Organisation organisiert ist, die Bereitstellung von Beratungsdiensten, wenn Sie w&auml;hrend dieser Transfers angefordert werden, und die Bereitstellung der R&uuml;ckkehr aller G&auml;ste zu den gew&uuml;nschten Punkten nach der Organisation werden mit einer &uuml;berlegenen Qualit&auml;t gew&auml;hrleistet.&nbsp;<br />Sowohl f&uuml;r einzelne als auch f&uuml;r Gruppen werden Fahrzeuge des gew&uuml;nschten Typs und der gew&uuml;nschten Kapazit&auml;t bereitgestellt.<br />&nbsp;<br />Der private Tourismus bietet alternative Transportm&ouml;glichkeiten, abh&auml;ngig von der Anzahl der G&auml;ste, die in Kongress-und seminarorganisationen ankommen. Wenn es in der Delegation Personen gibt, die unter das Protokoll fallen, kann auch ein Protokolltransportdienst f&uuml;r diese Personen angeboten werden.</p>', 'Kongress Seminar Organisation', 0, 3, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'kongress-seminar-organisation'),
-(54, 6, '2021-12-14 15:15:05', '<p>Um die Sch&ouml;nheiten Anatoliens zu entdecken, die aus jeder Ecke der Geschichte und Kultur sprudeln, k&ouml;nnen Sie kurz-oder langzeittouren mit besonderer touristischer sicherheit unternehmen. Sie k&ouml;nnen Fahrzeuge f&uuml;r alle Arten von Kultur-und glaubensreisen, anatolischen Touren, die von Reiseb&uuml;ros f&uuml;r In-und ausl&auml;ndische Touristengruppen organisiert werden, zur Verf&uuml;gung stellen.<br />Privattourismus bietet Ihnen auf diesen Reisen eine sichere und komfortable Reiseoption mit einer modernen Fahrzeugflotte, reiserfahrenen Fahrern, informativen Guides. So wie wir Dienstleistungen f&uuml;r die Bereitstellung von Fahrzeugen f&uuml;r inl&auml;ndische Kulturreisen von privaten Gruppen anbieten, werden in den tourprogrammen von In-und ausl&auml;ndischen Reiseb&uuml;ros Fahrzeuge in der gew&uuml;nschten Art und Spezifikation bereitgestellt.</p>', 'Inländische Kulturreisen', 0, 3, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'inl-ndische-kulturreisen'),
-(55, 6, '2021-12-14 15:15:41', '<p>In der privattourismusflotte gibt es speziell ausgestattete Luxus-VIP-Fahrzeuge. Im Rahmen des VIP-Service mit Fahrer werden besondere Anl&auml;sse f&uuml;r Institutionen, Organisationen oder Einzelpersonen (Hochzeit, beschneidungszeremonie usw.) angeboten.), Flughafentransfers, Fahrzeuge aus dem VIP-Segment werden f&uuml;r Ausfl&uuml;ge angeboten.</p>\n<p>Mit unseren professionellen Fahrern, die Ihnen w&auml;hrend Ihrer Reise zur Verf&uuml;gung stehen und sich ihrer zufriedenheit verschrieben haben, ist der Private Tourismus die richtige Wahl, wenn Sie sich besonders f&uuml;hlen.</p>\n<p>In unserer Fahrzeugflotte gibt es VIP-Fahrzeuge in 3 Segmenten. Dies sind VIP-Autos, VIP-Minibus und VIP-Bus. In diesen Gruppen werden je nach Anzahl der Passagiere oder protokollstatus verschiedene Fahrzeugtypen empfohlen. Zu den allgemeinen Merkmalen der Fahrzeuge der VIP-Gruppe von Mercedes Benz und Volks ① geh&ouml;ren Lederpolster, Plasma-tv, Klimaanlage, airbag, minibar.</p>', 'Inland', 0, 3, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'inland'),
-(56, 6, '2021-12-14 15:16:05', '<p>Der private Tourismus bietet nicht nur eine einzigartige fahrzeugversorgung. Die Lieferung der gew&uuml;nschten Anzahl von Fahrzeugen im gew&uuml;nschten Segment (Auto, Minibus, Bus) f&uuml;r lange oder kurze Zeit auf Anfrage wird durch den speziellen urizm problemlos gew&auml;hrleistet. Die Bereitstellung von Fahrzeugen in der gew&uuml;nschten Ausr&uuml;stung f&uuml;r Aktivit&auml;ten gro&szlig;er Gruppen wie Schulausfl&uuml;ge, personalreisen wird durch spezielle Toursicherheit gew&auml;hrleistet.</p>', 'Flottenvermietung', 0, 3, '', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 'flottenvermietung');
+INSERT INTO `nictr_posts` (`ID`, `post_cover`, `post_author`, `post_date`, `post_content`, `post_title`, `post_status`, `post_modified`, `post_slug`, `post_summary`, `post_keywords`) VALUES
+(5, '{\"1\":\"public\\/img\\/2022\\/blog\\/624fdbc5557b8whatsapp_image_2022-04-08_at_09.52.37.jpeg\",\"7\":\"public\\/img\\/2022\\/blog\\/624f5e0014494product_ikonlar\\u0131.v-10.png\"}', 1, '2022-04-01 09:52:57', '{\"1\":\"\\u003Cp\\u003ESpices have unique benefits for human health thanks to the active ingredients they contain. In this article, we desire you to encounter the unknown aspects of spices that you know very well. \\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cdiv class=\\\"col-md-12\\\"\\u003E\\u003Cimg class=\\\"img-thumbnail responsive\\\" src=\\\"..\\/..\\/..\\/public\\/img\\/2022\\/blog\\/624fd9a02defd_positive_reflections_of_spices_on_human_healt.jpg\\\" \\/\\u003E\\u003C\\/div\\u003E\\r\\n\\u003Cp\\u003E\\u003Cbr \\/\\u003EWhen some spices meet with other spices, their boosting effects increase. Some of them have specific dominant flavors; some have both the distinctive pleasantness and aromas that make all other flavors shine. Spices are one of the unique tastes offered by nature as much as the cultural element that creates the common taste among people is spices. The best spice always finds its way into the dish where it belongs. So, now let&rsquo;s review the most used and traditional spices in Turkish cuisine: \\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cdiv class=\\\"row d-flex\\\"\\u003E\\r\\n\\u003Cdiv class=\\\"col-md-3\\\"\\u003E\\u003Cimg class=\\\"img-thumbnail responsive\\\" src=\\\"..\\/..\\/..\\/public\\/img\\/2022\\/blog\\/624fd9a206d3b_orta_positive_reflections_of_spices_on_human_health-min_(1)_(1).jpg\\\" \\/\\u003E\\u003C\\/div\\u003E\\r\\n\\u003Cdiv class=\\\"col-md-9\\\"\\u003EGinger: Effective in relieving joint pain, eliminating inflammation in the body, and preventing nausea&hellip; Ginger fights to strengthen our immunity for all four seasons like a health soldier. Clove: Clove, which is recommended to be consumed against ailments, such as sore throat, cough, cold, and sinusitis, helps to destroy harmful bacteria in the mouth, and to reduce the feeling of pain. Clove is the strongest protector of the skin, thanks to its oil being a barrier for the skin.\\u003C\\/div\\u003E\\r\\n\\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003ECumin: Avoiding salt, and choosing cumin with low sodium level prevents high blood pressure. Thanks to the B vitamins, it provides an ideal sleep pattern. Turmeric: Turmeric, which must take its place in our diet for the healthy functioning of the immune system, and digestive system; it helps to alleviate headaches, overcome colds, and provide rapid recovery after surgery. It is a natural pain reliever in relieving all pains in the body, as well as in the treatment of dermatological disorders. \\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003ECinnamon: Thanks to its antibacterial and antimicrobial properties, cinnamon purifies the skin from bacteria; it disinfects naturally. With the manganese it contains, it accelerates the absorption of calcium in the body; heals damaged connective tissue; it reduces bone pain. In addition to being one-to-one against the common cold, cinnamon, which keeps blood sugar in balance with the support gives to the body, plays a leading role in combating the fatigue, headaches, and hunger felt by diabetes patients. \\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003EGarlic: Garlic, our strongest assistant in the fight against colds, and high blood pressure, is also a very strong food in terms of antioxidants. Cardamom: Rich in vitamins A and C, cardamom not only cures gum problems, but also regulates blood circulation, and brings the acid level in the digestive organs to an ideal level. \\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003ECurry: Cleansing the liver, curry is a remedy for indigestion problems, as well as helping the body get rid of harmful toxins. Including it in the diet during the treatment of rheumatic diseases supports faster recovery. Saffron: It has been determined that saffron, which contains high levels of antioxidants, plays an active role in reducing the body mass index of people with cardiovascular disease and thinning the waist circumference. In addition, saffron extract increases the dopamine level by keeping the serotonin level constant; it has been found to reduce inflammation, and damage in brain cells.\\u003C\\/div\\u003E\",\"7\":\"\"}', '{\"1\":\"Positive Reflections of Spices on Human Health\",\"7\":\"\"}', 1, '2022-04-08 14:28:31', '{\"1\":\"positive-reflections-of-spices-on-human-health\",\"7\":\"\"}', '{\"1\":\"Spices have unique benefits for human health thanks to the active ingredients they contain. In this article, we desire you to encounter the unknown aspects of spices that you know very well.\",\"7\":\"\"}', '{\"1\":\"[{\\\"value\\\":\\\"jain farm fresh\\\"},{\\\"value\\\":\\\"spices\\\"}]\",\"7\":\"\"}'),
+(9, '{\"1\":\"public\\/img\\/2022\\/blog\\/624fd52496ef4rectangle_bf.png\"}', 1, '2022-03-25 09:35:41', '{\"1\":\"\\u003Cp\\u003ESpices turn your dream meal into a masterpiece. So much so that the trace (impression) left by a spice touch is never forgotten. The masterpiece of care, enthusiasm you show for a meal or dessert is spice which is the detail where creativity is hidden. Contrary to those who say spice is the final touch, it is actually always the starting point. A properly used spice opens a different door in our memory for tastes. It adds character and excitement to our dishes with its beautiful scents and flavors while increasing curiosity, interest and passion for food. The journeys to the unknown stories of the dishes also begin with spices. \\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cdiv class=\\\"col-md-12\\\"\\u003E\\u003Cimg class=\\\"img-thumbnail responsive\\\" src=\\\"https:\\/\\/gonetdemo.com\\/jff2022\\/assets\\/img\\/Rectangle_bf.png\\\" \\/\\u003E\\u003C\\/div\\u003E\\r\\n\\u003Cp\\u003E\\u003Cbr \\/\\u003EWhen some spices meet with other spices, their boosting effects increase. Some of them have specific dominant flavors; some have both the distinctive pleasantness and aromas that make all other flavors shine. Spices are one of the unique tastes offered by nature as much as the cultural element that creates the common taste among people is spices. The best spice always finds its way into the dish where it belongs. So, now let&rsquo;s review the most used and traditional spices in Turkish cuisine: \\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cdiv class=\\\"row d-flex\\\"\\u003E\\r\\n\\u003Cdiv class=\\\"col-md-3\\\"\\u003E\\u003Cimg class=\\\"img-thumbnail responsive\\\" src=\\\"https:\\/\\/gonetdemo.com\\/jff2022\\/assets\\/img\\/Rectangle_bi.png\\\" \\/\\u003E\\u003C\\/div\\u003E\\r\\n\\u003Cdiv class=\\\"col-md-9\\\"\\u003E1. Chili pepper The chili pepper, which is obtained from red pepper, whose seeds are removed and chopped after drying, leaves its mark on the dishes with its sharp touch. It is the crown jewel of bitter lovers in stuffed green peppers, meat dishes, kebabs, and legumes such as dried beans and chickpeas. In addition to bitter varieties, it is possible to come across varieties with sweet and oily flavors.\\u003C\\/div\\u003E\\r\\n\\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003E2. Black pepper As black pepper is the hero of all dishes of Turkish cuisine, it is used so intensely even only in rice that the first spice that comes to mind when it comes to &ldquo;traditional and indispensable flavor&rdquo; is black pepper. As a companion of salt, it is the most precious spice on our tables.\\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003E3. Mint Mint, which can be used in a wide range of flavors from olive oil dishes to soups, from sour dishes to tzatziki and lemonade, is one of the most intensely flavored spices. It gives coolness to salads in fresh form; mint tea is the most beautiful source of health and can be consumed in all seasons of the year.\\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003E4. Cumin Cumin, which can be brewed as tea as well as used in meals cooked in the oven with granular form. Bringing the pleasure of eating to its peak with the hot and soft tastes, it adds to tomato-based, hot, sour and peppery dishes in powder form. Cumin cannot be considered separately from cheese types, meat dishes, soups and lentil dishes.\\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003E5. Thyme Thyme, the inseparable spice of olive oil, is the best gift given by the Mediterranean basin. With its different types and impressive tastes, it leaves its unique flavor to pastas, cheeses, grills, meat and vegetable recipes.\\u003C\\/div\\u003E\"}', '{\"1\":\"The Magic of Spices\"}', 1, '2022-05-31 17:22:12', '{\"1\":\"the-magic-of-spices\"}', '{\"1\":\"Spices turn your dream meal into a masterpiece. So much so that the trace (impression) left by a spice touch is never forgotten.\"}', '{\"1\":\"[{\\\"value\\\":\\\"jain farm fresh\\\"},{\\\"value\\\":\\\"spices\\\"}]\"}'),
+(10, '{\"1\":\"public\\/img\\/2022\\/blog\\/624fe3ae62fe7whatsapp_image_2022-04-08_at_10.13.06.jpeg\",\"7\":\"\"}', 1, '2022-04-08 10:27:16', '{\"1\":\"\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003EHealthy, balanced, adequate&hellip; In other words, sustainable nutrition is the most basic need for people; it is the most necessary understanding of life in today\'s world.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003EIf we need to summarize the main principles of this nutrition approach;\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cdiv class=\\\"col-md-12\\\"\\u003E\\u003Cspan style=\\\"font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E\\u003Cimg class=\\\"img-thumbnail responsive\\\" src=\\\"..\\/..\\/public\\/img\\/2022\\/blog\\/624fe32436f15_whatsapp_image_2022-04-08_at_10.13.06.jpeg\\\" width=\\\"1600\\\" height=\\\"1066\\\" \\/\\u003E\\u003C\\/span\\u003E\\u003C\\/div\\u003E\\r\\n\\u003Cp\\u003E&nbsp;\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E*The starting point of the concept of sustainable healthy nutrition is breast milk.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E*Healthy and reliable; it should have high nutritional value, and minimal damage to the environment.&nbsp;\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E*Sustainable nutrition; it refers to a life style that is economical, accessible, fair, acceptable, puts food safety first, and is necessary for the healthy growth of generations.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E*Consists of a wide variety of unprocessed or minimally processed foods.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cdiv class=\\\"row d-flex\\\"\\u003E\\r\\n\\u003Cdiv class=\\\"col-md-3\\\"\\u003E\\u003Cspan style=\\\"font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E\\u003Cimg class=\\\"img-thumbnail responsive\\\" src=\\\"..\\/..\\/public\\/img\\/2022\\/blog\\/624fe3249cf06_whatsapp_image_2022-04-08_at_10.13.12.jpeg\\\" width=\\\"1066\\\" height=\\\"1600\\\" \\/\\u003E\\u003C\\/span\\u003E\\u003C\\/div\\u003E\\r\\n\\u003Cdiv class=\\\"col-md-9\\\"\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E*Contains oily seeds, legumes, vegetables, fruits, whole wheat flour. Accepts moderate red meat, poultry, eggs, milk, and dairy products.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E*The most important is the right to access safe, clean drinking water.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E*In the event that every person living on the earth attains this desired diet, not only the risk of infectious diseases will not decrease in proportion to proper nutrition; at the same time, a general state of well-being, and health emerges.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E*Sustainable nutrition includes adequate, and correct amount of nutrients for a person\'s growth and development stages, and ensures a healthy continuation of life.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003C\\/div\\u003E\\r\\n\\u003Cbr \\/\\u003E\\u003Cbr \\/\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E*Sustainable healthy eating regimens that are the result of a system free from pathogens, and toxic substances; helps to eliminate carbon footprint, water waste, nitrogen-phosphorus applications, and chemical pollution.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E*Serves the existence of bio-diversity.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E*It adopts a policy that aims to minimize the use of hormones, and antibiotics in food production, the use of plastics, and derivatives in food packaging, and the loss, and waste in food consumption.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003Cp\\u003E\\u003Cspan style=\\\"font-weight: 400; font-family: tahoma, arial, helvetica, sans-serif;\\\"\\u003E*Sustainable healthy eating is a respect built on the values \\u200b\\u200bof local cuisine, consumption habits, and knowledge in the process of obtaining, producing, and consuming food.\\u003C\\/span\\u003E\\u003C\\/p\\u003E\\r\\n\\u003C\\/div\\u003E\",\"7\":\"\"}', '{\"1\":\"What is Sustainable Nutrition?\",\"7\":\"\"}', 1, '2022-04-12 12:26:16', '{\"1\":\"what-is-sustainable-nutrition\",\"7\":\"\"}', '{\"1\":\"Healthy, balanced, adequate\\u2026 In other words, sustainable nutrition is the most basic need for people; it is the most necessary understanding of life in today\'s world.\",\"7\":\"\"}', '{\"1\":\"[{\\\"value\\\":\\\"health\\\"},{\\\"value\\\":\\\"food\\\"},{\\\"value\\\":\\\"jff\\\"},{\\\"value\\\":\\\"fresh\\\"}]\",\"7\":\"\"}');
 
 -- --------------------------------------------------------
 
@@ -1448,146 +1142,19 @@ INSERT INTO `nictr_posts` (`ID`, `post_author`, `post_date`, `post_content`, `po
 -- Tablo için tablo yapısı `nictr_post_meta`
 --
 
-DROP TABLE IF EXISTS `nictr_post_meta`;
-CREATE TABLE IF NOT EXISTS `nictr_post_meta` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nictr_post_meta` (
+  `id` int(11) NOT NULL,
   `postID` int(11) NOT NULL,
   `type` text COLLATE utf8_turkish_ci NOT NULL,
-  `type_meta` text COLLATE utf8_turkish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=273 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+  `type_meta` text COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `nictr_post_meta`
 --
 
 INSERT INTO `nictr_post_meta` (`id`, `postID`, `type`, `type_meta`) VALUES
-(2, 1, 'cat', '1'),
-(4, 2, 'cat', '1'),
-(8, 4, 'cat', '2'),
-(10, 5, 'cat', '2'),
-(12, 6, 'cat', '2'),
-(100, 9, 'image', ''),
-(101, 9, 'cat', '6'),
-(102, 9, 'cat', '8'),
-(103, 10, 'image', ''),
-(104, 10, 'cat', '6'),
-(105, 10, 'cat', '8'),
-(106, 11, 'image', 'azerbaycan-da-peri-masalini-hatirlatan-kis-mevsimi-324-webp.webp'),
-(107, 11, 'cat', '5'),
-(108, 11, 'cat', '9'),
-(109, 12, 'image', 'yabancilara-29-aralik-uyarisi-9662.webp'),
-(110, 12, 'cat', '5'),
-(111, 12, 'cat', '9'),
-(112, 13, 'image', 'thy-avrupa-da-ikinci-2-sirada-yer-aldi-2631-webp.webp'),
-(113, 13, 'cat', '5'),
-(114, 13, 'cat', '9'),
-(115, 14, 'image', 'hindistan-da-50-otele-ulasiyor-4487.webp'),
-(116, 14, 'cat', '5'),
-(117, 14, 'cat', '9'),
-(121, 16, 'image', 'thy-genel-muduru-eksi-den-firtina-aciklamasi-7265.webp'),
-(122, 16, 'cat', '5'),
-(123, 16, 'cat', '9'),
-(124, 15, 'image', 'turizmin-yol-haritasi-izmir-de-ciziliyor-5218_1.webp'),
-(125, 15, 'cat', '5'),
-(126, 15, 'cat', '9'),
-(127, 17, 'image', 'istanbul-un-yeni-luks-oteli-acildi-5329.webp'),
-(128, 17, 'cat', '5'),
-(129, 17, 'cat', '9'),
-(130, 18, 'image', 'kapadokya-da-balon-turlari-iptal-3821.webp'),
-(131, 18, 'cat', '5'),
-(132, 18, 'cat', '9'),
-(153, 8, 'image', 'izmir-adnan-menderes-havalimani-otopark-ucreti-fiyatlari-2021-telefon-numarasi-iletisim_8c865.webp'),
-(154, 8, 'cat', '5'),
-(155, 8, 'cat', '7'),
-(158, 7, 'image', 'thumbs_b_c_513047b71adfafc5eaf6723f8b4e7995.webp'),
-(159, 7, 'cat', '5'),
-(160, 7, 'cat', '7'),
-(181, 31, 'image', 'milas.webp'),
-(182, 31, 'cat', '6'),
-(183, 31, 'cat', '8'),
-(184, 30, 'image', 'istanbul.webp'),
-(185, 30, 'cat', '6'),
-(186, 30, 'cat', '8'),
-(187, 29, 'image', 'izmir-adnan-menderes-havalimani-otopark-ucreti-fiyatlari-2021-telefon-numarasi-iletisim_8c865_1.webp'),
-(188, 29, 'cat', '6'),
-(189, 29, 'cat', '8'),
-(190, 28, 'image', 'dalaman.webp'),
-(191, 28, 'cat', '6'),
-(192, 28, 'cat', '8'),
-(193, 27, 'image', 'trabzon.webp'),
-(194, 27, 'cat', '6'),
-(195, 27, 'cat', '8'),
-(196, 26, 'image', 'sabiha-gokcen.webp'),
-(197, 26, 'cat', '6'),
-(198, 26, 'cat', '8'),
-(199, 25, 'image', '1200px-trabzon_airport.webp'),
-(200, 25, 'cat', '5'),
-(201, 25, 'cat', '7'),
-(202, 19, 'image', '1578390564762-havalimani_1.webp'),
-(203, 19, 'cat', '5'),
-(204, 19, 'cat', '7'),
-(205, 23, 'image', 'image_750x_5e6a4d7137475.webp'),
-(206, 23, 'cat', '5'),
-(207, 23, 'cat', '7'),
 (214, 33, 'image', '3246738_810x458.webp'),
-(215, 33, 'cat', '10'),
-(216, 33, 'cat', '11'),
-(217, 32, 'image', 'istanbul_1.webp'),
-(218, 32, 'cat', '10'),
-(219, 32, 'cat', '11'),
-(220, 34, 'image', 'unnamed.webp'),
-(221, 34, 'cat', '10'),
-(222, 34, 'cat', '11'),
-(223, 35, 'image', 'dalaman-havalimani-1.webp'),
-(224, 35, 'cat', '10'),
-(225, 35, 'cat', '11'),
-(226, 36, 'image', '1200px-trabzon_airport_1.webp'),
-(227, 36, 'cat', '10'),
-(228, 36, 'cat', '11'),
-(229, 37, 'image', 'image_750x_5e6a4d7137475_1.webp'),
-(230, 37, 'cat', '10'),
-(231, 37, 'cat', '11'),
-(232, 38, 'image', 'image_750x_5e6a4d7137475_2.webp'),
-(233, 38, 'cat', '5'),
-(234, 38, 'cat', '7'),
-(235, 39, 'image', ''),
-(236, 39, 'cat', '12'),
-(237, 40, 'image', ''),
-(238, 40, 'cat', '13'),
-(239, 41, 'image', ''),
-(240, 41, 'cat', '14'),
-(241, 42, 'image', ''),
-(242, 42, 'cat', '12'),
-(243, 43, 'image', ''),
-(244, 43, 'cat', '14'),
-(245, 44, 'image', ''),
-(246, 44, 'cat', '13'),
-(247, 45, 'image', ''),
-(248, 45, 'cat', '12'),
-(249, 46, 'image', ''),
-(250, 46, 'cat', '12'),
-(251, 47, 'image', ''),
-(252, 47, 'cat', '12'),
-(253, 48, 'image', ''),
-(254, 48, 'cat', '12'),
-(255, 49, 'image', ''),
-(256, 49, 'cat', '13'),
-(257, 50, 'image', ''),
-(258, 50, 'cat', '13'),
-(259, 51, 'image', ''),
-(260, 51, 'cat', '13'),
-(261, 52, 'image', ''),
-(262, 52, 'cat', '13'),
-(263, 53, 'image', ''),
-(264, 53, 'cat', '14'),
-(265, 54, 'image', ''),
-(266, 54, 'cat', '14'),
-(267, 55, 'image', ''),
-(268, 55, 'cat', '14'),
-(269, 56, 'image', ''),
-(270, 56, 'cat', '14'),
-(271, 3, 'image', ''),
 (272, 3, 'cat', '1');
 
 -- --------------------------------------------------------
@@ -1596,37 +1163,28 @@ INSERT INTO `nictr_post_meta` (`id`, `postID`, `type`, `type_meta`) VALUES
 -- Tablo için tablo yapısı `nictr_settings`
 --
 
-DROP TABLE IF EXISTS `nictr_settings`;
-CREATE TABLE IF NOT EXISTS `nictr_settings` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `aktif` int(11) NOT NULL DEFAULT '0',
+CREATE TABLE `nictr_settings` (
+  `id` int(11) NOT NULL,
   `langID` int(11) NOT NULL,
-  `currencyID` int(11) NOT NULL,
-  `siteurl` text COLLATE utf8_turkish_ci NOT NULL,
-  `baslik` text COLLATE utf8_turkish_ci NOT NULL,
-  `compName` text COLLATE utf8_turkish_ci NOT NULL,
-  `aciklama` text COLLATE utf8_turkish_ci NOT NULL,
+  `title` text COLLATE utf8_turkish_ci NOT NULL,
+  `content` text COLLATE utf8_turkish_ci NOT NULL,
   `keywords` text COLLATE utf8_turkish_ci NOT NULL,
-  `adres` text COLLATE utf8_turkish_ci NOT NULL,
+  `address` text COLLATE utf8_turkish_ci NOT NULL,
   `lat` text COLLATE utf8_turkish_ci NOT NULL,
   `lng` text COLLATE utf8_turkish_ci NOT NULL,
   `tel` varchar(55) COLLATE utf8_turkish_ci NOT NULL,
   `gsm` text COLLATE utf8_turkish_ci NOT NULL,
   `fax` varchar(55) COLLATE utf8_turkish_ci NOT NULL,
-  `eposta` text COLLATE utf8_turkish_ci NOT NULL,
-  `mailHost` text COLLATE utf8_turkish_ci NOT NULL,
-  `mailPort` text COLLATE utf8_turkish_ci NOT NULL,
-  `mailUser` text COLLATE utf8_turkish_ci NOT NULL,
-  `mailPass` text COLLATE utf8_turkish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+  `email` text COLLATE utf8_turkish_ci NOT NULL,
+  `map` text COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `nictr_settings`
 --
 
-INSERT INTO `nictr_settings` (`id`, `aktif`, `langID`, `currencyID`, `siteurl`, `baslik`, `compName`, `aciklama`, `keywords`, `adres`, `lat`, `lng`, `tel`, `gsm`, `fax`, `eposta`, `mailHost`, `mailPort`, `mailUser`, `mailPass`) VALUES
-(1, 1, 1, 1, 'http://localhost/NEMA/', 'JFF', 'JFF', '', 'jff, jain, jain farm,jain farm fresh', 'Konak/ İzmir', '32.817277169318494', '39.89654466273957', '+90 000 00 00', '+90 000 00 00', '', 'peniaugur80@gmail.com', 'mail.internettescil.com.tr', '587', 'ugur.isik@internettescil.com.tr', '12345q');
+INSERT INTO `nictr_settings` (`id`, `langID`, `title`, `content`, `keywords`, `address`, `lat`, `lng`, `tel`, `gsm`, `fax`, `email`, `map`) VALUES
+(1, 1, 'Site Başlık', 'Site Açıklama.....', '[{\"value\":\"tag1\"},{\"value\":\"tag2\"},{\"value\":\"tag3\"},{\"value\":\"tag4\"},{\"value\":\"tag5\"}]', 'adres', '39.89654466273957', '32.817277169318494', '+90 000 00 00', '+90 000 00 00', '', 'test@test.com', '');
 
 -- --------------------------------------------------------
 
@@ -1634,13 +1192,11 @@ INSERT INTO `nictr_settings` (`id`, `aktif`, `langID`, `currencyID`, `siteurl`, 
 -- Tablo için tablo yapısı `nictr_slider`
 --
 
-DROP TABLE IF EXISTS `nictr_slider`;
-CREATE TABLE IF NOT EXISTS `nictr_slider` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `dp` int(11) NOT NULL DEFAULT '0',
+CREATE TABLE `nictr_slider` (
+  `id` int(11) NOT NULL,
+  `dp` int(11) NOT NULL DEFAULT 0,
   `langID` int(11) NOT NULL,
-  `title` text NOT NULL,
-  PRIMARY KEY (`id`)
+  `title` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1649,9 +1205,8 @@ CREATE TABLE IF NOT EXISTS `nictr_slider` (
 -- Tablo için tablo yapısı `nictr_slider_img`
 --
 
-DROP TABLE IF EXISTS `nictr_slider_img`;
-CREATE TABLE IF NOT EXISTS `nictr_slider_img` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nictr_slider_img` (
+  `id` int(11) NOT NULL,
   `slideID` int(11) NOT NULL,
   `order` varchar(3) NOT NULL,
   `target` text NOT NULL,
@@ -1659,8 +1214,7 @@ CREATE TABLE IF NOT EXISTS `nictr_slider_img` (
   `title` text NOT NULL,
   `detail` text NOT NULL,
   `fileName` text NOT NULL,
-  `url` text NOT NULL,
-  PRIMARY KEY (`id`)
+  `url` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1669,15 +1223,13 @@ CREATE TABLE IF NOT EXISTS `nictr_slider_img` (
 -- Tablo için tablo yapısı `nictr_social`
 --
 
-DROP TABLE IF EXISTS `nictr_social`;
-CREATE TABLE IF NOT EXISTS `nictr_social` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nictr_social` (
+  `id` int(11) NOT NULL,
   `icon` text NOT NULL,
   `bg-color` text NOT NULL,
   `baslik` text NOT NULL,
-  `url` text NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+  `url` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Tablo döküm verisi `nictr_social`
@@ -1686,7 +1238,7 @@ CREATE TABLE IF NOT EXISTS `nictr_social` (
 INSERT INTO `nictr_social` (`id`, `icon`, `bg-color`, `baslik`, `url`) VALUES
 (6, 'fa fa-facebook', '#2b4f8f', 'Facebook', 'javascript:;'),
 (7, 'fa fa-twitter', '#1aa1f2', 'Twitter', 'javascript:;'),
-(8, 'fa fa-youtube', '#ff0000', 'Youtube', 'javascript:;');
+(8, 'fab fa-youtube fa-fw', '#ff0000', 'Youtube', 'javascript:;');
 
 -- --------------------------------------------------------
 
@@ -1694,15 +1246,13 @@ INSERT INTO `nictr_social` (`id`, `icon`, `bg-color`, `baslik`, `url`) VALUES
 -- Tablo için tablo yapısı `nictr_terms`
 --
 
-DROP TABLE IF EXISTS `nictr_terms`;
-CREATE TABLE IF NOT EXISTS `nictr_terms` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nictr_terms` (
+  `id` int(11) NOT NULL,
   `langID` int(11) NOT NULL,
   `termID` int(11) NOT NULL,
   `type` text COLLATE utf8_turkish_ci NOT NULL,
   `type_meta` text COLLATE utf8_turkish_ci NOT NULL,
-  `slug` text COLLATE utf8_turkish_ci NOT NULL,
-  PRIMARY KEY (`id`)
+  `slug` text COLLATE utf8_turkish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 -- --------------------------------------------------------
@@ -1711,29 +1261,28 @@ CREATE TABLE IF NOT EXISTS `nictr_terms` (
 -- Tablo için tablo yapısı `nictr_users`
 --
 
-DROP TABLE IF EXISTS `nictr_users`;
-CREATE TABLE IF NOT EXISTS `nictr_users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `status` int(11) NOT NULL DEFAULT '0',
-  `name` text COLLATE utf8_turkish_ci NOT NULL,
-  `surname` text COLLATE utf8_turkish_ci NOT NULL,
+CREATE TABLE `nictr_users` (
+  `id` int(11) NOT NULL,
+  `status` int(11) NOT NULL DEFAULT 0,
+  `name` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `surname` text COLLATE utf8_turkish_ci DEFAULT NULL,
   `email` text COLLATE utf8_turkish_ci NOT NULL,
-  `phone` text COLLATE utf8_turkish_ci NOT NULL,
-  `address` text COLLATE utf8_turkish_ci NOT NULL,
-  `company` text COLLATE utf8_turkish_ci NOT NULL,
-  `department` text COLLATE utf8_turkish_ci NOT NULL,
+  `phone` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `address` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `company` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `department` text COLLATE utf8_turkish_ci DEFAULT NULL,
   `password` text COLLATE utf8_turkish_ci NOT NULL,
-  `login` int(11) DEFAULT '0',
-  `loginID` varchar(100) COLLATE utf8_turkish_ci DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+  `image` text COLLATE utf8_turkish_ci DEFAULT NULL,
+  `login` int(11) DEFAULT 0,
+  `loginID` varchar(100) COLLATE utf8_turkish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `nictr_users`
 --
 
-INSERT INTO `nictr_users` (`id`, `status`, `name`, `surname`, `email`, `phone`, `address`, `company`, `department`, `password`, `login`, `loginID`) VALUES
-(1, 2, 'Uğur', 'Işık', 'ugur.isik@internettescil.com.tr', '', '', 'İnternet Tescil', 'PHP Developer', '$2y$10$JVvmdMZeKD7hEyWCX9FIFOcC9qqxDM194oFSIXm.Hc02cnZQ.Pff2', 1, 'c659987cdeba2709cf5c66c0383a93e5');
+INSERT INTO `nictr_users` (`id`, `status`, `name`, `surname`, `email`, `phone`, `address`, `company`, `department`, `password`, `image`, `login`, `loginID`) VALUES
+(1, 3, 'Uğur', 'Işık', 'ugur.isik@internettescil.com.tr', '', '', 'İnternet Tescil', 'PHP Developer', '$2y$10$roQZBo4F9eEbI7MsLuNE7enEEny7iqZUTpRb3Gmm/mbsHNPiaSBK.', NULL, 1, '21c80d482936b24002aa00b2f490ea5c');
 
 -- --------------------------------------------------------
 
@@ -1741,21 +1290,282 @@ INSERT INTO `nictr_users` (`id`, `status`, `name`, `surname`, `email`, `phone`, 
 -- Tablo için tablo yapısı `nictr_users_meta`
 --
 
-DROP TABLE IF EXISTS `nictr_users_meta`;
-CREATE TABLE IF NOT EXISTS `nictr_users_meta` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `nictr_users_meta` (
+  `id` int(11) NOT NULL,
   `userID` int(11) NOT NULL,
   `type` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
-  `type_meta` varchar(255) COLLATE utf8_turkish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+  `type_meta` varchar(255) COLLATE utf8_turkish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
 -- Tablo döküm verisi `nictr_users_meta`
 --
 
 INSERT INTO `nictr_users_meta` (`id`, `userID`, `type`, `type_meta`) VALUES
-(1, 1, 'yetki', '2');
+(301, 1, 'yetki', '2'),
+(302, 1, 'yetki', 'usersview'),
+(303, 1, 'yetki', 'useradd'),
+(304, 1, 'yetki', 'userdelete'),
+(305, 1, 'yetki', 'userupdate'),
+(306, 1, 'yetki', 'contactview'),
+(307, 1, 'yetki', 'sitesettingsview'),
+(308, 1, 'yetki', 'sitesettingsupdate'),
+(309, 1, 'yetki', 'langvariablesview'),
+(310, 1, 'yetki', 'menusettingsview'),
+(311, 1, 'yetki', 'addmenu'),
+(312, 1, 'yetki', 'updatemenu'),
+(313, 1, 'yetki', 'socialmediaview'),
+(314, 1, 'yetki', 'mailschemaview'),
+(315, 1, 'yetki', 'mailsettingsview');
+
+--
+-- Dökümü yapılmış tablolar için indeksler
+--
+
+--
+-- Tablo için indeksler `nictr_langs`
+--
+ALTER TABLE `nictr_langs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_langs_meta`
+--
+ALTER TABLE `nictr_langs_meta`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_log`
+--
+ALTER TABLE `nictr_log`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Tablo için indeksler `nictr_login_ban`
+--
+ALTER TABLE `nictr_login_ban`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_login_error`
+--
+ALTER TABLE `nictr_login_error`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_login_info`
+--
+ALTER TABLE `nictr_login_info`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_mailsetting`
+--
+ALTER TABLE `nictr_mailsetting`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_mailtemplate`
+--
+ALTER TABLE `nictr_mailtemplate`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_mail_schema`
+--
+ALTER TABLE `nictr_mail_schema`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Tablo için indeksler `nictr_menu`
+--
+ALTER TABLE `nictr_menu`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_postcat`
+--
+ALTER TABLE `nictr_postcat`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_posts`
+--
+ALTER TABLE `nictr_posts`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `post_author` (`post_author`);
+
+--
+-- Tablo için indeksler `nictr_post_meta`
+--
+ALTER TABLE `nictr_post_meta`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_settings`
+--
+ALTER TABLE `nictr_settings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_slider`
+--
+ALTER TABLE `nictr_slider`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_slider_img`
+--
+ALTER TABLE `nictr_slider_img`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_social`
+--
+ALTER TABLE `nictr_social`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_terms`
+--
+ALTER TABLE `nictr_terms`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_users`
+--
+ALTER TABLE `nictr_users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Tablo için indeksler `nictr_users_meta`
+--
+ALTER TABLE `nictr_users_meta`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
+--
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_langs`
+--
+ALTER TABLE `nictr_langs`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_langs_meta`
+--
+ALTER TABLE `nictr_langs_meta`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_log`
+--
+ALTER TABLE `nictr_log`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_login_ban`
+--
+ALTER TABLE `nictr_login_ban`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_login_error`
+--
+ALTER TABLE `nictr_login_error`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_login_info`
+--
+ALTER TABLE `nictr_login_info`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=971;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_mailsetting`
+--
+ALTER TABLE `nictr_mailsetting`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_mailtemplate`
+--
+ALTER TABLE `nictr_mailtemplate`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_mail_schema`
+--
+ALTER TABLE `nictr_mail_schema`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_menu`
+--
+ALTER TABLE `nictr_menu`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_postcat`
+--
+ALTER TABLE `nictr_postcat`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_posts`
+--
+ALTER TABLE `nictr_posts`
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_post_meta`
+--
+ALTER TABLE `nictr_post_meta`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=273;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_settings`
+--
+ALTER TABLE `nictr_settings`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_slider`
+--
+ALTER TABLE `nictr_slider`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_slider_img`
+--
+ALTER TABLE `nictr_slider_img`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_social`
+--
+ALTER TABLE `nictr_social`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_terms`
+--
+ALTER TABLE `nictr_terms`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_users`
+--
+ALTER TABLE `nictr_users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `nictr_users_meta`
+--
+ALTER TABLE `nictr_users_meta`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=316;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
