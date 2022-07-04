@@ -96,7 +96,7 @@ class helper
 	{
 		$filename = "public/img/" . date("Y") . "/" . $path;
 		if (!is_dir($filename)) {
-			mkdir($filename, 0777);
+			mkdir($filename, 0777,true);
 		}
 
 		$file_ = $filename . "/" . uniqid() . "_" . strtolower(str_replace(" ", "-", htmlspecialchars(helper::trtoen(basename($file["file"]["name"])))));
@@ -104,6 +104,14 @@ class helper
 		if (move_uploaded_file($file["file"]["tmp_name"], $file_)) {
 			return $file_;
 		} else {
+			return false;
+		}
+	}
+	static function deleteFile($filepath){
+		if(file_exists($filepath)){
+			unlink($filepath);
+			return true;
+		}else{
 			return false;
 		}
 	}

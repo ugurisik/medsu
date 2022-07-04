@@ -130,10 +130,13 @@
                                             <div class=" needsclick">
                                                 <div class="dz-message justify-content-center">
                                                     <div class="dz-preview dz-image-preview">
-                                                        <div class="dz-image"><img width="100%" data-dz-thumbnail="" alt="http://localhost/medsu/medsu/public/yonetim/assets/media/avatars/300-1.jpg" src="http://localhost/medsu/medsu/public/yonetim/assets/media/avatars/300-1.jpg"></div>
+                                                        <div class="dz-image">
+                                                            <img width="100%" onerror="if (this.src == null || '<?= SITE_URL ?>') this.src = '<?= SITE_URL ?>public/yonetim/assets/media/avatars/blank.png';" data-dz-thumbnail="" alt="<?= SITE_URL . $param['user']['image'] ?>" src="<?= SITE_URL . $param['user']['image'] ?>">
+
+                                                        </div>
                                                         <div class="dz-details">
                                                             <div class="dz-size"></div>
-                                                            <div class="dz-filename"><span data-dz-name="">http://localhost/medsu/medsu/public/yonetim/assets/media/avatars/300-1.jpg</span></div>
+                                                            <div class="dz-filename"><span data-dz-name=""><?= $param['user']['image'] ?></span></div>
                                                         </div>
 
                                                         <div class="dz-error-message"><span data-dz-errormessage=""></span></div>
@@ -150,7 +153,7 @@
                                                                         <path d="M32.6568542,29 L38.3106978,23.3461564 C39.8771021,21.7797521 39.8758057,19.2483887 38.3137085,17.6862915 C36.7547899,16.1273729 34.2176035,16.1255422 32.6538436,17.6893022 L27,23.3431458 L21.3461564,17.6893022 C19.7823965,16.1255422 17.2452101,16.1273729 15.6862915,17.6862915 C14.1241943,19.2483887 14.1228979,21.7797521 15.6893022,23.3461564 L21.3431458,29 L15.6893022,34.6538436 C14.1228979,36.2202479 14.1241943,38.7516113 15.6862915,40.3137085 C17.2452101,41.8726271 19.7823965,41.8744578 21.3461564,40.3106978 L27,34.6568542 L32.6538436,40.3106978 C34.2176035,41.8744578 36.7547899,41.8726271 38.3137085,40.3137085 C39.8758057,38.7516113 39.8771021,36.2202479 38.3106978,34.6538436 L32.6568542,29 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z"></path>
                                                                     </g>
                                                                 </g>
-                                                            </svg> </div> <a onclick="deletaAvatar()" class="dz-remove" href="javascript:undefined;" data-dz-remove="">Dosyayı Sil</a>
+                                                            </svg> </div> <a onclick="deleteAvatar()" class="dz-remove" href="javascript:undefined;" data-dz-remove="">Dosyayı Sil</a>
                                                     </div>
                                                 </div>
 
@@ -283,11 +286,47 @@
 <link href="<?= ADMIN_ASSETS ?>/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 <script src="<?= ADMIN_ASSETS ?>/plugins/custom/datatables/datatables.bundle.js"></script>
 <script>
+    let image = "<?= $param['user']['image'] ?>";
+
     $("#kt_datatable_example_1").DataTable({
         paging: true,
         responsive: true,
         displayLength: 10,
     });
+
+    function deleteAvatar() {
+        Swal.fire({
+            text: "Silmek istediğinize emin misiniz?",
+            icon: "info",
+            showDenyButton: true,
+            confirmButtonText: 'Evet Sil',
+            denyButtonText: `Hayır`,
+        }).then((result) => {
+
+            if (result.isConfirmed) {
+                let data = [];
+                data.push({
+                    name: "image",
+                    value: image
+                })
+                $.ajax({
+                    url: "<?= ADMIN_URL ?>users/imageDelete",
+                    type: "post",
+                    data: data,
+                    success: function(response) {
+                        console.log(response);
+                        let obj = JSON.parse(response);
+                        Swal.fire({
+                            text: "" + obj.message + "",
+                            icon: "" + obj.type + ""
+
+                        });
+
+                    }
+                });
+            }
+        });
+    }
 
     function del(id) {
         Swal.fire({
@@ -325,7 +364,6 @@
                 });
             }
         });
-
     }
 
     function dropZone() {
@@ -349,7 +387,13 @@
             init: function() {
 
                 this.on("success", function(file, responseText) {
-                    console.log(responseText);
+                    if (image) {
+                        this.removeFile("<?= SITE_URL ?>" + "" + image + "");
+                        console.log("Deleted image");
+                    }
+                    image = responseText;
+                    console.log(image);
+
                 });
             },
             accept: function(file, done) {
@@ -370,6 +414,9 @@
             form.push({
                 "name": "yetki",
                 "value": yetki
+            }, {
+                "name": "image",
+                "value": image
             });
             let new_password = $("input[name=new_password]").val();
             let renew_password = $("input[name=renew_password]").val();
@@ -404,7 +451,7 @@
                     let obj = JSON.parse(response);
 
                     if (obj.type == "success") {
-                        
+
                         for (let index = 0; index < yetki.length; index++) {
                             let yetkidata = [{
                                     name: "yetki",

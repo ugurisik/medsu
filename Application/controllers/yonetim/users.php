@@ -40,7 +40,7 @@ class users extends controller
             "company" => $_POST['firma'],
             "department" => $_POST['departman'],
             "password" => password_hash($_POST['new_password'], PASSWORD_DEFAULT),
-            "image" => $_POST['resim'],
+            "image" => $_POST['image'],
             "status" => 3,
         );
         if ($this->model("usersModel")->getUserInformation($_POST["email"]) != null) {
@@ -93,7 +93,7 @@ class users extends controller
             "company" => $_POST['firma'],
             "department" => $_POST['departman'],
             "password" => $pass,
-            "image" => $_POST['resim'],
+            "image" => $_POST['image'],
             "status" => 3,
         );
         $add = $this->model("usersModel")->userUpdate($data, $id);
@@ -160,5 +160,20 @@ class users extends controller
     public function imageAdd()
     {
         echo helper::imageUpload($_FILES, "profile");
+    }
+    public function imageDelete(){
+        if(helper::deleteFile($_POST['image'])){
+            $data = array(
+                "message" => "Resim başarılı bir şekilde silindi.",
+                "type" => "success"
+            );
+        }else{
+            $data = array(
+                "message" => "Resim silinirken bir hata oluştu.".$_POST['image'],
+                "type" => "error"
+            );
+        }
+        $json = json_encode($data, JSON_UNESCAPED_UNICODE);
+        print_r($json);
     }
 }
