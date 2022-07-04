@@ -37,21 +37,6 @@ class files extends controller
         }
         echo helper::fileUpload($_FILES, "general");
     }
-
-    public function listFiles()
-    {
-        if (!$this->sessionManager->isLogged()) {
-            helper::redirect(SITE_URL . "/yonetim/giris");
-            die();
-        }
-
-        $arr = helper::directoryToArray("public/files", true);
-        foreach ($arr as $files) {
-            if (strpos($files, ".") !== false) {
-                echo $files . "<br>";
-            }
-        }
-    }
     public function deleteFiles()
     {
         if (helper::deleteFile($_POST['filepath'])) {
@@ -67,5 +52,32 @@ class files extends controller
         }
         $json = json_encode($data, JSON_UNESCAPED_UNICODE);
         print_r($json);
+    }
+
+    public function images()
+    {
+        if (!$this->sessionManager->isLogged()) {
+            helper::redirect(SITE_URL . "/yonetim/giris");
+            die();
+        }
+        $files = array();
+        $arr = helper::directoryToArray("public/img", true);
+        foreach ($arr as $file) {
+            if (strpos($file, ".") !== false) {
+                $files[] = $file;
+            }
+        }
+
+        $this->render('yonetim/inc/header', ['mpage' => 'content', 'maltpage' => 'files']);
+        $this->render('yonetim/images', ['images' => $files]);
+        $this->render('yonetim/inc/footer');
+    }
+    public function uploadImages()
+    {
+        if (!$this->sessionManager->isLogged()) {
+            helper::redirect(SITE_URL . "/yonetim/giris");
+            die();
+        }
+        echo helper::imageUpload($_FILES, "general");
     }
 }
