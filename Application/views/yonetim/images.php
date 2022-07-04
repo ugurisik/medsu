@@ -207,7 +207,7 @@
             paramName: "file",
             maxFiles: 5,
             acceptedFiles: ".png,.jpg,.gif,.bmp,.jpeg,.webp",
-            maxFilesize: 150,
+            maxFilesize: 5,
             addRemoveLinks: true,
             dictDefaultMessage: 'Yüklemek istediğiniz dosyaları buraya bırakın',
             dictFallbackMessage: "Tarayıcınız sürükle bırak yüklemelerini desteklemiyor",
