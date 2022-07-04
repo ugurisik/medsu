@@ -107,6 +107,44 @@ class helper
 			return false;
 		}
 	}
+
+	static function fileUpload($file, $path){
+		$filename = "public/files/" . date("Y") . "/" . $path;
+		if (!is_dir($filename)) {
+			mkdir($filename, 0777,true);
+		}
+
+		$file_ = $filename . "/" . uniqid() . "_" . strtolower(str_replace(" ", "-", htmlspecialchars(helper::trtoen(basename($file["file"]["name"])))));
+
+		if (move_uploaded_file($file["file"]["tmp_name"], $file_)) {
+			return $file_;
+		} else {
+			return false;
+		}
+	}
+	
+	static function directoryToArray($directory, $recursive) {
+		$array_items = array();
+		if ($handle = opendir($directory)) {
+			while (false !== ($file = readdir($handle))) {
+				if ($file != "." && $file != "..") {
+					if (is_dir($directory. "/" . $file)) {
+						if($recursive) {
+							$array_items = array_merge($array_items, helper::directoryToArray($directory. "/" . $file, $recursive));
+						}
+						$file = $directory . "/" . $file;
+						$array_items[] = preg_replace("/\/\//si", "/", $file);
+					} else {
+						$file = $directory . "/" . $file;
+						$array_items[] = preg_replace("/\/\//si", "/", $file);
+					}
+				}
+			}
+			closedir($handle);
+		}
+		return $array_items;
+	}
+
 	static function deleteFile($filepath){
 		if(file_exists($filepath)){
 			unlink($filepath);
