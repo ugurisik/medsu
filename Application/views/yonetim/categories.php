@@ -3,20 +3,21 @@
         <div class="card card-docs my-3">
             <div class="card-header">
 
-                <h3 class="card-title">Dosya Yönetimi</h3>
+                <h3 class="card-title">Kategori Yönetimi</h3>
                 <div class=" py-6 text-muted font-size-xs">
                     <div class="card-toolbar">
-                        <div class="d-flex justify-content-end" data-kt-filemanager-table-toolbar="base">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_upload">
-                                <span class="svg-icon svg-icon-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path opacity="0.3" d="M10 4H21C21.6 4 22 4.4 22 5V7H10V4Z" fill="currentColor"></path>
-                                        <path d="M10.4 3.60001L12 6H21C21.6 6 22 6.4 22 7V19C22 19.6 21.6 20 21 20H3C2.4 20 2 19.6 2 19V4C2 3.4 2.4 3 3 3H9.20001C9.70001 3 10.2 3.20001 10.4 3.60001ZM16 11.6L12.7 8.29999C12.3 7.89999 11.7 7.89999 11.3 8.29999L8 11.6H11V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V11.6H16Z" fill="currentColor"></path>
-                                        <path opacity="0.3" d="M11 11.6V17C11 17.6 11.4 18 12 18C12.6 18 13 17.6 13 17V11.6H11Z" fill="currentColor"></path>
+                        <div class="d-flex align-items-center">
+                            <!--begin::Button-->
+                            <a href="<?= ADMIN_URL ?>/kategori/ekle/<?= $param['tur'] ?>" class="btn btn-white btn-outline-primary font-weight-bold px-2 px-lg-5 mr-2">
+                                <span class="svg-icon svg-icon-success svg-icon-lg">
+                                    <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Add-user.svg-->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                                        <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+                                        <path d="M432 256c0 17.69-14.33 32.01-32 32.01H256v144c0 17.69-14.33 31.99-32 31.99s-32-14.3-32-31.99v-144H48c-17.67 0-32-14.32-32-32.01s14.33-31.99 32-31.99H192v-144c0-17.69 14.33-32.01 32-32.01s32 14.32 32 32.01v144h144C417.7 224 432 238.3 432 256z" />
                                     </svg>
-                                </span>
-                                Dosya Yükle
-                            </button>
+                                    <!--end::Svg Icon-->
+                                </span>Kategori Ekle</a>
+                            <!--end::Button-->
                         </div>
                     </div>
                 </div>
@@ -25,49 +26,70 @@
         </div>
         <div class="row">
 
-            <?php
-            foreach ($param['files'] as $file) :
-                $filename = explode("/", $file);
 
-            ?>
-                <div class="col-md-3 col-xl-3 col-lg-3 col-sm-6 col-xs-6">
-                    <div class="card my-3 card-custom card-stretch">
-                        <div class="card-header border-0">
-                            <h3 class="card-title"></h3>
-                            <div class="card-toolbar">
-                                <a href="javascript:;" onclick="navigator.clipboard.writeText('<?= SITE_URL . $file ?>'); alert('Link Kopyalandı!')" class="btn btn-sm btn-light-danger btn-icon mx-3" title="Link Kopyala">
-                                    <span class="svg-icon svg-icon-md">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                            <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->
-                                            <path d="M433.941 65.941l-51.882-51.882A48 48 0 0 0 348.118 0H176c-26.51 0-48 21.49-48 48v48H48c-26.51 0-48 21.49-48 48v320c0 26.51 21.49 48 48 48h224c26.51 0 48-21.49 48-48v-48h80c26.51 0 48-21.49 48-48V99.882a48 48 0 0 0-14.059-33.941zM266 464H54a6 6 0 0 1-6-6V150a6 6 0 0 1 6-6h74v224c0 26.51 21.49 48 48 48h96v42a6 6 0 0 1-6 6zm128-96H182a6 6 0 0 1-6-6V54a6 6 0 0 1 6-6h106v88c0 13.255 10.745 24 24 24h88v202a6 6 0 0 1-6 6zm6-256h-64V48h9.632c1.591 0 3.117.632 4.243 1.757l48.368 48.368a6 6 0 0 1 1.757 4.243V112z" />
-                                        </svg>
-                                    </span>
-                                </a>
-                                <a href="javascript:;" onclick="delFile('<?= $file ?>')" class="btn btn-sm btn-light-danger btn-icon" title="Sil">
-                                    <span class="svg-icon svg-icon-md">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                                            <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-                                            <path d="M135.2 17.69C140.6 6.848 151.7 0 163.8 0H284.2C296.3 0 307.4 6.848 312.8 17.69L320 32H416C433.7 32 448 46.33 448 64C448 81.67 433.7 96 416 96H32C14.33 96 0 81.67 0 64C0 46.33 14.33 32 32 32H128L135.2 17.69zM394.8 466.1C393.2 492.3 372.3 512 346.9 512H101.1C75.75 512 54.77 492.3 53.19 466.1L31.1 128H416L394.8 466.1z" fill="#000000" fill-rule="nonzero"></path>
-                                        </svg>
-                                    </span>
-                                </a>
-
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <div class="d-flex flex-column align-items-center">
-                                <img alt="" class="max-h-65px" src="<?= SITE_URL ?>public/yonetim/assets/media/svg/files/doc.svg">
-                                <span class="text-dark-75 font-weight-bold mt-15 font-size-lg">
-                                    <?= $filename[count($filename) - 1] ?>
-                                    <?= $fileext[1] ?>
-                                </span>
-                            </div>
+            <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-xs-12">
+                <div class="card card-custom gutter-b">
+                    <div class="card-header flex-wrap py-3">
+                        <div class="card-title">
+                            <h3 class="card-label">Kategoriler
                         </div>
                     </div>
+                    <div class="card-body">
+                        <!--begin: Datatable-->
+                        <table id="kt_datatable_example_1" class="table table-striped table-row-bordered gy-5">
+                            <thead>
+                                <tr class="fw-bold fs-6 text-muted">
+                                    <th class="w-10px text-center">ID</th>
+                                    <th class="text-start">Başlık</th>
+                                    <th class="text-end w-50px">İşlem</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                foreach ($param['categories'] as $categories) :
+                                ?>
+                                    <tr>
+                                        <td class="text-center"><?= $categories['id'] ?></td>
+                                        <td class="text-start"><?= helper::jdil($categories['title']) ?></td>
+
+                                        <td>
+                                            <a href="<?= ADMIN_URL ?>post/categories/<?= $categories['id'] ?>" class="btn btn-sm btn-clean btn-icon mr-2" title="Düzenle">
+                                                <span class="svg-icon svg-icon-md">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <rect x="0" y="0" width="24" height="24" />
+                                                            <path d="M8,17.9148182 L8,5.96685884 C8,5.56391781 8.16211443,5.17792052 8.44982609,4.89581508 L10.965708,2.42895648 C11.5426798,1.86322723 12.4640974,1.85620921 13.0496196,2.41308426 L15.5337377,4.77566479 C15.8314604,5.0588212 16,5.45170806 16,5.86258077 L16,17.9148182 C16,18.7432453 15.3284271,19.4148182 14.5,19.4148182 L9.5,19.4148182 C8.67157288,19.4148182 8,18.7432453 8,17.9148182 Z" fill="#000000" fill-rule="nonzero" \ transform="translate(12.000000, 10.707409) rotate(-135.000000) translate(-12.000000, -10.707409) " />
+                                                            <rect fill="#000000" opacity="0.3" x="5" y="20" width="15" height="2" rx="1" />
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                            </a>
+                                            <a href="javascript:;" onclick="sil('<?= $kat['id'] ?>','kategori','<?= $param['tur'] ?>')" class="btn btn-sm btn-clean btn-icon" title="Sil">
+                                                <span class="svg-icon svg-icon-md">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                        <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <rect x="0" y="0" width="24" height="24" />
+                                                            <path d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z" fill="#000000" fill-rule="nonzero" />
+                                                            <path d="M14,4.5 L14,4 C14,3.44771525 13.5522847,3 13,3 L11,3 C10.4477153,3 10,3.44771525 10,4 L10,4.5 L5.5,4.5 C5.22385763,4.5 5,4.72385763 5,5 L5,5.5 C5,5.77614237 5.22385763,6 5.5,6 L18.5,6 C18.7761424,6 19,5.77614237 19,5.5 L19,5 C19,4.72385763 18.7761424,4.5 18.5,4.5 L14,4.5 Z" fill="#000000" opacity="0.3" />
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                            </a>
+
+                                        </td>
+                                    </tr>
+                                <?php
+                                endforeach;
+                                ?>
+
+                            </tbody>
+                        </table>
+                        <!--end: Datatable-->
+                    </div>
                 </div>
-            <?php
-            endforeach;
-            ?>
+            </div>
+
         </div>
 
     </div>
@@ -138,7 +160,7 @@
                                                             <path d="M32.6568542,29 L38.3106978,23.3461564 C39.8771021,21.7797521 39.8758057,19.2483887 38.3137085,17.6862915 C36.7547899,16.1273729 34.2176035,16.1255422 32.6538436,17.6893022 L27,23.3431458 L21.3461564,17.6893022 C19.7823965,16.1255422 17.2452101,16.1273729 15.6862915,17.6862915 C14.1241943,19.2483887 14.1228979,21.7797521 15.6893022,23.3461564 L21.3431458,29 L15.6893022,34.6538436 C14.1228979,36.2202479 14.1241943,38.7516113 15.6862915,40.3137085 C17.2452101,41.8726271 19.7823965,41.8744578 21.3461564,40.3106978 L27,34.6568542 L32.6538436,40.3106978 C34.2176035,41.8744578 36.7547899,41.8726271 38.3137085,40.3137085 C39.8758057,38.7516113 39.8771021,36.2202479 38.3106978,34.6538436 L32.6568542,29 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z"></path>
                                                         </g>
                                                     </g>
-                                                </svg> </div> 
+                                                </svg> </div>
                                         </div>
                                     </div>
 
@@ -161,7 +183,15 @@
 
 <script src="<?= ADMIN_ASSETS ?>/plugins/global/plugins.bundle.js"></script>
 <script src="<?= ADMIN_ASSETS ?>/js/scripts.bundle.js"></script>
-
+<link href="<?= ADMIN_ASSETS ?>/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
+<script src="<?= ADMIN_ASSETS ?>/plugins/custom/datatables/datatables.bundle.js"></script>
+<script>
+    $(".table").DataTable({
+        paging: true,
+        responsive: true,
+        displayLength: 10,
+    });
+</script>
 <script>
     function delFile(path) {
         Swal.fire({

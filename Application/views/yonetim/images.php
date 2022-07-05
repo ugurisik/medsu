@@ -35,7 +35,7 @@
                         <div class="card-header border-0">
                             <h3 class="card-title"></h3>
                             <div class="card-toolbar">
-                                <a href="javascript:;" onclick="navigator.clipboard.writeText('<?= SITE_URL . $file ?>')" class="btn btn-sm btn-light-danger btn-icon mx-3" title="Link Kopyala">
+                                <a href="javascript:;" onclick="navigator.clipboard.writeText('<?= SITE_URL . $file ?>'); alert('Link Kopyalandı!')" class="btn btn-sm btn-light-danger btn-icon mx-3" title="Link Kopyala">
                                     <span class="svg-icon svg-icon-md">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                                             <!-- Font Awesome Pro 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) -->

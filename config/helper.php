@@ -342,7 +342,7 @@ class helper
 					[
 						"text" => "Sayfa Yönetimi",
 						"href" => "#",
-						"active" => "post",
+						"active" => "pages",
 						"icon" => "",
 						"target" => "",
 						"children" => [
