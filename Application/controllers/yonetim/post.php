@@ -13,9 +13,10 @@ class post extends controller
 
 
         $categories = $this->model('postModel')->getCategories("post");
+        $category = $this->model('postModel')->getCategoryWithId($id);
 
         $this->render('yonetim/inc/header',['mpage'=>'content','maltpage'=>'post']);
-        $this->render('yonetim/categories',['categories'=>$categories]);
+        $this->render('yonetim/categories',['categories'=>$categories,'category'=>$category]);
         $this->render('yonetim/inc/footer');
     }
 }

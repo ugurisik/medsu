@@ -12,7 +12,7 @@ class dil extends model
 	public function dilkisa(){
 		
 		$this->db->orderBy("id","ASC");
-		$dil = $this->db->get("langs",2,"*");
+		$dil = $this->db->get("langs");
 		//$arraym[0]="dil sıfır ".$d['kisa'];
 		//$arraym[1]="dil bir ".$d['kisa'];
 		//return $arraym;

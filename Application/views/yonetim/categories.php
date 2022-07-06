@@ -8,7 +8,7 @@
                     <div class="card-toolbar">
                         <div class="d-flex align-items-center">
                             <!--begin::Button-->
-                            <a href="<?= ADMIN_URL ?>/kategori/ekle/<?= $param['tur'] ?>" class="btn btn-white btn-outline-primary font-weight-bold px-2 px-lg-5 mr-2">
+                            <a href="<?= ADMIN_URL ?>post/categories" class="btn btn-white btn-outline-primary font-weight-bold px-2 px-lg-5 mr-2">
                                 <span class="svg-icon svg-icon-success svg-icon-lg">
                                     <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Add-user.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -89,7 +89,66 @@
                     </div>
                 </div>
             </div>
+            <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-xs-12">
+                <div class="card card-custom gutter-b">
+                    <div class="card-header flex-wrap py-3">
+                        <div class="card-title">
+                            <h3 class="card-label"><?php
+                                                    if ($param['category'] != "") {
+                                                        echo "Kategori Düzenle";
+                                                    } else {
+                                                        echo "Kategori Ekle";
+                                                    }
+                                                    ?></h3>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <label class="col-2 col-form-label">Üst Kategori </label>
+                            <div class="col-10">
+                                <select class="selectpicker form-select form-control"  multiple="multiple" data-control="select2" data-placeholder="Select an option" data-show-subtext="true" name="ust" data-live-search="true" data-size="5">
 
+                                    <option value="0">Ana Kategori</option>
+                                    <?php foreach ($param['categories'] as $kat) {
+                                        if ($param['categories']['id'] != $kat['id']) { ?>
+                                            <option value="<?= $kat['id'] ?>" data-subtext="<?= helper::jdil($kat['ubaslik']) ?>">
+                                                <?= helper::jdil($kat['title']) ?></option>
+                                    <?php }
+                                    } ?>
+                                </select>
+                            </div>
+                        </div>
+                        <ul class="nav nav-tabs my-5" id="myTab" role="tablist">
+                            <?php $d = 0;
+                            foreach (dildizi as $diltab) { ?>
+                                <li class="nav-item" role="presentation">
+                                    <a class="nav-link  <?php if ($d == 0) {
+                                                            echo 'active';
+                                                        } ?>" id="dil<?= $diltab['id'] ?>" data-toggle="tab" href="#tab<?= $diltab['id'] ?>" role="tab" aria-controls="home" aria-selected="true"><img src="<?= SITE_URL ?>public/yonetim/assets/media/flags/<?= $diltab['img'] ?>" style="height:20px"><?= $diltab['title'] ?></a>
+                                </li>
+                            <?php $d++;
+                            } ?>
+                        </ul>
+                        <div class="tab-content mt-5" id="myTabContent">
+                            <?php $d = 0;
+                            foreach (dildizi as $diltab) { ?>
+                                <div class="tab-pane fade  <?php if ($d == 0) {
+                                                                echo ' show active';
+                                                            } ?>" id="tab<?= $diltab['id'] ?>" role="tabpanel" aria-labelledby="tab<?= $diltab['id'] ?>">
+                                    <div class="form-group row">
+                                        <label class="col-2 col-form-label">Başlık (<?= $diltab['title'] ?>)</label>
+                                        <div class="col-10">
+                                            <input class="form-control" type="text" name="baslik[<?= $diltab['id'] ?>]" />
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php $d++;
+                            } ?>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
     </div>

@@ -19,10 +19,10 @@ class system
            $url[1]=$this->method;
        }
 
-        $dilverim=$this->dil->dilkisa(1);
+        $dilverim=$this->dil->dillist();
        $dilveri[0]=$dilverim[0];
        $dilveri[1]=$dilverim[1];
-        define("dildizi",$dilveri);
+        define("dildizi",$dilverim);
         $key = array_search($url[0], array_column($dilveri, 'kisa'));
         
         if(is_numeric($key))
