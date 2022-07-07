@@ -25,8 +25,6 @@
 
         </div>
         <div class="row">
-
-
             <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-xs-12">
                 <div class="card card-custom gutter-b">
                     <div class="card-header flex-wrap py-3">
@@ -65,7 +63,7 @@
                                                     </svg>
                                                 </span>
                                             </a>
-                                            <a href="javascript:;" onclick="sil('<?= $kat['id'] ?>','kategori','<?= $param['tur'] ?>')" class="btn btn-sm btn-clean btn-icon" title="Sil">
+                                            <a href="javascript:;" onclick="del('<?= $categories['id'] ?>')" class="btn btn-sm btn-clean btn-icon" title="Sil">
                                                 <span class="svg-icon svg-icon-md">
                                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -93,148 +91,107 @@
                 <div class="card card-custom gutter-b">
                     <div class="card-header flex-wrap py-3">
                         <div class="card-title">
-                            <h3 class="card-label"><?php
-                                                    if ($param['category'] != "") {
+                            <h3 class="card-label"><?php if ($param['category'] != "") {
                                                         echo "Kategori Düzenle";
                                                     } else {
                                                         echo "Kategori Ekle";
-                                                    }
-                                                    ?></h3>
+                                                    } ?></h3>
                         </div>
                     </div>
                     <div class="card-body">
                         <div class="form-group row">
                             <label class="col-2 col-form-label">Üst Kategori </label>
                             <div class="col-10">
-                                <select class="selectpicker form-select form-control"  multiple="multiple" data-control="select2" data-placeholder="Select an option" data-show-subtext="true" name="ust" data-live-search="true" data-size="5">
+                                <select class="selectpicker form-select form-control" data-control="select2" data-placeholder="Kategori Seçiniz" data-show-subtext="true" name="subcategories" data-live-search="true" data-size="5">
 
                                     <option value="0">Ana Kategori</option>
                                     <?php foreach ($param['categories'] as $kat) {
-                                        if ($param['categories']['id'] != $kat['id']) { ?>
-                                            <option value="<?= $kat['id'] ?>" data-subtext="<?= helper::jdil($kat['ubaslik']) ?>">
-                                                <?= helper::jdil($kat['title']) ?></option>
-                                    <?php }
+
+                                        if ($kat['topcat'] == 0) {
+                                            $top = "Ana Kategori";
+                                        } else {
+                                            $topcat = $this->model("postModel")->getCategoryWithId($kat['topcat']);
+                                            $top = helper::jdil($topcat['title']);
+                                        }
+
+
+                                        if ($kat['categories']['id'] == $param['category']['topcat']) {
+                                            $selected = "selected";
+                                        } else {
+                                            $selected = "";
+                                        }
+
+                                    ?>
+                                        <option value="<?= $kat['id'] ?>" <?= $selected ?>>
+                                            <?= helper::jdil($kat['title']) ?> [<small style="font-size: 3px;"><?= $top ?></small>]</option>
+                                    <?php
                                     } ?>
                                 </select>
                             </div>
                         </div>
-                        <ul class="nav nav-tabs my-5" id="myTab" role="tablist">
-                            <?php $d = 0;
-                            foreach (dildizi as $diltab) { ?>
-                                <li class="nav-item" role="presentation">
-                                    <a class="nav-link  <?php if ($d == 0) {
-                                                            echo 'active';
-                                                        } ?>" id="dil<?= $diltab['id'] ?>" data-toggle="tab" href="#tab<?= $diltab['id'] ?>" role="tab" aria-controls="home" aria-selected="true"><img src="<?= SITE_URL ?>public/yonetim/assets/media/flags/<?= $diltab['img'] ?>" style="height:20px"><?= $diltab['title'] ?></a>
-                                </li>
-                            <?php $d++;
-                            } ?>
-                        </ul>
-                        <div class="tab-content mt-5" id="myTabContent">
-                            <?php $d = 0;
-                            foreach (dildizi as $diltab) { ?>
-                                <div class="tab-pane fade  <?php if ($d == 0) {
-                                                                echo ' show active';
-                                                            } ?>" id="tab<?= $diltab['id'] ?>" role="tabpanel" aria-labelledby="tab<?= $diltab['id'] ?>">
-                                    <div class="form-group row">
-                                        <label class="col-2 col-form-label">Başlık (<?= $diltab['title'] ?>)</label>
-                                        <div class="col-10">
-                                            <input class="form-control" type="text" name="baslik[<?= $diltab['id'] ?>]" />
+                        <div class="d-flex flex-column flex-md-row rounded border p-10 my-5">
+                            <ul class="nav nav-tabs nav-pills flex-row border-0 flex-md-column me-5 mb-3 mb-md-0 fs-6">
+
+                                <?php
+                                $c = 0;
+                                foreach (dildizi as $lang) :
+                                    if ($c % 2 == 0) {
+                                        $activeshow = "btn-active-light-info  active";
+                                    } else {
+                                        $activeshow = "btn-active-light-danger";
+                                    }
+                                    $c++;
+                                ?>
+                                    <li class="nav-item me-0 mb-md-2">
+                                        <a class="nav-link btn btn-flex <?= $activeshow ?>" data-bs-toggle="tab" href="#tab<?= $lang['id'] ?>">
+                                            <span class="symbol symbol-20px me-4"> <img class="rounded-1" src="<?= ADMIN_ASSETS ?>/media/flags/<?= $lang['img'] ?>" alt=""></span>
+                                            <span class="d-flex flex-column align-items-start">
+                                                <span class="fs-4 fw-bolder">Kategori</span>
+                                                <span class="fs-7"><?= $lang['title'] ?></span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                <?php
+                                endforeach;
+                                ?>
+                            </ul>
+                            <form name="catForm" class="w-100">
+                                <div class="tab-content w-100" id="myTabContent">
+                                    <?php
+                                    $c = 0;
+                                    foreach (dildizi as $lang) :
+                                        if ($c % 2 == 0 and $c < 1) {
+                                            $activeshow = "active show";
+                                        } else {
+                                            $activeshow = "";
+                                        }
+                                        $c++;
+                                    ?>
+                                        <div class="tab-pane fade <?= $activeshow ?>" id="tab<?= $lang['id'] ?>" role="tabpanel">
+                                            <div class="row mb-5">
+                                                <div class="col-md-12">
+                                                    <label>Kategori Adı <small>[<?= $lang['title'] ?>]</small></label>
+                                                    <input type="text" name="title[<?= $lang['id'] ?>]" class="form-control" value="<?= helper::jdilWithLangs($param['category']['title'], $lang['id']) ?>">
+                                                </div>
+                                            </div>
+
                                         </div>
-                                    </div>
+                                    <?php
+                                    endforeach;
+                                    ?>
                                 </div>
-                            <?php $d++;
-                            } ?>
+                            </form>
                         </div>
+                    </div>
+                    <div class="card-footer text-end">
+                        <button name="btn" type="button" data-type="<?php if ($param['category'] != "") {
+                                                                        echo "edit";
+                                                                    } else {
+                                                                        echo "add";
+                                                                    } ?>" class="btn btn-primary w-25"><i class="fa fa-plus"></i>Ekle</button>
                     </div>
                 </div>
 
-            </div>
-        </div>
-
-    </div>
-    <div class="modal fade" id="kt_modal_upload" tabindex="-1" aria-hidden="true">
-        <!--begin::Modal dialog-->
-        <div class="modal-dialog modal-dialog-centered mw-650px">
-            <!--begin::Modal content-->
-            <div class="modal-content">
-                <!--begin::Form-->
-                <form class="form" action="none" id="kt_modal_upload_form">
-                    <!--begin::Modal header-->
-                    <div class="modal-header">
-                        <!--begin::Modal title-->
-                        <h2 class="fw-bolder">Upload files</h2>
-                        <!--end::Modal title-->
-                        <!--begin::Close-->
-                        <div class="btn btn-icon btn-sm btn-active-icon-primary" data-bs-dismiss="modal">
-                            <!--begin::Svg Icon | path: icons/duotune/arrows/arr061.svg-->
-                            <span class="svg-icon svg-icon-1">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                    <rect opacity="0.5" x="6" y="17.3137" width="16" height="2" rx="1" transform="rotate(-45 6 17.3137)" fill="black" />
-                                    <rect x="7.41422" y="6" width="16" height="2" rx="1" transform="rotate(45 7.41422 6)" fill="black" />
-                                </svg>
-                            </span>
-                            <!--end::Svg Icon-->
-                        </div>
-                        <!--end::Close-->
-                    </div>
-                    <!--end::Modal header-->
-                    <!--begin::Modal body-->
-                    <div class="modal-body pt-10 pb-15 px-lg-17">
-                        <!--begin::Input group-->
-                        <div class="form-group">
-                            <!--begin::Dropzone-->
-                            <div class="dropzone" id="modal_upload">
-
-                                <div class="dz-message needsclick">
-                                    <i class="bi bi-file-earmark-arrow-up text-primary fs-3x"></i>
-                                    <div class="ms-4">
-                                        <h3 class="fs-5 fw-bolder text-gray-900 mb-1">
-                                            Dosya eklemek için sürükleyin ya da
-                                            tıklayın!</h3>
-                                    </div>
-                                </div>
-                                <div class=" needsclick">
-                                    <div class="dz-message justify-content-center">
-                                        <div class="dz-preview dz-image-preview">
-                                            <div class="dz-image">
-                                                <img width="100%" onerror="if (this.src == null || '<?= SITE_URL ?>') this.src = '<?= SITE_URL ?>public/yonetim/assets/media/avatars/blank.png';" data-dz-thumbnail="" alt="<?= SITE_URL . $param['user']['image'] ?>" src="<?= SITE_URL . $param['user']['image'] ?>">
-
-                                            </div>
-                                            <div class="dz-details">
-                                                <div class="dz-size"></div>
-                                                <div class="dz-filename"><span data-dz-name=""><?= $param['user']['image'] ?></span></div>
-                                            </div>
-
-                                            <div class="dz-error-message"><span data-dz-errormessage=""></span></div>
-                                            <div class="dz-success-mark"> <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                    <title>Check</title>
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <path d="M23.5,31.8431458 L17.5852419,25.9283877 C16.0248253,24.3679711 13.4910294,24.366835 11.9289322,25.9289322 C10.3700136,27.4878508 10.3665912,30.0234455 11.9283877,31.5852419 L20.4147581,40.0716123 C20.5133999,40.1702541 20.6159315,40.2626649 20.7218615,40.3488435 C22.2835669,41.8725651 24.794234,41.8626202 26.3461564,40.3106978 L43.3106978,23.3461564 C44.8771021,21.7797521 44.8758057,19.2483887 43.3137085,17.6862915 C41.7547899,16.1273729 39.2176035,16.1255422 37.6538436,17.6893022 L23.5,31.8431458 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z" stroke-opacity="0.198794158" stroke="#747474" fill-opacity="0.816519475" fill="#FFFFFF"></path>
-                                                    </g>
-                                                </svg> </div>
-                                            <div class="dz-error-mark"> <svg width="54px" height="54px" viewBox="0 0 54 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                                    <title>Error</title>
-                                                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                                                        <g stroke="#747474" stroke-opacity="0.198794158" fill="#FFFFFF" fill-opacity="0.816519475">
-                                                            <path d="M32.6568542,29 L38.3106978,23.3461564 C39.8771021,21.7797521 39.8758057,19.2483887 38.3137085,17.6862915 C36.7547899,16.1273729 34.2176035,16.1255422 32.6538436,17.6893022 L27,23.3431458 L21.3461564,17.6893022 C19.7823965,16.1255422 17.2452101,16.1273729 15.6862915,17.6862915 C14.1241943,19.2483887 14.1228979,21.7797521 15.6893022,23.3461564 L21.3431458,29 L15.6893022,34.6538436 C14.1228979,36.2202479 14.1241943,38.7516113 15.6862915,40.3137085 C17.2452101,41.8726271 19.7823965,41.8744578 21.3461564,40.3106978 L27,34.6568542 L32.6538436,40.3106978 C34.2176035,41.8744578 36.7547899,41.8726271 38.3137085,40.3137085 C39.8758057,38.7516113 39.8771021,36.2202479 38.3106978,34.6538436 L32.6568542,29 Z M27,53 C41.3594035,53 53,41.3594035 53,27 C53,12.6405965 41.3594035,1 27,1 C12.6405965,1 1,12.6405965 1,27 C1,41.3594035 12.6405965,53 27,53 Z"></path>
-                                                        </g>
-                                                    </g>
-                                                </svg> </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!--end::Dropzone-->
-                            <!--begin::Hint-->
-                            <span class="form-text fs-6 text-muted">Max file size is 1MB per file.</span>
-                            <!--end::Hint-->
-                        </div>
-                        <!--end::Input group-->
-                    </div>
-                    <!--end::Modal body-->
-                </form>
-                <!--end::Form-->
             </div>
         </div>
     </div>
@@ -252,7 +209,7 @@
     });
 </script>
 <script>
-    function delFile(path) {
+    function del(id) {
         Swal.fire({
             text: "Silmek istediğinize emin misiniz?",
             icon: "info",
@@ -264,11 +221,11 @@
             if (result.isConfirmed) {
                 let data = [];
                 data.push({
-                    name: "filepath",
-                    value: path
+                    name: "catid",
+                    value: id
                 })
                 $.ajax({
-                    url: "<?= ADMIN_URL ?>files/deleteFiles",
+                    url: "<?= ADMIN_URL ?>post/deleteCategories",
                     type: "post",
                     data: data,
                     success: function(response) {
@@ -290,38 +247,54 @@
         });
     }
 
-    function dropZone() {
-        var myDropzone = new Dropzone("#modal_upload", {
-            url: "<?= ADMIN_URL ?>files/uploadFile",
-            paramName: "file",
-            maxFiles: 5,
-            maxFilesize: 150,
-            addRemoveLinks: true,
-            dictDefaultMessage: 'Yüklemek istediğiniz dosyaları buraya bırakın',
-            dictFallbackMessage: "Tarayıcınız sürükle bırak yüklemelerini desteklemiyor",
-            dictFileTooBig: "Dosya boyutu çok büyük ({{filesize}} Mb). Yükleyebileceğiniz en büyük dosya boyutu: {{maxFilesize}} Mb.",
-            dictInvalidFileType: "Bu tür dosyaları yükleyemezsiniz",
-            dictResponseError: "Sunucu hatası. Hata kodu : {{statusCode}}",
-            dictCancelUpload: "Yüklemeyi İptal Et",
-            dictUploadCanceled: "Yükleme iptal edildi",
-            dictCancelUploadConfirmation: "Bu yüklemeyip iptal etmek istediğinizden emin misiniz ?",
-            dictRemoveFile: "Dosyayı Sil",
-            dictMaxFilesExceeded: "Başka dosya yükleyemezsiniz.",
-            init: function() {
 
-                this.on("success", function(file, responseText) {
-
-                    console.log(responseText);
-
-                });
-            },
-            accept: function(file, done) {
-                done();
-            }
-
-        });
-    }
     $(document).ready(function() {
-        dropZone();
+        $("button[name=btn]").on("click", () => {
+            let type = $("button[name=btn]").data("type");
+            let subcategories = $("select[name=subcategories]").val();
+            if (subcategories == "") {
+                Swal.fire({
+                    text: "Kategori seçiniz",
+                    icon: "error"
+                });
+                return false;
+            }
+            let form = $("form[name=catForm]").serializeArray();
+            form.push({
+                name: "subcategories",
+                value: subcategories
+            });
+
+            let uri = "";
+            if (type == "add") {
+                uri = "<?= ADMIN_URL ?>post/addCategories";
+            } else {
+                uri = "<?= ADMIN_URL ?>post/updateCategories";
+                let id = <?= $param['category']['id'] ?>;
+                form.push({
+                    name: "id",
+                    value: id
+                });
+            }
+            $.ajax({
+                url: uri,
+                type: "post",
+                data: form,
+                success: function(response) {
+                    console.log(response);
+                    let obj = JSON.parse(response);
+                    Swal.fire({
+                        text: "" + obj.message + "",
+                        icon: "" + obj.type + ""
+
+                    });
+                    if (obj.type == "success") {
+                        setTimeout(function() {
+                            location.reload();
+                        }, 2000);
+                    }
+                }
+            });
+        });
     });
 </script>
