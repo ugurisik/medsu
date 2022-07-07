@@ -80,4 +80,34 @@ class files extends controller
         }
         echo helper::imageUpload($_FILES, "general");
     }
+
+
+    public function videos()
+    {
+
+        if (!$this->sessionManager->isLogged()) {
+            helper::redirect(SITE_URL . "/yonetim/giris");
+            die();
+        }
+        $files = array();
+        $arr = helper::directoryToArray("public/videos", true);
+        foreach ($arr as $file) {
+            if (strpos($file, ".") !== false) {
+                $files[] = $file;
+            }
+        }
+
+        $this->render('yonetim/inc/header', ['mpage' => 'content', 'maltpage' => 'files']);
+        $this->render('yonetim/videos', ['videos' => $files]);
+        $this->render('yonetim/inc/footer');
+    }
+    public function uploadVideos()
+    {
+        if (!$this->sessionManager->isLogged()) {
+            helper::redirect(SITE_URL . "/yonetim/giris");
+            die();
+        }
+        echo helper::videoUpload($_FILES, "general");
+    }
+
 }

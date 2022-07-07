@@ -108,6 +108,22 @@ class helper
 		}
 	}
 
+	static function videoUpload($file, $path)
+	{
+		$filename = "public/videos/" . date("Y") . "/" . $path;
+		if (!is_dir($filename)) {
+			mkdir($filename, 0777,true);
+		}
+
+		$file_ = $filename . "/" . uniqid() . "_" . strtolower(str_replace(" ", "-", htmlspecialchars(helper::trtoen(basename($file["file"]["name"])))));
+
+		if (move_uploaded_file($file["file"]["tmp_name"], $file_)) {
+			return $file_;
+		} else {
+			return false;
+		}
+	}
+
 	static function fileUpload($file, $path){
 		$filename = "public/files/" . date("Y") . "/" . $path;
 		if (!is_dir($filename)) {
