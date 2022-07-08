@@ -79,7 +79,7 @@ class post extends controller
             "topcat" => $_POST['subcategories'],
             "type" => "post",
         );
-        $add = $this->model('postModel')->updateCategory($data,$_POST['id']);
+        $add = $this->model('postModel')->updateCategory($data, $_POST['id']);
         if ($add) {
             $data = array(
                 "message" => "Kategori başarılı bir şekilde güncellendi.",
@@ -93,5 +93,27 @@ class post extends controller
         }
         $json = json_encode($data, JSON_UNESCAPED_UNICODE);
         echo $json;
+    }
+
+    public function getCategories($id, $asd = null)
+    {
+        $cat = $this->model('postModel')->getCategoryWithTopId($id);
+        foreach ($cat as $c) {
+            echo $asd . json_encode($c['id'], JSON_UNESCAPED_UNICODE) . "<br>";
+            $asd .= "-";
+            $this->getCategories($c['id'], $asd);
+        }
+    }
+
+    public function getCategories2($parent_id = 0, $sub_mark = '',$arr= array())
+    {
+        $cat = $this->model('postModel')->getCategoryWithTopId($parent_id);
+        foreach ($cat as $c) {
+            echo $sub_mark.$c['id']."<br>";
+            $arr['ID'][]=$c['id'];
+            $this->getCategories2($c['id'], $sub_mark.'---',$arr);
+        }
+
+        //echo json_encode($arr, JSON_UNESCAPED_UNICODE);
     }
 }

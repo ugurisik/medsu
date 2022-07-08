@@ -22,7 +22,42 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="kt_tree_52" class="tree-demo">
+                </div>
 
+
+                <?php
+
+                $cat = $this->model('postModel')->getCategoryWithTopId(0);
+                foreach ($cat as $c) {
+                    echo "<b style='color:red'>" . helper::jdil($c['title']) . "</b><br>";
+                    $cat_ = $this->model('postModel')->getCategoryWithTopId($c['id']);
+                    foreach ($cat_ as $c_) {
+                        echo "&emsp;&emsp;<b style='color:red'>" . helper::jdil($c_['title']) . "</b><br>";
+                        $cat__ = $this->model('postModel')->getCategoryWithTopId($c_['id']);
+                        foreach ($cat__ as $c__) {
+                            echo "&emsp;&emsp;&emsp;&emsp;<b style='color:red'>" . helper::jdil($c__['title']) . "</b><br>";
+                            $cat___ = $this->model('postModel')->getCategoryWithTopId($c__['id']);
+                            foreach ($cat___ as $c___) {
+                                echo "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b style='color:red'>" . helper::jdil($c___['title']) . "</b><br>";
+                                $cat____ = $this->model('postModel')->getCategoryWithTopId($c___['id']);
+                                foreach ($cat____ as $c____) {
+                                    echo "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b style='color:red'>" . helper::jdil($c____['title']) . "</b><br>";
+                                    $cat_____ = $this->model('postModel')->getCategoryWithTopId($c____['id']);
+                                    foreach ($cat_____ as $c_____) {
+                                        echo "&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<b style='color:red'>" . helper::jdil($c_____['title']) . "</b><br>";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                ?>
+
+            </div>
         </div>
         <div class="row">
             <div class="col-md-6 col-xl-6 col-lg-6 col-sm-12 col-xs-12">
@@ -115,7 +150,7 @@
                                         }
 
 
-                                        if ($kat['categories']['id'] == $param['category']['topcat']) {
+                                        if ($kat['id'] == $param['category']['topcat']) {
                                             $selected = "selected";
                                         } else {
                                             $selected = "";
@@ -201,6 +236,9 @@
 <script src="<?= ADMIN_ASSETS ?>/js/scripts.bundle.js"></script>
 <link href="<?= ADMIN_ASSETS ?>/plugins/custom/datatables/datatables.bundle.css" rel="stylesheet" type="text/css" />
 <script src="<?= ADMIN_ASSETS ?>/plugins/custom/datatables/datatables.bundle.js"></script>
+
+
+<script src="<?= ADMIN_ASSETS ?>/js/custom/jstree/jstree.js"></script>
 <script>
     $(".table").DataTable({
         paging: true,
@@ -270,7 +308,7 @@
                 uri = "<?= ADMIN_URL ?>post/addCategories";
             } else {
                 uri = "<?= ADMIN_URL ?>post/updateCategories";
-                let id = <?= $param['category']['id'] ?>;
+                let id = "<?= $param['category']['id'] ?>";
                 form.push({
                     name: "id",
                     value: id
@@ -295,6 +333,85 @@
                     }
                 }
             });
+        });
+
+        $("#kt_tree_5").jstree({
+            "core": {
+                "themes": {
+                    "responsive": true
+                },
+                // so that create works
+                "check_callback": true,
+                "data": [{
+                        "text": "Parent Node",
+                        "children": [{
+                            "text": "Initially selected",
+                            "state": {
+                                "selected": true
+                            }
+                        }, {
+                            "text": "Custom Icon",
+                            "icon": "flaticon2-warning text-danger"
+                        }, {
+                            "text": "Initially open",
+                            "icon": "fa fa-folder text-success",
+                            "state": {
+                                "opened": true
+                            },
+                            "children": [{
+                                "text": "Another node",
+                                "icon": "fa fa-file text-waring"
+                            }]
+                        }, {
+                            "text": "Another Custom Icon",
+                            "icon": "flaticon2-bell-5 text-waring"
+                        }, {
+                            "text": "Disabled Node",
+                            "icon": "fa fa-check text-success",
+                            "state": {
+                                "disabled": true
+                            }
+                        }, {
+                            "text": "Sub Nodes",
+                            "icon": "fa fa-folder text-danger",
+                            "children": [{
+                                    "text": "Item 1",
+                                    "icon": "fa fa-file text-waring"
+                                },
+                                {
+                                    "text": "Item 2",
+                                    "icon": "fa fa-file text-success"
+                                },
+                                {
+                                    "text": "Item 3",
+                                    "icon": "fa fa-file text-default"
+                                },
+                                {
+                                    "text": "Item 4",
+                                    "icon": "fa fa-file text-danger"
+                                },
+                                {
+                                    "text": "Item 5",
+                                    "icon": "fa fa-file text-info"
+                                }
+                            ]
+                        }]
+                    },
+                    "Another Node"
+                ]
+            },
+            "types": {
+                "default": {
+                    "icon": "fa fa-folder text-success"
+                },
+                "file": {
+                    "icon": "fa fa-file  text-success"
+                }
+            },
+            "state": {
+                "key": "demo2"
+            },
+            "plugins": ["dnd", "state", "types"]
         });
     });
 </script>

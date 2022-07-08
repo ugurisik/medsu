@@ -36,6 +36,7 @@ License: For each use you must have a valid license purchased only from above li
     <link href="<?= ADMIN_ASSETS ?>/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css" />
     <link href="<?= ADMIN_ASSETS ?>/css/style.bundle.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="<?= ADMIN_ASSETS ?>/plugins/custom/bootstrap-iconpicker/css/bootstrap-iconpicker.min.css">
+    <link rel="stylesheet" type="text/css" href="<?= ADMIN_ASSETS ?>/css/jstree.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
